@@ -1,5 +1,9 @@
 {
   "nav": {
+    "tagline": "« L'Excellence Infalsifiable »",
+    "taglineSub": "Marque Mondialement Protégée",
+    "ledger": "The Sovereign Ledger",
+    "ipLabel": "Propriété Intellectuelle Globale",
     "collection": "First of All",
     "univers": "L'Univers First of All",
     "services": "Services & Garantie",
@@ -84,6 +88,10 @@
     }
   },
   "collection": {
+    "label": "COLLECTION",
+    "protectionLevels": "{count} Niveaux de Protection",
+    "reserveTitle": "Réservez votre {name}",
+    "availableWorldwide": "disponibles dans le monde.",
     "title": "La Collection First of All",
     "intro": "Quatre versions. Une seule exigence : l'infalsifiable. Marque protégée EUIPO • OAPI • USPTO • Canada • UK.",
     "badge": "® Marque mondialement Protégée",
@@ -114,6 +122,7 @@
     }
   },
   "univers": {
+    "label": "L'UNIVERS",
     "title": "L'Univers First of All",
     "intro": "Découvrez l'histoire, la philosophie et les engagements de la marque First of All®.",
     "explore": "EXPLORER ⟶",
@@ -262,6 +271,8 @@
     ]
   },
   "services": {
+    "label": "SERVICES",
+    "protectionTitle": "Protection Mondiale Garantie",
     "title": "Services & Garantie",
     "intro": "First of All® offre une gamme complète de services pour garantir l'authenticité et la pérennité de votre investissement.",
     "items": [
@@ -284,6 +295,8 @@
     ]
   },
   "dealers": {
+    "networkLabel": "RÉSEAU",
+    "mapPlaceholder": "Réseau Mondial — Carte Interactive à venir",
     "title": "Trouver un Distributeur Officiel",
     "intro": "First of All® s'appuie sur un réseau mondial de distributeurs sélectionnés selon des critères stricts d'intégrité.",
     "formTitle": "Devenir Distributeur Officiel",
@@ -315,6 +328,7 @@
     }
   },
   "actualites": {
+    "label": "ACTUALITÉS",
     "title": "Actualités",
     "intro": "Suivez l'actualité de First of All® et les dernières nouvelles de la sécurité documentaire mondiale.",
     "comingSoon": "Les actualités seront disponibles prochainement.",
@@ -380,7 +394,15 @@
     "error": "Une erreur est survenue. Veuillez réessayer.",
     "close": "Fermer"
   },
+  "legal": {
+    "label": "LÉGAL",
+    "title": "Mentions Légales",
+    "p1": "First of All® est une marque protégée internationalement : Europe (EUIPO), Afrique (OAPI), États-Unis (USPTO), Canada, Royaume-Uni.",
+    "p2": "Société enregistrée aux États-Unis, au Royaume-Uni et au Canada. Toute reproduction, utilisation ou exploitation de la marque, des technologies ou du contenu de ce site sans autorisation préalable est strictement interdite.",
+    "copyright": "© 2026 First of All®. Tous droits réservés."
+  },
   "footer": {
+    "crafted": "Réalisé par",
     "tagline": "La référence mondiale en technologie cryptofiduciaire protégée.",
     "legal": "First of All® – Marque protégée internationalement : Europe (EUIPO), Afrique (OAPI), États-Unis (USPTO), Canada, Royaume-Uni. Société enregistrée aux États-Unis, au Royaume-Uni et au Canada.",
     "sections": {

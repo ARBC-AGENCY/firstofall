@@ -37,17 +37,6 @@ const VERSION_CONFIG = {
   },
 } as const;
 
-const PROTECTION_LEVELS = [
-  "Sécurités Fiduciaires Visibles",
-  "Sécurités Fiduciaires Invisibles",
-  "Cryptographie Numérique",
-  "Calibrage Spécifique",
-  "Authentification Temporelle",
-  "Lien Documentaire Indestructible",
-  "Traçabilité Totale",
-  "Anti-Usurpation",
-  "Vérification Instantanée",
-];
 
 export default function VersionPage({
   params,
@@ -129,15 +118,15 @@ export default function VersionPage({
         <div className="max-w-7xl mx-auto">
           <ScrollReveal className="mb-16">
             <span className="label-md text-primary block mb-3">
-              PARTICULARITÉS TECHNIQUES
+              {th("protection.title")}
             </span>
             <h2 className="text-3xl md:text-4xl font-cinzel font-bold text-on-surface">
-              {config.levels} Niveaux de Protection
+              {t("protectionLevels", { count: config.levels })}
             </h2>
           </ScrollReveal>
 
           <ScrollReveal stagger className="space-y-0">
-            {PROTECTION_LEVELS.slice(0, config.levels).map((level, i) => (
+            {Array.from({ length: config.levels }, (_, i) => (
               <div
                 key={i}
                 className="flex gap-6 md:gap-10 items-start py-8 border-b border-yellow-900/10 group"
@@ -147,7 +136,7 @@ export default function VersionPage({
                 </div>
                 <div>
                   <h3 className="text-lg font-cinzel font-bold text-on-surface mb-2">
-                    {level}
+                    {th(`protection.levels.${i}.name`)}
                   </h3>
                   <p className="text-neutral-500 text-sm leading-relaxed">
                     {th(`protection.levels.${i}.desc`)}
@@ -163,10 +152,10 @@ export default function VersionPage({
       <section className="py-24 bg-surface-container-lowest text-center px-6">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-cinzel font-bold text-on-surface mb-6">
-            Réservez votre {t(`versions.${versionKey}.name`)}
+            {t("reserveTitle", { name: t(`versions.${versionKey}.name`) })}
           </h2>
           <p className="text-neutral-500 italic font-light mb-10 max-w-lg mx-auto">
-            {t(`versions.${versionKey}.limited`)} disponibles dans le monde.
+            {t(`versions.${versionKey}.limited`)} {t("availableWorldwide")}
           </p>
           <button
             onClick={() => setModalOpen(true)}

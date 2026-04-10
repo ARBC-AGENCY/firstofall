@@ -25,7 +25,7 @@ export default async function ActualitesPage({
     <>
       <section className="pt-36 pb-20 bg-surface text-center px-6">
         <ScrollReveal>
-          <span className="label-md text-primary block mb-4">ACTUALITÉS</span>
+          <span className="label-md text-primary block mb-4">{t("label")}</span>
           <h1 className="text-4xl md:text-6xl font-cinzel font-bold text-on-surface mb-6">
             {t("title")}
           </h1>

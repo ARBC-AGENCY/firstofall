@@ -45,7 +45,7 @@ export default function DealersPage() {
     <>
       <section className="pt-36 pb-20 bg-surface text-center px-6">
         <ScrollReveal>
-          <span className="label-md text-primary block mb-4">RÉSEAU</span>
+          <span className="label-md text-primary block mb-4">{t("networkLabel")}</span>
           <h1 className="text-4xl md:text-6xl font-cinzel font-bold text-on-surface mb-6">
             {t("title")}
           </h1>
@@ -62,7 +62,7 @@ export default function DealersPage() {
             map
           </span>
           <p className="text-neutral-600 text-sm font-cinzel tracking-widest uppercase">
-            Réseau Mondial — Carte Interactive à venir
+            {t("mapPlaceholder")}
           </p>
         </div>
       </section>

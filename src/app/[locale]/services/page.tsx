@@ -28,7 +28,7 @@ export default async function ServicesPage({
     <>
       <section className="pt-36 pb-20 bg-surface text-center px-6">
         <ScrollReveal>
-          <span className="label-md text-primary block mb-4">SERVICES</span>
+          <span className="label-md text-primary block mb-4">{t("label")}</span>
           <h1 className="text-4xl md:text-6xl font-cinzel font-bold text-on-surface mb-6">
             {t("title")}
           </h1>
@@ -63,7 +63,7 @@ export default async function ServicesPage({
       <section className="py-20 bg-surface text-center px-6">
         <ScrollReveal>
           <h2 className="text-2xl font-cinzel text-on-surface mb-10 uppercase tracking-widest">
-            Protection Mondiale Garantie
+            {t("protectionTitle")}
           </h2>
           <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
             {["EUIPO", "OAPI", "USPTO", "CANADA", "UK"].map((j) => (

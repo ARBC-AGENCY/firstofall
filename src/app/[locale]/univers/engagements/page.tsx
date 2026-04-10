@@ -20,13 +20,14 @@ export default async function EngagementsPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "engagements" });
+  const tu = await getTranslations({ locale, namespace: "univers" });
   const items = t.raw("items") as { title: string; desc: string }[];
 
   return (
     <>
       <section className="pt-36 pb-20 bg-surface text-center px-6">
         <ScrollReveal>
-          <span className="label-md text-primary block mb-4">L&apos;UNIVERS</span>
+          <span className="label-md text-primary block mb-4">{tu("label")}</span>
           <h1 className="text-4xl md:text-6xl font-cinzel font-bold text-on-surface mb-6">
             {t("title")}
           </h1>

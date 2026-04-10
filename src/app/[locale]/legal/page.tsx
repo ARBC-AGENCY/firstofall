@@ -1,28 +1,41 @@
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import type { Metadata } from "next";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-export default function LegalPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "legal" });
+  return { title: t("title") };
+}
+
+export default async function LegalPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "legal" });
+
   return (
     <section className="pt-36 pb-20 bg-surface px-6 md:px-12">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
-          <span className="label-md text-primary block mb-4">LÉGAL</span>
+          <span className="label-md text-primary block mb-4">{t("label")}</span>
           <h1 className="text-4xl font-cinzel font-bold text-on-surface mb-10">
-            Mentions Légales
+            {t("title")}
           </h1>
           <div className="space-y-8 text-neutral-400 leading-relaxed text-sm">
             <p>
-              <strong className="text-on-surface font-cinzel">First of All®</strong> est une marque
-              protégée internationalement : Europe (EUIPO), Afrique (OAPI), États-Unis (USPTO),
-              Canada, Royaume-Uni.
+              <strong className="text-on-surface font-cinzel">First of All®</strong>{" "}
+              {t("p1")}
             </p>
-            <p>
-              Société enregistrée aux États-Unis, au Royaume-Uni et au Canada. Toute reproduction,
-              utilisation ou exploitation de la marque, des technologies ou du contenu de ce site
-              sans autorisation préalable est strictement interdite.
-            </p>
-            <p>
-              © 2026 First of All®. Tous droits réservés.
-            </p>
+            <p>{t("p2")}</p>
+            <p>{t("copyright")}</p>
           </div>
         </ScrollReveal>
       </div>

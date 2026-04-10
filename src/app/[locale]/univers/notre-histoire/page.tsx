@@ -20,6 +20,7 @@ export default async function NotrHistoirePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "histoire" });
+  const tu = await getTranslations({ locale, namespace: "univers" });
 
   const timeline = t.raw("timeline") as { date: string; event: string }[];
   const levels = t.raw("protection.levels") as { name: string; desc: string }[];
@@ -32,7 +33,7 @@ export default async function NotrHistoirePage({
       <section className="pt-36 pb-20 bg-surface px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <span className="label-md text-primary block mb-4">L&apos;UNIVERS</span>
+            <span className="label-md text-primary block mb-4">{tu("label")}</span>
             <h1 className="text-4xl md:text-6xl font-cinzel font-bold text-on-surface mb-8 leading-tight">
               {t("title")}
             </h1>

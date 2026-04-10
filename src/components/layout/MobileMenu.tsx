@@ -43,7 +43,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         opacity: 0,
         duration: 0.35,
         ease: "power2.in",
-        onComplete: () => gsap.set(overlay, { display: "none" }),
+        onComplete: () => { gsap.set(overlay, { display: "none" }); },
       });
     }
   }, [isOpen]);
@@ -131,10 +131,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       >
         <div className="relative z-10 text-center px-12">
           <h2 className="font-cinzel text-4xl lg:text-6xl font-black italic text-primary drop-shadow-[0_0_30px_rgba(242,202,80,0.25)]">
-            « L&apos;Excellence Infalsifiable »
+            {t("tagline")}
           </h2>
           <p className="mt-6 text-neutral-500 uppercase tracking-[0.4rem] text-xs font-light italic">
-            Marque Mondialement Protégée
+            {t("taglineSub")}
           </p>
           <div className="mt-10 h-16 w-[1px] bg-gradient-to-b from-primary to-transparent mx-auto" />
         </div>
@@ -148,7 +148,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </div>
 
         <div className="absolute bottom-10 right-10 text-right">
-          <div className="font-cinzel text-primary font-bold text-sm mb-1">The Sovereign Ledger</div>
+          <div className="font-cinzel text-primary font-bold text-sm mb-1">{t("ledger")}</div>
           <div className="text-[10px] text-neutral-600 uppercase tracking-widest leading-relaxed">
             EUIPO • OAPI • USPTO • UK • WIPO<br />© First of All® 2026
           </div>
@@ -163,7 +163,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </div>
         <div className="text-right">
           <LangSwitcher />
-          <div className="text-[8px] text-neutral-500 mt-2 uppercase tracking-tighter">Propriété Intellectuelle Globale</div>
+          <div className="text-[8px] text-neutral-500 mt-2 uppercase tracking-tighter">{t("ipLabel")}</div>
         </div>
       </div>
     </div>

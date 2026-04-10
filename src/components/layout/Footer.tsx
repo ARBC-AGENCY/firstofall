@@ -100,8 +100,22 @@ export default async function Footer({ locale }: { locale: string }) {
           <p className="text-neutral-600 text-[10px] leading-relaxed max-w-xl">
             {t("legal")}
           </p>
-          <div className="text-neutral-600 text-[10px] uppercase tracking-widest whitespace-nowrap">
-            {t("copyright")}
+          <div className="flex flex-col items-start md:items-end gap-2">
+            <div className="text-neutral-600 text-[10px] uppercase tracking-widest whitespace-nowrap">
+              {t("copyright")}
+            </div>
+            <a
+              href="https://www.arbc-agency.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-1.5 text-[10px] tracking-widest uppercase text-neutral-700 hover:text-primary transition-colors duration-300"
+            >
+              <span>{t("crafted")}</span>
+              <span className="font-cinzel font-bold text-neutral-500 group-hover:text-primary transition-colors duration-300">
+                ARBC Agency
+              </span>
+
+            </a>
           </div>
         </div>
       </div>
