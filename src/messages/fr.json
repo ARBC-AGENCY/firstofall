@@ -1,0 +1,407 @@
+{
+  "nav": {
+    "collection": "First of All",
+    "univers": "L'Univers First of All",
+    "services": "Services & Garantie",
+    "boutique": "Boutique",
+    "dealers": "Trouver un Distributeur Officiel",
+    "club": "Club First of All",
+    "siliconValley": "Programme Silicon Valley",
+    "actualites": "Actualités",
+    "close": "Fermer",
+    "menu": "Menu",
+    "subVersions": {
+      "essential": "Essentiel",
+      "business": "Business",
+      "executive": "Exécutive",
+      "exclusive": "Exclusive"
+    },
+    "subUnivers": {
+      "histoire": "Notre Histoire",
+      "engagements": "Engagements scientifiques",
+      "dealers": "Trouver un Distributeur",
+      "club": "Club First of All"
+    }
+  },
+  "home": {
+    "hero": {
+      "headline": "First of All.",
+      "headlineSub": "L'Excellence Infalsifiable.",
+      "subtext": "La première technologie cryptofiduciaire protégée dans cinq juridictions mondiales.",
+      "cta": "Découvrir la Collection",
+      "ctaSecondary": "Notre Histoire",
+      "scroll": "DÉFILER"
+    },
+    "collection": {
+      "label": "LA COLLECTION",
+      "title": "La Collection",
+      "tagline": "Quatre versions. Une seule marque protégée dans cinq juridictions.",
+      "explore": "EXPLORER ⟶",
+      "versions": {
+        "essential": {
+          "name": "Version Essentiel",
+          "desc": "La quintessence de l'authenticité First of All."
+        },
+        "business": {
+          "name": "Version Business",
+          "desc": "Sécurité accrue pour les échanges institutionnels."
+        },
+        "executive": {
+          "name": "Version Exécutive",
+          "desc": "Le prestige allié à une protection multi-niveaux."
+        },
+        "exclusive": {
+          "name": "Version Exclusive",
+          "desc": "L'apogée technologique limitée à l'élite mondiale."
+        }
+      }
+    },
+    "technology": {
+      "label": "TECHNOLOGIE BREVETÉE",
+      "title": "Neuf niveaux de protection. Zéro compromis.",
+      "text": "Chaque sceau First of All® est une prouesse d'ingénierie cryptofiduciaire. En combinant des encres nanostructurées et une architecture de ledger souveraine, nous créons un actif numérique physiquement ancré, impossible à dupliquer.",
+      "cta": "Découvrir la Technologie"
+    },
+    "protection": {
+      "title": "Protégée sur cinq continents"
+    },
+    "siliconValley": {
+      "label": "PROGRAMME EXCLUSIF",
+      "title": "Le luxe qui change le monde",
+      "text": "5 % de chaque achat finance un voyage scientifique en Silicon Valley. Le luxe qui change le monde.",
+      "cta": "Découvrir le Programme"
+    },
+    "metrics": {
+      "levels": "Niveaux de Protection",
+      "jurisdictions": "Juridictions",
+      "seals": "Cachets / An",
+      "media": "Médias Mondiaux"
+    },
+    "club": {
+      "title": "Club First of All®",
+      "text": "L'accès à l'écosystème souverain se fait exclusivement sur invitation ou parrainage.",
+      "cta": "Faire une demande d'adhésion"
+    }
+  },
+  "collection": {
+    "title": "La Collection First of All",
+    "intro": "Quatre versions. Une seule exigence : l'infalsifiable. Marque protégée EUIPO • OAPI • USPTO • Canada • UK.",
+    "badge": "® Marque mondialement Protégée",
+    "reserve": "Réserver",
+    "discover": "Découvrir",
+    "limited": "Série Limitée",
+    "versions": {
+      "essential": {
+        "name": "Version Essentiel",
+        "intro": "La protection fondamentale. Cinq couches de sécurité fiduciaire pour vos documents officiels.",
+        "limited": "5 000 exemplaires / an"
+      },
+      "business": {
+        "name": "Version Business",
+        "intro": "Sécurité renforcée pour les échanges institutionnels. Sept niveaux de protection pour les professionnels.",
+        "limited": "2 000 exemplaires / an"
+      },
+      "executive": {
+        "name": "Version Exécutive",
+        "intro": "Le prestige allié à une protection multi-niveaux. Huit couches de sécurité pour les dirigeants.",
+        "limited": "1 000 exemplaires / an"
+      },
+      "exclusive": {
+        "name": "Version Exclusive",
+        "intro": "Le summum de la sécurité documentaire. La première technologie cryptofiduciaire protégée en tant que Marque et technologie brevetée et enregistrée mondialement.",
+        "limited": "50 exemplaires / an"
+      }
+    }
+  },
+  "univers": {
+    "title": "L'Univers First of All",
+    "intro": "Découvrez l'histoire, la philosophie et les engagements de la marque First of All®.",
+    "explore": "EXPLORER ⟶",
+    "links": {
+      "histoire": "Notre Histoire",
+      "engagements": "Engagements Scientifiques",
+      "dealers": "Distributeurs Officiels",
+      "club": "Club First of All"
+    }
+  },
+  "histoire": {
+    "title": "Notre Histoire",
+    "launch": "Le 1er octobre 2026 marque le lancement commercial international du cachet infalsifiable d'Édouard Patrick Junior Onana — une solution multicouche de sécurité documentaire désormais distribuée mondialement par la marque First of All.",
+    "intro": "Nous vous racontons son origine, sa singularité, sa philosophie, son modèle commercial et sa timeline officielle, depuis la création jusqu'au lancement.",
+    "invention": {
+      "title": "PRÉSENTATION DE L'INVENTION",
+      "text": "Le cachet infalsifiable est un dispositif physique et numérique combinant cryptographie avancée, sécurité fiduciaire et technologies numériques pour rendre la falsification ou la reproduction pratiquement impossible. Il protège l'authenticité de documents officiels (gouvernements, banques, universités, santé, commerce).",
+      "inventor": "Inventé par Édouard Patrick Junior Onana, reconnu dans la presse africaine et internationale et les organisations mondiales de propriété intellectuelle comme pionnier de la sécurité documentaire."
+    },
+    "protection": {
+      "title": "PARTICULARITÉS TECHNIQUES",
+      "subtitle": "Les 9 Niveaux de Protection",
+      "intro": "La force de cette technologie réside dans la superposition de neuf couches de sécurité indépendantes et complémentaires, rendant toute reproduction impossible :",
+      "levels": [
+        {
+          "name": "Sécurités Fiduciaires Visibles",
+          "desc": "Éléments de design et encres spécifiques inspirés des billets de banque, détectables à l'œil nu."
+        },
+        {
+          "name": "Sécurités Fiduciaires Invisibles",
+          "desc": "Composants insérés dans le support (papier ou cachet) nécessitant des outils spécifiques pour être révélés."
+        },
+        {
+          "name": "Cryptographie Numérique",
+          "desc": "Intégration d'une clé ou d'un identifiant numérique unique lié à chaque document via une architecture sécurisée (type blockchain)."
+        },
+        {
+          "name": "Calibrage Spécifique",
+          "desc": "Les éléments de sécurité sont calibrés précisément pour un type de document donné."
+        },
+        {
+          "name": "Authentification Temporelle",
+          "desc": "Le cachet peut être configuré pour n'être valide que pendant une période définie."
+        },
+        {
+          "name": "Lien Documentaire Indestructible",
+          "desc": "Si le cachet est apposé sur un document pour lequel il n'était pas destiné, la sécurité invisible prouve instantanément la fraude."
+        },
+        {
+          "name": "Traçabilité Totale",
+          "desc": "Chaque empreinte ou cachet est traçable jusqu'à son origine et son détenteur légitime."
+        },
+        {
+          "name": "Anti-Usurpation",
+          "desc": "En cas de vol du cachet physique, celui-ci devient inutilisable car le fraudeur ne possède pas les informations de contexte nécessaires à sa validité."
+        },
+        {
+          "name": "Vérification Instantanée",
+          "desc": "Un système de validation permet à n'importe quel contrôleur (via smartphone ou lecteur) de confirmer l'intégrité des 8 niveaux précédents simultanément."
+        }
+      ]
+    },
+    "legalTitle": "PROTECTION ET RECONNAISSANCE LÉGALE",
+    "legal": [
+      {
+        "name": "OAPI",
+        "desc": "Protection stratégique pour les 17 États membres en Afrique."
+      },
+      { "name": "EUIPO", "desc": "Protection sur le marché européen." },
+      {
+        "name": "WIPO / OMPI",
+        "desc": "Enregistrement international garantissant l'exclusivité mondiale de la technologie."
+      },
+      {
+        "name": "Marque déposée mondialement",
+        "desc": "Le terme « FIRST OF ALL » est protégé en tant que marque commerciale pour identifier cette solution unique de sécurité."
+      }
+    ],
+    "philosophyTitle": "PHILOSOPHIE ET VALEURS",
+    "philosophy": "Intégrité, authenticité, responsabilité. Le projet vise non seulement à contrer la fraude mais aussi à restaurer la confiance dans les échanges documentaires. La production limitée annuelle reflète une volonté d'exclusivité éthique : qualité, contrôle strict des partenaires et respect des normes internationales.",
+    "commerceTitle": "CRITÈRES DE COMMERCIALISATION",
+    "commerce": [
+      "Sélection des partenaires : institutions publiques et privées respectant des standards d'intégrité.",
+      "Séries limitées annuelles : 5 000 Essential; 2 000 Business; 1 000 Executive; 50 Exclusive; 10 Exclusive+ (distribution mondiale contrôlée)."
+    ],
+    "structureTitle": "STRUCTURE DE COMMERCIALISATION ET MARQUE",
+    "structure": "First of All — positionnée comme référence premium en sécurité documentaire. Implantation commerciale : entités de commercialisation créées aux États-Unis, Royaume-Uni et Canada; réseau de distribution sélectif et partenariats institutionnels pour intégration aux processus administratifs et financiers.",
+    "visionTitle": "VISION",
+    "vision": "Devenir la référence mondiale d'authenticité de cachet des décideurs, en combinant innovation technologique et éthique. Objectif : réduire significativement la fraude documentaire et instaurer des standards internationaux de confiance.",
+    "timelineTitle": "TIMELINE",
+    "timeline": [
+      {
+        "date": "1er janvier 2024",
+        "event": "Création du cachet; protection par © copyright."
+      },
+      {
+        "date": "Juin 2024",
+        "event": "Campagne médiatique mondiale (relayée par 125+ médias)."
+      },
+      {
+        "date": "Août 2024",
+        "event": "Création de la marque First of All; dépôts EUIPO et OAPI."
+      },
+      {
+        "date": "Décembre 2024",
+        "event": "Publication officielle auprès de l'OAPI."
+      },
+      {
+        "date": "Août 2025",
+        "event": "Publication internationale via l'OMPI."
+      },
+      {
+        "date": "Octobre 2025",
+        "event": "Création des structures commerciales aux USA, UK, Canada."
+      },
+      {
+        "date": "Novembre 2025",
+        "event": "Extension des protections auprès de USPTO, GovUK, GovCanada."
+      },
+      {
+        "date": "1er octobre 2026",
+        "event": "Lancement commercial international."
+      },
+      {
+        "date": "1er novembre 2026",
+        "event": "Lancement du Programme Silicon Valley."
+      }
+    ]
+  },
+  "engagements": {
+    "title": "Engagements Scientifiques",
+    "intro": "First of All® s'engage à financer la recherche et l'innovation scientifique à travers le monde.",
+    "items": [
+      {
+        "title": "Programme Silicon Valley",
+        "desc": "5 % de chaque achat finance un voyage scientifique en Silicon Valley pour chercheurs et entrepreneurs."
+      },
+      {
+        "title": "Propriété Intellectuelle",
+        "desc": "Protection et valorisation des innovations technologiques à l'échelle mondiale via OAPI, EUIPO, WIPO."
+      },
+      {
+        "title": "Standards Internationaux",
+        "desc": "Contribution à l'établissement de standards mondiaux de confiance documentaire."
+      }
+    ]
+  },
+  "services": {
+    "title": "Services & Garantie",
+    "intro": "First of All® offre une gamme complète de services pour garantir l'authenticité et la pérennité de votre investissement.",
+    "items": [
+      {
+        "title": "Certification d'Authenticité",
+        "desc": "Chaque cachet est livré avec son certificat d'authenticité numérique et physique, traçable via notre système de vérification instantanée."
+      },
+      {
+        "title": "Garantie à Vie",
+        "desc": "Votre investissement est protégé par une garantie à vie couvrant tout défaut de fabrication ou de sécurité."
+      },
+      {
+        "title": "Service de Vérification",
+        "desc": "Accès 24h/24 à notre plateforme de vérification d'authenticité via smartphone ou lecteur dédié."
+      },
+      {
+        "title": "Support Institutionnel",
+        "desc": "Accompagnement personnalisé pour les institutions gouvernementales, bancaires et académiques."
+      }
+    ]
+  },
+  "dealers": {
+    "title": "Trouver un Distributeur Officiel",
+    "intro": "First of All® s'appuie sur un réseau mondial de distributeurs sélectionnés selon des critères stricts d'intégrité.",
+    "formTitle": "Devenir Distributeur Officiel",
+    "formIntro": "Rejoignez le réseau exclusif de distributeurs First of All® et participez à la révolution de la sécurité documentaire.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "country": "Pays",
+      "organisation": "Organisation / Entreprise",
+      "message": "Votre demande",
+      "submit": "Soumettre ma candidature",
+      "success": "Votre candidature a été envoyée. Nous vous contacterons dans les meilleurs délais.",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "club": {
+    "title": "Club First of All®",
+    "intro": "L'accès à l'écosystème souverain se fait exclusivement sur invitation ou parrainage.",
+    "text": "Le Club First of All® réunit les décideurs, dirigeants et institutions qui placent l'authenticité au cœur de leurs valeurs. Rejoignez une communauté d'élite engagée dans la lutte contre la fraude documentaire.",
+    "waitlistTitle": "Liste d'Attente",
+    "waitlistText": "Déposez votre candidature. Notre équipe vous contactera pour évaluer votre profil.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "submit": "Rejoindre la liste d'attente",
+      "success": "Votre demande a été enregistrée. Nous vous contacterons prochainement.",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "actualites": {
+    "title": "Actualités",
+    "intro": "Suivez l'actualité de First of All® et les dernières nouvelles de la sécurité documentaire mondiale.",
+    "comingSoon": "Les actualités seront disponibles prochainement.",
+    "readMore": "Lire la suite"
+  },
+  "siliconValley": {
+    "label": "PROGRAMME EXCLUSIF",
+    "title": "First of All finance le tourisme scientifique",
+    "intro": "Chaque cachet acheté permet à un chercheur ou entrepreneur de vivre une immersion exclusive en Silicon Valley. Postulez dès aujourd'hui.",
+    "text": "5 % de chaque achat finance un voyage scientifique en Silicon Valley. Le luxe qui change le monde.",
+    "howTitle": "Comment ça fonctionne",
+    "how": [
+      {
+        "step": "01",
+        "title": "Réservez votre cachet",
+        "desc": "Choisissez la version First of All qui correspond à vos besoins."
+      },
+      {
+        "step": "02",
+        "title": "5 % alloués au programme",
+        "desc": "Un pourcentage de votre achat est automatiquement alloué au fonds Silicon Valley."
+      },
+      {
+        "step": "03",
+        "title": "Postulez au programme",
+        "desc": "Chercheurs et entrepreneurs peuvent postuler pour une immersion en Silicon Valley."
+      }
+    ],
+    "applyTitle": "Postuler au Programme",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "country": "Pays",
+      "organisation": "Organisation / Université",
+      "project": "Décrivez votre projet de recherche ou d'innovation",
+      "submit": "Soumettre ma candidature",
+      "success": "Votre candidature a été envoyée. Nous vous contacterons dans les meilleurs délais.",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "reservation": {
+    "title": "Réserver",
+    "intro": "Réservez votre cachet First of All®. Notre équipe vous contactera pour finaliser votre commande.",
+    "fields": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "country": "Pays",
+      "organisation": "Organisation (optionnel)",
+      "version": "Version souhaitée",
+      "message": "Message (optionnel)",
+      "gdpr": "J'accepte que mes données soient utilisées pour traiter ma réservation conformément à la politique de confidentialité."
+    },
+    "versions": {
+      "essential": "Version Essentiel",
+      "business": "Version Business",
+      "executive": "Version Exécutive",
+      "exclusive": "Version Exclusive"
+    },
+    "submit": "Confirmer ma Réservation",
+    "success": "Votre réservation a été enregistrée. Notre équipe vous contactera sous 48h.",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "close": "Fermer"
+  },
+  "footer": {
+    "tagline": "La référence mondiale en technologie cryptofiduciaire protégée.",
+    "legal": "First of All® – Marque protégée internationalement : Europe (EUIPO), Afrique (OAPI), États-Unis (USPTO), Canada, Royaume-Uni. Société enregistrée aux États-Unis, au Royaume-Uni et au Canada.",
+    "sections": {
+      "gouvernance": "GOUVERNANCE",
+      "regions": "RÉGIONS",
+      "legal": "LÉGAL",
+      "links": "LIENS RAPIDES"
+    },
+    "links": {
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions d'Utilisation",
+      "collection": "La Collection",
+      "histoire": "Notre Histoire",
+      "services": "Services & Garantie",
+      "contact": "Contact"
+    },
+    "regions": {
+      "canada": "Canada",
+      "uk": "Royaume-Uni",
+      "silicon": "Bureau Silicon Valley"
+    },
+    "copyright": "© 2026 First of All®. Tous droits réservés."
+  }
+}

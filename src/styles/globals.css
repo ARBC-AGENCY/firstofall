@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-cinzel: "Cinzel", serif;
+    --font-inter: "Inter", sans-serif;
+  }
+
+  html {
+    background-color: #131313;
+    color: #e5e2e1;
+    scroll-behavior: auto; /* Lenis handles smooth scroll */
+  }
+
+  body {
+    background-color: #131313;
+    color: #e5e2e1;
+    font-family: var(--font-inter), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #d4af37;
+    color: #3c2f00;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism nav */
+  .glass-nav {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Hero gradient overlay */
+  .hero-gradient {
+    background: linear-gradient(
+      to bottom,
+      rgba(19, 19, 19, 0.3) 0%,
+      rgba(19, 19, 19, 0.7) 60%,
+      rgba(19, 19, 19, 1) 100%
+    );
+  }
+
+  /* Gold CTA gradient */
+  .primary-cta-gradient {
+    background: linear-gradient(45deg, #f2ca50 0%, #d4af37 100%);
+  }
+
+  /* Glow shadow (no hard drop-shadow) */
+  .glow-gold {
+    box-shadow: 0 0 40px rgba(242, 202, 80, 0.2);
+  }
+
+  /* Cinzel font helper */
+  .font-cinzel {
+    font-family: var(--font-cinzel), serif;
+  }
+
+  /* Label style */
+  .label-md {
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  /* Scroll-reveal initial state (set by JS) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

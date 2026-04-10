@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=Inter:wght@200;300;400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-variant": "#353535",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-fixed": "#ffdea7",
+                        "primary-container": "#d4af37",
+                        "on-primary-fixed-variant": "#574500",
+                        "inverse-primary": "#735c00",
+                        "secondary-container": "#765300",
+                        "on-primary": "#3c2f00",
+                        "on-tertiary-container": "#00502e",
+                        "secondary": "#efbf68",
+                        "surface-tint": "#e9c349",
+                        "tertiary-fixed": "#9af6bc",
+                        "surface-container-low": "#1b1b1b",
+                        "primary": "#f2ca50",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#7fd9a2",
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#20201f",
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "outline": "#99907c",
+                        "on-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-tertiary": "#00391f",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#00522f",
+                        "on-background": "#e5e2e1",
+                        "tertiary": "#87e1aa",
+                        "surface-container-highest": "#353535",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#241a00",
+                        "error-container": "#93000a",
+                        "outline-variant": "#4d4635",
+                        "primary-fixed-dim": "#e9c349",
+                        "primary-fixed": "#ffe088",
+                        "background": "#131313",
+                        "on-secondary": "#412d00",
+                        "tertiary-container": "#6bc590",
+                        "surface-dim": "#131313",
+                        "on-surface-variant": "#d0c5af",
+                        "secondary-fixed-dim": "#efbf68",
+                        "on-secondary-fixed": "#271900",
+                        "on-tertiary-fixed": "#002110",
+                        "on-secondary-container": "#faca71"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Cinzel"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            background: rgba(19, 19, 19, 0.8);
+        }
+        .glow-shadow {
+            box-shadow: 0 0 60px 0 rgba(229, 226, 225, 0.04);
+        }
+        .vertical-line {
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #d4af37, transparent);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-transparent dark:bg-black/90 border-b border-yellow-600/20 glass-effect">
+<nav class="flex justify-between items-center px-8 py-6 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold text-yellow-600 dark:text-yellow-500 tracking-tighter font-headline">First of All®</span>
+<div class="hidden md:flex gap-6">
+<a class="font-serif tracking-widest uppercase text-sm Cinzel text-yellow-500 font-bold hover:text-yellow-500 transition-colors duration-500" href="#">MENU ☰</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="font-serif tracking-widest uppercase text-sm Cinzel text-neutral-400">FR|EN</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-yellow-600 cursor-pointer">shopping_cart</span>
+<span class="material-symbols-outlined text-yellow-600 cursor-pointer">account_circle</span>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col justify-center px-8 md:px-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="Cinematic aerial shot of a futuristic research station nestled in a dark, foggy mountain range at twilight with golden interior lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJDW3OigFz2L4tcGpRW--U8P2Zlt2psN4q9LSDZEqWICvVqE51Z3hHJ6mLsgtsCnVI0pQWB-__wmcILY1M2dY6UpE8KgBNpQ0PIUnIR_61-_M2L0P5bvmUpwro-mHDcyYkV28OywUi_H98MrVmSxSLEzSKg1xrKT60f6rtCX0MKLjTw2ZFUch8q43PbALpKCsMeZF9qJ_ZTOtaOWS1AB-w_vDCLHum3BsDKy1VbND7tQXyiwkdkf_SJt9cq5tOPIzpJLmI42q_1wla"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<span class="label-md uppercase tracking-[0.3rem] text-primary mb-6 block font-label text-xs">Silicon Valley Programme</span>
+<h1 class="text-5xl md:text-8xl font-headline font-bold text-on-surface leading-tight tracking-tight mb-8">
+                    First of All<br/><span class="italic text-primary-container">finance le tourisme scientifique</span>
+</h1>
+<p class="text-xl md:text-2xl font-light text-on-surface-variant max-w-2xl italic leading-relaxed">
+                    Le premier programme de luxe à impact scientifique mondial.
+                </p>
+<div class="mt-12">
+<a class="inline-block px-12 py-4 border border-primary bg-primary-container/10 text-primary uppercase tracking-widest text-sm font-bold hover:bg-primary-container/20 transition-all" href="#apply">
+                        Candidater
+                    </a>
+</div>
+</div>
+</section>
+<!-- Section 1: How it works -->
+<section class="py-32 px-8 md:px-20 bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-4">
+<h2 class="text-4xl font-headline font-bold text-primary mb-6">5 % pour changer le monde</h2>
+<div class="vertical-line h-32 my-8"></div>
+</div>
+<div class="md:col-span-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="p-8 bg-surface border-l-2 border-primary-container/30">
+<span class="text-4xl font-headline text-outline-variant mb-4 block">01.</span>
+<h3 class="text-xl font-bold uppercase tracking-widest text-on-surface mb-4">Achat</h3>
+<p class="text-on-surface-variant font-light italic">Chaque acquisition d'une pièce d'exception First of All® contribue directement au fonds souverain.</p>
+</div>
+<!-- Step 2 -->
+<div class="p-8 bg-surface border-l-2 border-primary-container/30">
+<span class="text-4xl font-headline text-outline-variant mb-4 block">02.</span>
+<h3 class="text-xl font-bold uppercase tracking-widest text-on-surface mb-4">Financement</h3>
+<p class="text-on-surface-variant font-light italic">5% du produit est alloué à des expéditions de recherche fondamentale et aux innovateurs de demain.</p>
+</div>
+<!-- Step 3 -->
+<div class="p-8 bg-surface border-l-2 border-primary-container/30">
+<span class="text-4xl font-headline text-outline-variant mb-4 block">03.</span>
+<h3 class="text-xl font-bold uppercase tracking-widest text-on-surface mb-4">Immersion</h3>
+<p class="text-on-surface-variant font-light italic">Nos membres accèdent à des laboratoires exclusifs et participent aux découvertes sur le terrain.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Who can apply -->
+<section class="py-32 px-8 md:px-20">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-20 items-center">
+<div class="flex-1 order-2 md:order-1">
+<h2 class="text-3xl font-headline font-bold mb-12 border-b border-primary-container/20 pb-4">Profils Recherchés</h2>
+<ul class="space-y-12">
+<li class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary text-4xl">science</span>
+<div>
+<h4 class="text-lg font-bold text-on-surface uppercase tracking-wider mb-2">Chercheurs</h4>
+<p class="text-on-surface-variant font-light">Scientifiques de haut niveau menant des travaux de rupture dans la préservation de l'environnement.</p>
+</div>
+</li>
+<li class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary text-4xl">lightbulb</span>
+<div>
+<h4 class="text-lg font-bold text-on-surface uppercase tracking-wider mb-2">Entrepreneurs</h4>
+<p class="text-on-surface-variant font-light">Fondateurs de start-ups DeepTech développant des solutions d'impact à l'échelle mondiale.</p>
+</div>
+</li>
+<li class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary text-4xl">rocket_launch</span>
+<div>
+<h4 class="text-lg font-bold text-on-surface uppercase tracking-wider mb-2">Innovateurs</h4>
+<p class="text-on-surface-variant font-light">Visionnaires audacieux souhaitant transformer la connaissance en héritage durable.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="flex-1 order-1 md:order-2">
+<div class="relative">
+<div class="absolute -inset-4 border border-primary/20"></div>
+<img class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-1000 glow-shadow" data-alt="Close-up of a modern laboratory microscope lens with golden reflections and a minimalist black background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnVJZLfjRX6c4Z5LUugK3JDrrdfG5UsqimZZpebp3BiHc5B8482LpWwbG7_x02-dxZQEnR2QkzEvKf00GQQnNgAPzOAK2h_ijB2Pek0BRhFEoTnM9mo0yB8JNz3oYdcQe9KY3j8lDr4OZ4OzJzPizhXhkRof6IpbT4CKQRHRO0u3BCLj78O6_KQ8bpOJLzE15tlSmY84ryWR98ywYDxtzZL6dWb8y0qQc6jt3IgPh2CEYzcD8sMmJK-NoMsvVBYLDXjNEqkbe6nsrh"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Application form -->
+<section class="py-32 px-8 md:px-20 bg-surface-container-lowest" id="apply">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-headline font-bold mb-4">Rejoindre le Ledger</h2>
+<p class="text-primary uppercase tracking-widest text-xs font-label">Processus de Sélection Souverain</p>
+</div>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-2">
+<label class="block text-xs uppercase tracking-widest text-neutral-500 font-label">Nom complet</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 text-on-surface focus:ring-0 focus:border-primary transition-colors" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs uppercase tracking-widest text-neutral-500 font-label">Pays</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 text-on-surface focus:ring-0 focus:border-primary transition-colors" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs uppercase tracking-widest text-neutral-500 font-label">Domaine de recherche</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 text-on-surface focus:ring-0 focus:border-primary transition-colors" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs uppercase tracking-widest text-neutral-500 font-label">Description du projet</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 text-on-surface focus:ring-0 focus:border-primary transition-colors resize-none" rows="4"></textarea>
+</div>
+<div class="pt-8 flex justify-center">
+<button class="px-20 py-4 border border-primary text-primary hover:bg-primary hover:text-on-primary transition-all duration-500 font-bold uppercase tracking-[0.2em] text-sm" type="submit">
+                            Postuler
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-yellow-900/30 bg-neutral-950 dark:bg-black">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-full">
+<div class="col-span-1">
+<span class="text-xl font-bold text-yellow-500 font-headline mb-4 block">First of All®</span>
+<p class="text-neutral-500 text-xs leading-relaxed uppercase tracking-tighter">Marque Mondialement Protégée<br/>Sovereign Ledger Technologies.</p>
+</div>
+<div>
+<h4 class="text-primary text-xs font-bold uppercase tracking-widest mb-6">Jurisdictions</h4>
+<div class="flex flex-col gap-2">
+<span class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-[0.1rem]">EUIPO 🇪🇺</span>
+<span class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-[0.1rem]">USPTO 🇺🇸</span>
+<span class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-[0.1rem]">OAPI 🌍</span>
+</div>
+</div>
+<div>
+<h4 class="text-primary text-xs font-bold uppercase tracking-widest mb-6">Légal</h4>
+<div class="flex flex-col gap-2">
+<a class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-[0.1rem]" href="#">Privacy Policy</a>
+<a class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-[0.1rem]" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="text-right">
+<p class="label-md uppercase tracking-[0.1rem] Inter Light text-neutral-500 text-xs">© First of All®. All Rights Reserved.</p>
+<div class="mt-8 flex justify-end gap-4 text-primary">
+<span class="material-symbols-outlined cursor-pointer">diamond</span>
+<span class="material-symbols-outlined cursor-pointer">verified</span>
+</div>
+</div>
+</div>
+<div class="h-1 bg-gradient-to-r from-transparent via-yellow-600 to-transparent opacity-30"></div>
+</footer>
+</body></html>

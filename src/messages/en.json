@@ -1,0 +1,401 @@
+{
+  "nav": {
+    "collection": "First of All",
+    "univers": "The First of All Universe",
+    "services": "Services & Warranty",
+    "boutique": "Boutique",
+    "dealers": "Find an Official Distributor",
+    "club": "First of All Club",
+    "siliconValley": "Silicon Valley Program",
+    "actualites": "News",
+    "close": "Close",
+    "menu": "Menu",
+    "subVersions": {
+      "essential": "Essential",
+      "business": "Business",
+      "executive": "Executive",
+      "exclusive": "Exclusive"
+    },
+    "subUnivers": {
+      "histoire": "Our Story",
+      "engagements": "Scientific Commitments",
+      "dealers": "Find a Distributor",
+      "club": "First of All Club"
+    }
+  },
+  "home": {
+    "hero": {
+      "headline": "First of All.",
+      "headlineSub": "The Infalsifiable Excellence.",
+      "subtext": "The first crypto-fiduciary technology protected in five global jurisdictions.",
+      "cta": "Discover the Collection",
+      "ctaSecondary": "Our Story",
+      "scroll": "SCROLL"
+    },
+    "collection": {
+      "label": "THE COLLECTION",
+      "title": "The Collection",
+      "tagline": "Four versions. One single brand protected in five jurisdictions.",
+      "explore": "EXPLORE ⟶",
+      "versions": {
+        "essential": {
+          "name": "Essential Version",
+          "desc": "The quintessence of First of All authenticity."
+        },
+        "business": {
+          "name": "Business Version",
+          "desc": "Enhanced security for institutional exchanges."
+        },
+        "executive": {
+          "name": "Executive Version",
+          "desc": "Prestige combined with multi-level protection."
+        },
+        "exclusive": {
+          "name": "Exclusive Version",
+          "desc": "The technological apex limited to the global elite."
+        }
+      }
+    },
+    "technology": {
+      "label": "PATENTED TECHNOLOGY",
+      "title": "Nine levels of protection. Zero compromise.",
+      "text": "Every First of All® seal is a feat of crypto-fiduciary engineering. By combining nanostructured inks and a sovereign ledger architecture, we create a physically anchored digital asset, impossible to duplicate.",
+      "cta": "Discover the Technology"
+    },
+    "protection": {
+      "title": "Protected across five continents"
+    },
+    "siliconValley": {
+      "label": "EXCLUSIVE PROGRAM",
+      "title": "Luxury that changes the world",
+      "text": "5% of every purchase funds a scientific trip to Silicon Valley. Luxury that changes the world.",
+      "cta": "Discover the Program"
+    },
+    "metrics": {
+      "levels": "Protection Levels",
+      "jurisdictions": "Jurisdictions",
+      "seals": "Seals / Year",
+      "media": "Global Media"
+    },
+    "club": {
+      "title": "First of All® Club",
+      "text": "Access to the sovereign ecosystem is exclusively by invitation or sponsorship.",
+      "cta": "Submit a membership request"
+    }
+  },
+  "collection": {
+    "title": "The First of All Collection",
+    "intro": "Four versions. One single requirement: the infalsifiable. Brand protected EUIPO • OAPI • USPTO • Canada • UK.",
+    "badge": "® Globally Protected Brand",
+    "reserve": "Reserve",
+    "discover": "Discover",
+    "limited": "Limited Series",
+    "versions": {
+      "essential": {
+        "name": "Essential Version",
+        "intro": "Fundamental protection. Five layers of fiduciary security for your official documents.",
+        "limited": "5,000 units / year"
+      },
+      "business": {
+        "name": "Business Version",
+        "intro": "Enhanced security for institutional exchanges. Seven levels of protection for professionals.",
+        "limited": "2,000 units / year"
+      },
+      "executive": {
+        "name": "Executive Version",
+        "intro": "Prestige combined with multi-level protection. Eight security layers for executives.",
+        "limited": "1,000 units / year"
+      },
+      "exclusive": {
+        "name": "Exclusive Version",
+        "intro": "The ultimate in document security. The first crypto-fiduciary technology protected as a trademark and patented technology, registered worldwide.",
+        "limited": "50 units / year"
+      }
+    }
+  },
+  "univers": {
+    "title": "The First of All Universe",
+    "intro": "Discover the history, philosophy and commitments of the First of All® brand.",
+    "explore": "EXPLORE ⟶",
+    "links": {
+      "histoire": "Our Story",
+      "engagements": "Scientific Commitments",
+      "dealers": "Official Distributors",
+      "club": "First of All Club"
+    }
+  },
+  "histoire": {
+    "title": "Our Story",
+    "launch": "October 1st, 2026 marks the international commercial launch of Édouard Patrick Junior Onana's infalsifiable seal — a multilayer document security solution now distributed worldwide by the First of All brand.",
+    "intro": "We tell you its origin, its uniqueness, its philosophy, its business model and its official timeline, from creation to launch.",
+    "invention": {
+      "title": "PRESENTATION OF THE INVENTION",
+      "text": "The infalsifiable seal is a physical and digital device combining advanced cryptography, fiduciary security and digital technologies to make falsification or reproduction practically impossible. It protects the authenticity of official documents (governments, banks, universities, healthcare, commerce).",
+      "inventor": "Invented by Édouard Patrick Junior Onana, recognized in African and international press and global intellectual property organizations as a pioneer in document security."
+    },
+    "protection": {
+      "title": "TECHNICAL FEATURES",
+      "subtitle": "The 9 Levels of Protection",
+      "intro": "The strength of this technology lies in the superposition of nine independent and complementary security layers, making any reproduction impossible:",
+      "levels": [
+        {
+          "name": "Visible Fiduciary Securities",
+          "desc": "Design elements and specific inks inspired by banknotes, detectable to the naked eye."
+        },
+        {
+          "name": "Invisible Fiduciary Securities",
+          "desc": "Components inserted into the medium (paper or seal) requiring specific tools to be revealed."
+        },
+        {
+          "name": "Digital Cryptography",
+          "desc": "Integration of a unique digital key or identifier linked to each document via a secure architecture (blockchain type)."
+        },
+        {
+          "name": "Specific Calibration",
+          "desc": "Security elements are precisely calibrated for a given document type."
+        },
+        {
+          "name": "Temporal Authentication",
+          "desc": "The seal can be configured to be valid only during a defined period."
+        },
+        {
+          "name": "Indestructible Document Link",
+          "desc": "If the seal is affixed to a document for which it was not intended, the invisible security instantly proves fraud."
+        },
+        {
+          "name": "Total Traceability",
+          "desc": "Each imprint or seal is traceable to its origin and its legitimate holder."
+        },
+        {
+          "name": "Anti-Usurpation",
+          "desc": "In the event of theft of the physical seal, it becomes unusable as the fraudster does not possess the context information necessary for its validity."
+        },
+        {
+          "name": "Instant Verification",
+          "desc": "A validation system allows any inspector (via smartphone or reader) to confirm the integrity of the 8 previous levels simultaneously."
+        }
+      ]
+    },
+    "legalTitle": "PROTECTION AND LEGAL RECOGNITION",
+    "legal": [
+      {
+        "name": "OAPI",
+        "desc": "Strategic protection for the 17 member states in Africa."
+      },
+      { "name": "EUIPO", "desc": "Protection on the European market." },
+      {
+        "name": "WIPO",
+        "desc": "International registration guaranteeing the global exclusivity of the technology."
+      },
+      {
+        "name": "Globally registered trademark",
+        "desc": "The term 'FIRST OF ALL' is protected as a trademark to identify this unique security solution."
+      }
+    ],
+    "philosophyTitle": "PHILOSOPHY AND VALUES",
+    "philosophy": "Integrity, authenticity, responsibility. The project aims not only to counter fraud but also to restore trust in documentary exchanges. The limited annual production reflects a desire for ethical exclusivity: quality, strict partner control and compliance with international standards.",
+    "commerceTitle": "COMMERCIALIZATION CRITERIA",
+    "commerce": [
+      "Partner selection: public and private institutions respecting integrity standards.",
+      "Annual limited series: 5,000 Essential; 2,000 Business; 1,000 Executive; 50 Exclusive; 10 Exclusive+ (controlled global distribution)."
+    ],
+    "structureTitle": "COMMERCIALIZATION STRUCTURE AND BRAND",
+    "structure": "First of All — positioned as the premium reference in document security. Commercial implantation: commercial entities established in the United States, United Kingdom and Canada; selective distribution network and institutional partnerships for integration into administrative and financial processes.",
+    "visionTitle": "VISION",
+    "vision": "To become the global reference for decision-makers' seal authenticity, combining technological innovation and ethics. Objective: significantly reduce documentary fraud and establish international standards of trust.",
+    "timelineTitle": "TIMELINE",
+    "timeline": [
+      {
+        "date": "January 1, 2024",
+        "event": "Creation of the seal; protection by © copyright."
+      },
+      {
+        "date": "June 2024",
+        "event": "Global media campaign (relayed by 125+ media outlets)."
+      },
+      {
+        "date": "August 2024",
+        "event": "Creation of the First of All brand; EUIPO and OAPI filings."
+      },
+      { "date": "December 2024", "event": "Official publication with OAPI." },
+      { "date": "August 2025", "event": "International publication via WIPO." },
+      {
+        "date": "October 2025",
+        "event": "Creation of commercial structures in USA, UK, Canada."
+      },
+      {
+        "date": "November 2025",
+        "event": "Extension of protections with USPTO, GovUK, GovCanada."
+      },
+      {
+        "date": "October 1, 2026",
+        "event": "International commercial launch."
+      },
+      {
+        "date": "November 1, 2026",
+        "event": "Launch of the Silicon Valley Program."
+      }
+    ]
+  },
+  "engagements": {
+    "title": "Scientific Commitments",
+    "intro": "First of All® is committed to funding research and scientific innovation around the world.",
+    "items": [
+      {
+        "title": "Silicon Valley Program",
+        "desc": "5% of every purchase funds a scientific trip to Silicon Valley for researchers and entrepreneurs."
+      },
+      {
+        "title": "Intellectual Property",
+        "desc": "Protection and valorization of technological innovations on a global scale via OAPI, EUIPO, WIPO."
+      },
+      {
+        "title": "International Standards",
+        "desc": "Contribution to the establishment of global standards of documentary trust."
+      }
+    ]
+  },
+  "services": {
+    "title": "Services & Warranty",
+    "intro": "First of All® offers a comprehensive range of services to guarantee the authenticity and longevity of your investment.",
+    "items": [
+      {
+        "title": "Authenticity Certification",
+        "desc": "Each seal comes with its digital and physical authenticity certificate, traceable via our instant verification system."
+      },
+      {
+        "title": "Lifetime Warranty",
+        "desc": "Your investment is protected by a lifetime warranty covering any manufacturing or security defect."
+      },
+      {
+        "title": "Verification Service",
+        "desc": "24/7 access to our authenticity verification platform via smartphone or dedicated reader."
+      },
+      {
+        "title": "Institutional Support",
+        "desc": "Personalized support for government, banking and academic institutions."
+      }
+    ]
+  },
+  "dealers": {
+    "title": "Find an Official Distributor",
+    "intro": "First of All® relies on a global network of distributors selected according to strict integrity criteria.",
+    "formTitle": "Become an Official Distributor",
+    "formIntro": "Join the exclusive network of First of All® distributors and participate in the document security revolution.",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone",
+      "country": "Country",
+      "organisation": "Organisation / Company",
+      "message": "Your request",
+      "submit": "Submit my application",
+      "success": "Your application has been sent. We will contact you as soon as possible.",
+      "error": "An error occurred. Please try again."
+    }
+  },
+  "club": {
+    "title": "First of All® Club",
+    "intro": "Access to the sovereign ecosystem is exclusively by invitation or sponsorship.",
+    "text": "The First of All® Club brings together decision-makers, executives and institutions that place authenticity at the heart of their values. Join an elite community committed to fighting documentary fraud.",
+    "waitlistTitle": "Waiting List",
+    "waitlistText": "Submit your application. Our team will contact you to evaluate your profile.",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "submit": "Join the waiting list",
+      "success": "Your application has been registered. We will contact you soon.",
+      "error": "An error occurred. Please try again."
+    }
+  },
+  "actualites": {
+    "title": "News",
+    "intro": "Follow First of All® news and the latest from the world of document security.",
+    "comingSoon": "News will be available soon.",
+    "readMore": "Read more"
+  },
+  "siliconValley": {
+    "label": "EXCLUSIVE PROGRAM",
+    "title": "First of All funds scientific tourism",
+    "intro": "Each seal purchased allows a researcher or entrepreneur to experience an exclusive immersion in Silicon Valley. Apply today.",
+    "text": "5% of every purchase funds a scientific trip to Silicon Valley. Luxury that changes the world.",
+    "howTitle": "How it works",
+    "how": [
+      {
+        "step": "01",
+        "title": "Reserve your seal",
+        "desc": "Choose the First of All version that suits your needs."
+      },
+      {
+        "step": "02",
+        "title": "5% allocated to the program",
+        "desc": "A percentage of your purchase is automatically allocated to the Silicon Valley fund."
+      },
+      {
+        "step": "03",
+        "title": "Apply to the program",
+        "desc": "Researchers and entrepreneurs can apply for an immersion in Silicon Valley."
+      }
+    ],
+    "applyTitle": "Apply to the Program",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone",
+      "country": "Country",
+      "organisation": "Organisation / University",
+      "project": "Describe your research or innovation project",
+      "submit": "Submit my application",
+      "success": "Your application has been sent. We will contact you as soon as possible.",
+      "error": "An error occurred. Please try again."
+    }
+  },
+  "reservation": {
+    "title": "Reserve",
+    "intro": "Reserve your First of All® seal. Our team will contact you to finalize your order.",
+    "fields": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone",
+      "country": "Country",
+      "organisation": "Organisation (optional)",
+      "version": "Desired version",
+      "message": "Message (optional)",
+      "gdpr": "I agree that my data will be used to process my reservation in accordance with the privacy policy."
+    },
+    "versions": {
+      "essential": "Essential Version",
+      "business": "Business Version",
+      "executive": "Executive Version",
+      "exclusive": "Exclusive Version"
+    },
+    "submit": "Confirm my Reservation",
+    "success": "Your reservation has been registered. Our team will contact you within 48h.",
+    "error": "An error occurred. Please try again.",
+    "close": "Close"
+  },
+  "footer": {
+    "tagline": "The global reference in protected crypto-fiduciary technology.",
+    "legal": "First of All® – Internationally protected trademark: Europe (EUIPO), Africa (OAPI), United States (USPTO), Canada, United Kingdom. Company registered in the United States, United Kingdom and Canada.",
+    "sections": {
+      "gouvernance": "GOVERNANCE",
+      "regions": "REGIONS",
+      "legal": "LEGAL",
+      "links": "QUICK LINKS"
+    },
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "collection": "The Collection",
+      "histoire": "Our Story",
+      "services": "Services & Warranty",
+      "contact": "Contact"
+    },
+    "regions": {
+      "canada": "Canada",
+      "uk": "United Kingdom",
+      "silicon": "Silicon Valley Office"
+    },
+    "copyright": "© 2026 First of All®. All Rights Reserved."
+  }
+}

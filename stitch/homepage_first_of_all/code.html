@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>First of All® | L'Excellence Infalsifiable</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=Inter:ital,wght@0,300;0,400;0,700;1,300&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-variant": "#353535",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-fixed": "#ffdea7",
+                        "primary-container": "#d4af37",
+                        "on-primary-fixed-variant": "#574500",
+                        "inverse-primary": "#735c00",
+                        "secondary-container": "#765300",
+                        "on-primary": "#3c2f00",
+                        "on-tertiary-container": "#00502e",
+                        "secondary": "#efbf68",
+                        "surface-tint": "#e9c349",
+                        "tertiary-fixed": "#9af6bc",
+                        "surface-container-low": "#1b1b1b",
+                        "primary": "#f2ca50",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#7fd9a2",
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#20201f",
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "outline": "#99907c",
+                        "on-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-tertiary": "#00391f",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#00522f",
+                        "on-background": "#e5e2e1",
+                        "tertiary": "#87e1aa",
+                        "surface-container-highest": "#353535",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#241a00",
+                        "error-container": "#93000a",
+                        "outline-variant": "#4d4635",
+                        "primary-fixed-dim": "#e9c349",
+                        "primary-fixed": "#ffe088",
+                        "background": "#131313",
+                        "on-secondary": "#412d00",
+                        "tertiary-container": "#6bc590",
+                        "surface-dim": "#131313",
+                        "on-surface-variant": "#d0c5af",
+                        "secondary-fixed-dim": "#efbf68",
+                        "on-secondary-fixed": "#271900",
+                        "on-tertiary-fixed": "#002110",
+                        "on-secondary-container": "#faca71"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Cinzel", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Cinzel', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .hero-gradient { background: linear-gradient(to bottom, rgba(19,19,19,0.4) 0%, rgba(19,19,19,1) 100%); }
+        .primary-cta-gradient { background: linear-gradient(45deg, #f2ca50 0%, #d4af37 100%); }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent dark:bg-black/90 border-b border-yellow-600/20 glass-nav">
+<div class="flex justify-between items-center px-8 py-6 w-full">
+<div class="flex items-center gap-8">
+<span class="font-serif tracking-widest uppercase text-sm text-neutral-400 hover:text-yellow-500 transition-colors duration-500 cursor-pointer">MENU ☰</span>
+</div>
+<div class="text-2xl font-bold text-yellow-600 dark:text-yellow-500 tracking-tighter font-serif">
+                First of All®
+            </div>
+<div class="flex items-center gap-6">
+<span class="font-serif tracking-widest uppercase text-xs text-yellow-600 dark:text-yellow-500 cursor-pointer">FR|EN</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-yellow-600 hover:text-yellow-500 cursor-pointer" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined text-yellow-600 hover:text-yellow-500 cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Hidden by default, triggered by MENU) -->
+<div class="hidden fixed inset-0 z-[60] w-full h-full bg-neutral-950 flex flex-col md:flex-row items-center justify-between px-20" id="side-nav">
+<div class="absolute top-10 right-10 text-yellow-500 cursor-pointer text-2xl font-serif">CLOSE ✕</div>
+<div class="flex flex-col gap-8">
+<span class="text-neutral-700 text-6xl lg:text-8xl font-serif hover:text-yellow-500 hover:translate-x-4 duration-700 cursor-pointer italic transition-all">Collections</span>
+<span class="text-neutral-700 text-6xl lg:text-8xl font-serif hover:text-yellow-500 hover:translate-x-4 duration-700 cursor-pointer transition-all">Heritage</span>
+<span class="text-neutral-700 text-6xl lg:text-8xl font-serif hover:text-yellow-500 hover:translate-x-4 duration-700 cursor-pointer transition-all">Authenticity</span>
+<span class="text-neutral-700 text-6xl lg:text-8xl font-serif hover:text-yellow-500 hover:translate-x-4 duration-700 cursor-pointer transition-all">The Vault</span>
+<span class="text-neutral-700 text-6xl lg:text-8xl font-serif hover:text-yellow-500 hover:translate-x-4 duration-700 cursor-pointer transition-all">Contact</span>
+</div>
+<div class="text-right flex flex-col items-end">
+<div class="text-4xl font-bold text-yellow-500 mb-8 font-serif">The Sovereign Ledger</div>
+<p class="font-body italic text-neutral-400 mb-12">Marque Mondialement Protégée</p>
+<button class="border border-primary px-12 py-4 text-primary font-serif tracking-widest uppercase hover:bg-primary/10 transition-all">Secure Your Asset</button>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="cinematic close-up of a complex gold embossed document seal on a deep black textured paper background with dramatic chiaroscuro lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUMoxBXtH5cGWXegKykP96WBkB76lAvUAGcDntCAqgie1KKVd2phhOip8q4H6Nioqn8iNajQ2q8oq0hbT9MsnYKNsx5OtDyHpl2LjgOYM9KysYQz9x3gvm7qrNZUro_4tnt7bECYK9-HFTgVLiACn1kF3dSr78w8lEfdnPOzYhahYzCxkbBpJsOP78F4hXsQFyDlh_SSAtyzIyu_sHFJ61_GNere26PMX9-s4B8GcCey1Kd_cLTFk_GuUsCFeqKq4vCEeIJv40XK0e"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center max-w-5xl px-6">
+<h1 class="text-5xl md:text-8xl font-serif font-black tracking-tighter text-on-surface mb-6 leading-none">
+                First of All.<br/>
+<span class="text-primary">L'Excellence Infalsifiable.</span>
+</h1>
+<p class="text-xl md:text-2xl font-body font-light italic text-neutral-400 mb-12 max-w-2xl mx-auto">
+                La première technologie cryptofiduciaire protégée dans cinq juridictions mondiales.
+            </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="primary-cta-gradient text-on-primary px-10 py-5 font-serif font-bold tracking-widest uppercase shadow-[0_0_40px_rgba(242,202,80,0.2)] hover:scale-105 transition-transform">
+                    Découvrir la Collection
+                </button>
+<button class="border border-primary/60 text-primary px-10 py-5 font-serif font-bold tracking-widest uppercase hover:border-primary transition-all">
+                    Notre Histoire
+                </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-40">
+<span class="label-md uppercase tracking-[0.2rem] text-[10px]">SCROLL</span>
+<div class="w-[1px] h-12 bg-primary-container"></div>
+</div>
+</section>
+<!-- Section 2: La Collection -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 text-center">
+<h2 class="text-4xl md:text-6xl font-serif font-bold text-on-surface mb-4">La Collection</h2>
+<p class="text-primary font-body tracking-[0.3rem] uppercase text-sm">Quatre versions. Une seule marque protégée.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-low p-1 border border-transparent hover:border-primary-container/40 transition-all duration-700 h-[500px]">
+<div class="h-full w-full relative overflow-hidden bg-surface-container-lowest flex flex-col p-8">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity" data-alt="luxury certificate with gold embossing on charcoal black premium cardstock under a focused studio spotlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC11ICCMXj0KBxUSIBPwlZQbxnfuKyDwB2OReZj_CvTxYb_ftziRuz1CxuFx6J_FySNACii_MK7OtCY1vsRAiiwcZqE-sc6HXavlQ2GymZBRvmNlyFAxux5hiVuLVYLFJYSE-9gsEhHFSi9W6SsvJxHqSbftXx5pVOTXhg5eRsIx4-DjMaFUuXwTmjkD_H4Lxqg1d06r9HCvnB1zarkrQBLbZx-ayt4A6q_XekUsVHl4DVt2fFj4xCBTHPWhv-AIPbrQ98xxbk3QcpX"/>
+<div class="mt-auto relative z-10">
+<h3 class="text-2xl font-serif text-on-surface mb-2">Version Essentiel</h3>
+<p class="text-neutral-500 font-body text-sm mb-6">La quintessence de l'authenticité First of All.</p>
+<span class="text-xs font-serif tracking-widest text-primary group-hover:translate-x-2 inline-block transition-transform">EXPLORE ⟶</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-container-low p-1 border border-transparent hover:border-primary-container/40 transition-all duration-700 h-[500px]">
+<div class="h-full w-full relative overflow-hidden bg-surface-container-lowest flex flex-col p-8">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity" data-alt="macro shot of cryptographic patterns engraved on a metallic gold surface with high contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJg2ZIlVXuP2G59QAzU3dX7jlavXv1oPGBbzmNKG7t7gKt-hCe11HFej10GkmGw7zQwqNhwsLdaMTO-2MtsPp2EzG28wqToBXD7JCoOezDnB8gwwpdda7qGbRIXz-aqbhWDXmxQ8p1knTjrYfbgRoQFjWWs9891M0UCREIPiOS6LEjGHY6i2C3GpuVwL9zT9xb4QXwwTKZIbA0h4Qzd-COyDjcp6z0JTXPG9DLc19pqDJnKIRpzGJZ_25FtYIdzRQscDm-v6hhx5PD"/>
+<div class="mt-auto relative z-10">
+<h3 class="text-2xl font-serif text-on-surface mb-2">Version Business</h3>
+<p class="text-neutral-500 font-body text-sm mb-6">Sécurité accrue pour les échanges institutionnels.</p>
+<span class="text-xs font-serif tracking-widest text-primary group-hover:translate-x-2 inline-block transition-transform">EXPLORE ⟶</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-low p-1 border border-transparent hover:border-primary-container/40 transition-all duration-700 h-[500px]">
+<div class="h-full w-full relative overflow-hidden bg-surface-container-lowest flex flex-col p-8">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity" data-alt="elegant dark executive office setting with a single gold seal placed on a desk reflecting soft ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChd1a_qUopljZH7asykyQ__885qHD5fkup6fZyro34YvoAr5e7oVydAhzPHsxAu2TUg5pdvhUAls00QsnaVpjdWnon9fM2k7kcArsIWVZJ-DqjH6U0gDhvW6ugb5A2z5HtSbJwXvwdV5PB-DT0oQuDO119flK_6JOQ5YCS1b-7cRA1sRVR4b_a3usXZw3sVLplzjMxv6cpLgq-4m0sZ2_vVzSMQPd5Q8zRijVK2u293GOZdKtA-NPtsmZVVMe7i0H-14N5ecInEBuk"/>
+<div class="mt-auto relative z-10">
+<h3 class="text-2xl font-serif text-on-surface mb-2">Version Exécutive</h3>
+<p class="text-neutral-500 font-body text-sm mb-6">Le prestige allié à une protection multi-niveaux.</p>
+<span class="text-xs font-serif tracking-widest text-primary group-hover:translate-x-2 inline-block transition-transform">EXPLORE ⟶</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative bg-surface-container-low p-1 border border-transparent hover:border-primary-container/40 transition-all duration-700 h-[500px]">
+<div class="h-full w-full relative overflow-hidden bg-surface-container-lowest flex flex-col p-8">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity" data-alt="abstract luxury texture of black silk and flowing gold liquid gold particles shimmering in the dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfXLUY40mDVLrr06-NSYyB2PwGaL1FAUnUnitTpeMt6w1bFdh1ktUHRjfKPx9g7YMEXWQl7GjJFbosP9IeXfAFnOCgPxkcNJsWZGZZNNy4u3MuPh7axmY3sJ4pgo4q35Lw012q0WrMoDDB822jkSVRnCf5TcReMyFZkkwlOBHn-h7pxCr9L5ruKeykOPHmSVayR_Wx9HuI94SDNKC8fA8S51xk4bfCWugmdpjb4IvFNFqUY6jz-MWBSwfAZsSVHmyeDnLwCejv_tmu"/>
+<div class="mt-auto relative z-10">
+<h3 class="text-2xl font-serif text-on-surface mb-2">Version Exclusive</h3>
+<p class="text-neutral-500 font-body text-sm mb-6">L'apogée technologique limitée à l'élite mondiale.</p>
+<span class="text-xs font-serif tracking-widest text-primary group-hover:translate-x-2 inline-block transition-transform">EXPLORE ⟶</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: La Technologie -->
+<section class="bg-surface-container-low py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20 px-12">
+<div class="lg:w-1/2 relative">
+<div class="absolute -inset-4 border border-primary/20 scale-105"></div>
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-1000" data-alt="extreme macro photograph showing the microscopic details of a security hologram with vibrant rainbow diffraction" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo0JADSbDb1etizVxCW6wOQhkv1wo_zA8imHbumVvJcjLgNoZ9xN459hFbldeh3zlxDxU2eJn9P4JQFCZ2fU8XJPQQwcPjMDi6cfuiHGek03bBo7Rzeat4exCzmNGNFFW2mtvw7wpctHMY-FzvkqTTdASfPX0OcNry3G7XHtewXFGCnwBWwBRfsCogmTWCl748DT0HdAWuoeqQx41eO4yr4YRnIx3NFx7HBhIz9HFWmW6EPETqL9OP72cGxgxWuDDs6tMlf2mZntWB"/>
+</div>
+<div class="lg:w-1/2">
+<span class="label-md uppercase tracking-[0.2rem] text-primary font-bold block mb-4">TECHNOLOGIE BREVETÉE</span>
+<h2 class="text-4xl md:text-6xl font-serif font-bold text-on-surface mb-8 leading-tight">Neuf niveaux de protection. Zéro compromis.</h2>
+<p class="text-neutral-400 font-body text-lg leading-relaxed mb-12 italic">
+                    Chaque sceau First of All® est une prouesse d'ingénierie cryptofiduciaire. En combinant des encres nanostructurées et une architecture de ledger souveraine, nous créons un actif numérique physiquement ancré, impossible à dupliquer.
+                </p>
+<button class="border-b border-primary text-primary pb-2 font-serif tracking-[0.15rem] uppercase hover:text-on-surface hover:border-on-surface transition-all">
+                    Découvrir la Technologie
+                </button>
+</div>
+</div>
+</section>
+<!-- Section 4: Protections mondiales -->
+<section class="py-24 bg-surface text-center px-6">
+<h2 class="text-3xl font-serif text-on-surface mb-16 uppercase tracking-widest">Protégée sur cinq continents</h2>
+<div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+<div class="px-8 py-3 border border-primary-container/30 bg-surface-container-high text-primary font-serif tracking-widest text-xs">EUIPO</div>
+<div class="px-8 py-3 border border-primary-container/30 bg-surface-container-high text-primary font-serif tracking-widest text-xs">OAPI</div>
+<div class="px-8 py-3 border border-primary-container/30 bg-surface-container-high text-primary font-serif tracking-widest text-xs">USPTO</div>
+<div class="px-8 py-3 border border-primary-container/30 bg-surface-container-high text-primary font-serif tracking-widest text-xs">CANADA</div>
+<div class="px-8 py-3 border border-primary-container/30 bg-surface-container-high text-primary font-serif tracking-widest text-xs">UK</div>
+</div>
+</section>
+<!-- Section 5: Programme Silicon Valley -->
+<section class="bg-surface relative overflow-hidden h-[600px] flex items-center">
+<div class="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+<img class="w-full h-full object-cover" data-alt="futuristic modern architectural view of Silicon Valley office building at dusk with glowing warm interior lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKJw-kxf6gD44dytTWDyKuQTXzWcXkPJEKWdnngrgUgjqmlIbCnc-yoAcw13G9MzfFQo9tFH7pwjS43l8HXr3ynG1LJ2QZXWIV6W7LNok_DEfQmeGRDj8-ZYeD3r7_YKi2iJky9d1T6PHVApMwdLi1_ybocKGVDyDpYbUKLPLnkDx0_9JdAtZgynVj4a68VZJZZXY4lZybI1xm0oI8ma5Ieq5gyDht1nYeB97bhouOV-uK-wntjzakUwfr1ctYaAnGiOX3BGxinxYK"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface to-transparent"></div>
+</div>
+<div class="max-w-7xl mx-auto w-full px-12 relative z-10">
+<div class="lg:w-1/2">
+<span class="label-md uppercase tracking-[0.2rem] text-primary font-bold block mb-4">PROGRAMME EXCLUSIF</span>
+<h2 class="text-4xl md:text-7xl font-serif font-bold text-on-surface mb-8 leading-none">Le luxe qui change le monde</h2>
+<p class="text-neutral-500 font-body text-lg mb-10 max-w-md">
+                    First of All® s'associe aux pionniers de la Silicon Valley pour redéfinir la confiance numérique à l'échelle planétaire.
+                </p>
+<button class="primary-cta-gradient text-on-primary px-10 py-5 font-serif font-bold tracking-widest uppercase hover:opacity-90 transition-all">
+                    Découvrir le Programme
+                </button>
+</div>
+</div>
+</section>
+<!-- Section 6: Chiffres clés -->
+<section class="py-32 bg-surface-container-lowest border-y border-yellow-900/10">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="text-center">
+<div class="text-5xl font-serif text-primary font-black mb-2">9</div>
+<div class="text-xs uppercase tracking-widest text-neutral-400 font-body">Protection levels</div>
+</div>
+<div class="text-center">
+<div class="text-5xl font-serif text-primary font-black mb-2">5</div>
+<div class="text-xs uppercase tracking-widest text-neutral-400 font-body">Jurisdictions</div>
+</div>
+<div class="text-center">
+<div class="text-5xl font-serif text-primary font-black mb-2">8,050</div>
+<div class="text-xs uppercase tracking-widest text-neutral-400 font-body">Seals / Year</div>
+</div>
+<div class="text-center">
+<div class="text-5xl font-serif text-primary font-black mb-2">125+</div>
+<div class="text-xs uppercase tracking-widest text-neutral-400 font-body">Global Media</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Club First of All -->
+<section class="py-48 bg-surface text-center">
+<div class="max-w-3xl mx-auto px-6">
+<h2 class="text-4xl md:text-6xl font-serif font-bold text-on-surface mb-8">Club First of All®</h2>
+<div class="w-16 h-1 bg-primary mx-auto mb-12"></div>
+<p class="text-neutral-400 font-body text-xl italic mb-16">
+                L'accès à l'écosystème souverain se fait exclusivement sur invitation ou parrainage.
+            </p>
+<button class="border border-primary text-primary px-16 py-6 font-serif font-bold tracking-[0.2rem] uppercase hover:bg-primary/5 transition-all">
+                Faire une demande d'adhésion
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-neutral-950 border-t border-yellow-900/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-full">
+<div class="flex flex-col gap-6">
+<div class="text-xl font-bold text-yellow-500 font-serif">First of All®</div>
+<p class="text-neutral-500 text-xs tracking-wider leading-relaxed font-body uppercase">
+                    La référence mondiale en technologie cryptofiduciaire protégée.
+                </p>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="text-[10px] text-yellow-600 border border-yellow-600/30 px-2 py-1">EUIPO 🇪🇺</span>
+<span class="text-[10px] text-yellow-600 border border-yellow-600/30 px-2 py-1">USPTO 🇺🇸</span>
+<span class="text-[10px] text-yellow-600 border border-yellow-600/30 px-2 py-1">OAPI 🌍</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<span class="label-md uppercase tracking-[0.1rem] text-on-surface font-bold mb-4">GOUVERNANCE</span>
+<a class="text-neutral-500 text-xs uppercase tracking-widest hover:text-yellow-400 transition-all" href="#">EUIPO</a>
+<a class="text-neutral-500 text-xs uppercase tracking-widest hover:text-yellow-400 transition-all" href="#">OAPI</a>
+<a class="text-neutral-500 text-xs uppercase tracking-widest hover:text-yellow-400 transition-all" href="#">USPTO</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="label-md uppercase tracking-[0.1rem] text-on-surface font-bold mb-4">RÉGIONS</span>
+<a class="text-neutral-500 text-xs uppercase tracking-widest hover:text-yellow-400 transition-all" href="#">Canada</a>
+<a class="text-neutral-500 text-xs uppercase tracking-widest hover:text-yellow-400 transition-all" href="#">United Kingdom</a>
+<a class="text-neutral-500 text-xs uppercase tracking-widest hover:text-yellow-400 transition-all" href="#">Silicon Valley Office</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="label-md uppercase tracking-[0.1rem] text-on-surface font-bold mb-4">LEGAL</span>
+<a class="text-neutral-500 text-xs uppercase tracking-widest hover:text-yellow-400 transition-all" href="#">Privacy Policy</a>
+<a class="text-neutral-500 text-xs uppercase tracking-widest hover:text-yellow-400 transition-all underline" href="#">Terms of Service</a>
+<div class="mt-8 text-neutral-600 text-[10px] tracking-widest uppercase">
+                    © First of All®. All Rights Reserved.
+                </div>
+</div>
+</div>
+<div class="h-1 w-full bg-yellow-600/20"></div>
+</footer>
+</body></html>

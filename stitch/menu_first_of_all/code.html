@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>First of All® | The Sovereign Ledger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=Inter:ital,wght@0,100..900;1,100..900&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .cinzel { font-family: 'Cinzel', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-overlay {
+            backdrop-filter: blur(20px);
+            background: rgba(19, 19, 19, 0.8);
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-variant": "#353535",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-fixed": "#ffdea7",
+                        "primary-container": "#d4af37",
+                        "on-primary-fixed-variant": "#574500",
+                        "inverse-primary": "#735c00",
+                        "secondary-container": "#765300",
+                        "on-primary": "#3c2f00",
+                        "on-tertiary-container": "#00502e",
+                        "secondary": "#efbf68",
+                        "surface-tint": "#e9c349",
+                        "tertiary-fixed": "#9af6bc",
+                        "surface-container-low": "#1b1b1b",
+                        "primary": "#f2ca50",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#7fd9a2",
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#20201f",
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "outline": "#99907c",
+                        "on-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-tertiary": "#00391f",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#00522f",
+                        "on-background": "#e5e2e1",
+                        "tertiary": "#87e1aa",
+                        "surface-container-highest": "#353535",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#241a00",
+                        "error-container": "#93000a",
+                        "outline-variant": "#4d4635",
+                        "primary-fixed-dim": "#e9c349",
+                        "primary-fixed": "#ffe088",
+                        "background": "#131313",
+                        "on-secondary": "#412d00",
+                        "tertiary-container": "#6bc590",
+                        "surface-dim": "#131313",
+                        "on-surface-variant": "#d0c5af",
+                        "secondary-fixed-dim": "#efbf68",
+                        "on-secondary-fixed": "#271900",
+                        "on-tertiary-fixed": "#002110",
+                        "on-secondary-container": "#faca71"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    fontFamily: {
+                        "headline": ["Cinzel"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container overflow-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-yellow-600/20 bg-transparent dark:bg-black/90 flex justify-between items-center px-8 py-6 w-full backdrop-blur-md">
+<div class="text-2xl font-bold text-yellow-600 dark:text-yellow-500 tracking-tighter cinzel">First of All®</div>
+<div class="flex items-center gap-12">
+<div class="hidden md:flex gap-8 font-serif tracking-widest uppercase text-sm cinzel text-neutral-400">
+<a class="hover:text-yellow-500 transition-colors duration-500" href="#">COLLECTIONS</a>
+<a class="hover:text-yellow-500 transition-colors duration-500" href="#">HERITAGE</a>
+<a class="text-yellow-500 font-bold" href="#">MENU ☰</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="text-yellow-600 dark:text-yellow-500 font-serif tracking-widest uppercase text-xs cinzel">FR|EN</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-yellow-600 cursor-pointer hover:text-yellow-500 transition-all">shopping_cart</span>
+<span class="material-symbols-outlined text-yellow-600 cursor-pointer hover:text-yellow-500 transition-all">account_circle</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- Full-screen SideNavBar / Hamburger Overlay -->
+<div class="fixed inset-0 z-[60] w-full h-full bg-neutral-950 flex flex-col md:flex-row items-center justify-between px-10 md:px-20 h-full">
+<!-- Close Button (Top Right) -->
+<button class="absolute top-8 right-12 z-[70] group">
+<span class="material-symbols-outlined text-primary text-5xl transition-transform duration-500 group-hover:rotate-90">close</span>
+</button>
+<!-- Left Half: Navigation Links -->
+<div class="w-full md:w-1/2 h-full flex flex-col justify-center pt-24 md:pt-0">
+<ul class="space-y-6 md:space-y-4">
+<li class="group cursor-pointer">
+<div class="flex items-center gap-4 transition-all duration-700 text-neutral-700 hover:text-yellow-500 hover:translate-x-4">
+<span class="text-4xl md:text-6xl lg:text-7xl cinzel font-bold uppercase leading-none">Collection First of All</span>
+<span class="material-symbols-outlined text-4xl opacity-0 group-hover:opacity-100 transition-all duration-500">trending_flat</span>
+</div>
+<!-- Sub-items (expanded state visual) -->
+<div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 pl-2">
+<span class="text-primary-container italic text-sm md:text-lg opacity-80 hover:opacity-100 transition-opacity">Essentiel</span>
+<span class="text-primary-container italic text-sm md:text-lg opacity-80 hover:opacity-100 transition-opacity">Business</span>
+<span class="text-primary-container italic text-sm md:text-lg opacity-80 hover:opacity-100 transition-opacity">Exécutive</span>
+<span class="text-primary-container italic text-sm md:text-lg opacity-80 hover:opacity-100 transition-opacity">Exclusive</span>
+</div>
+</li>
+<li class="group cursor-pointer">
+<div class="flex items-center gap-4 transition-all duration-700 text-neutral-700 hover:text-yellow-500 hover:translate-x-4">
+<span class="text-4xl md:text-6xl lg:text-7xl cinzel font-bold uppercase leading-none">L'Univers First of All</span>
+<span class="material-symbols-outlined text-4xl opacity-0 group-hover:opacity-100 transition-all duration-500">trending_flat</span>
+</div>
+</li>
+<li class="group cursor-pointer">
+<div class="flex items-center gap-4 transition-all duration-700 text-neutral-700 hover:text-yellow-500 hover:translate-x-4">
+<span class="text-4xl md:text-6xl lg:text-7xl cinzel font-bold uppercase leading-none">Services &amp; Garantie</span>
+<span class="material-symbols-outlined text-4xl opacity-0 group-hover:opacity-100 transition-all duration-500">trending_flat</span>
+</div>
+</li>
+<li class="group cursor-pointer">
+<div class="flex items-center gap-4 transition-all duration-700 text-neutral-700 hover:text-yellow-500 hover:translate-x-4">
+<span class="text-4xl md:text-6xl lg:text-7xl cinzel font-bold uppercase leading-none">Boutique</span>
+<span class="material-symbols-outlined text-4xl opacity-0 group-hover:opacity-100 transition-all duration-500">trending_flat</span>
+</div>
+</li>
+<li class="group cursor-pointer">
+<div class="flex items-center gap-4 transition-all duration-700 text-neutral-700 hover:text-yellow-500 hover:translate-x-4">
+<span class="text-4xl md:text-6xl lg:text-7xl cinzel font-bold uppercase leading-none">Programme Silicon Valley</span>
+<span class="material-symbols-outlined text-4xl opacity-0 group-hover:opacity-100 transition-all duration-500">trending_flat</span>
+</div>
+</li>
+<li class="group cursor-pointer">
+<div class="flex items-center gap-4 transition-all duration-700 text-neutral-700 hover:text-yellow-500 hover:translate-x-4">
+<span class="text-4xl md:text-6xl lg:text-7xl cinzel font-bold uppercase leading-none">Actualités</span>
+<span class="material-symbols-outlined text-4xl opacity-0 group-hover:opacity-100 transition-all duration-500">trending_flat</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Right Half: Divider and Dynamic Image/Tagline -->
+<div class="hidden md:flex w-1/2 h-full relative items-center justify-center border-l border-yellow-600/20">
+<!-- Background Image Placeholder (Atmospheric Shift) -->
+<div class="absolute inset-0 z-0 opacity-20 grayscale hover:grayscale-0 transition-all duration-1000 overflow-hidden">
+<img alt="Cinematic abstract dark texture" class="w-full h-full object-cover" data-alt="macro close-up of forged carbon fiber with subtle gold leaf veins and dramatic low-key lighting cinematic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBb8874el98OzgsltV8XAcbBcJN1q5180eivM9Qr0bMLmzANu_stQBKp31FbxRyKou6XKn9bN3A2pFbaEmjIM8HkX7E3dqsIAz4FMDPa0GmR4H9lpXoSyLFl79avvdDFaLdejjCupGrHJI2iUK85oDDqJ1tefIC0AmATGcBX2XoNu59n637f3EKmbOwiYvMTeku8FLUYby4P6j_sRjewvrA2p_x81El49mOQ4OmG3M7SHOxU2ZV8c2JSOc5I5_S8piFIpdXLYJkxBP"/>
+</div>
+<!-- Central Tagline -->
+<div class="relative z-10 text-center px-12">
+<h2 class="cinzel text-5xl lg:text-7xl font-black italic text-primary drop-shadow-[0_0_30px_rgba(242,202,80,0.3)]">
+                    « L'Excellence Infalsifiable »
+                </h2>
+<p class="mt-8 text-neutral-500 uppercase tracking-[0.4rem] text-xs font-light italic">
+                    Marque Mondialement Protégée
+                </p>
+<div class="mt-12 h-20 w-[1px] bg-gradient-to-b from-primary to-transparent mx-auto"></div>
+</div>
+<!-- Bottom Branding/Switcher inside SideNav -->
+<div class="absolute bottom-12 left-12 flex flex-col gap-4">
+<div class="flex gap-4 items-center">
+<span class="text-primary text-sm font-bold cinzel cursor-pointer">FR</span>
+<div class="w-4 h-[1px] bg-neutral-800"></div>
+<span class="text-neutral-600 text-sm font-bold cinzel cursor-pointer hover:text-primary transition-colors">EN</span>
+</div>
+<div class="flex gap-6 mt-4">
+<span class="material-symbols-outlined text-neutral-600 text-xl cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-neutral-600 text-xl cursor-pointer hover:text-primary">shield</span>
+<span class="material-symbols-outlined text-neutral-600 text-xl cursor-pointer hover:text-primary">share</span>
+</div>
+</div>
+<div class="absolute bottom-12 right-12 text-right">
+<div class="cinzel text-yellow-500 font-bold text-lg mb-2">The Sovereign Ledger</div>
+<div class="text-[10px] text-neutral-600 uppercase tracking-widest leading-relaxed">
+                    EUIPO • OAPI • USPTO • UK • WIPO<br/>
+                    © First of All®. 2024
+                </div>
+</div>
+</div>
+<!-- Mobile Bottom Footer (only visible when overlay is open on small screens) -->
+<div class="md:hidden w-full pb-12 flex justify-between items-end border-t border-yellow-900/30 pt-8">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="material-symbols-outlined text-primary">public</span>
+</div>
+<div class="text-right">
+<div class="text-primary cinzel font-bold text-xs">FR | EN</div>
+<div class="text-[8px] text-neutral-500 mt-2 uppercase tracking-tighter">Propriété Intellectuelle Globale</div>
+</div>
+</div>
+</div>
+<!-- Background Content (Simulated Main Canvas) -->
+<main class="h-screen w-full flex items-center justify-center bg-surface">
+<div class="text-center opacity-20">
+<h1 class="cinzel text-9xl font-black text-on-surface">VAULT</h1>
+</div>
+</main>
+<!-- Footer (Standard Layout based on JSON) -->
+<footer class="w-full border-t border-yellow-900/30 bg-neutral-950 dark:bg-black grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-full relative z-40">
+<div>
+<div class="text-xl font-bold text-yellow-500 cinzel mb-6">First of All®</div>
+<p class="text-neutral-500 text-sm italic leading-relaxed">
+                The world's first sovereign anti-counterfeit ecosystem. Authenticity is not an option; it is an inheritance.
+            </p>
+</div>
+<div>
+<h4 class="text-yellow-600 label-md uppercase tracking-[0.1rem] mb-6 font-bold">JURISDICTIONS</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-container border border-outline-variant/20 text-[10px] text-neutral-400">EUIPO</span>
+<span class="px-2 py-1 bg-surface-container border border-outline-variant/20 text-[10px] text-neutral-400">OAPI</span>
+<span class="px-2 py-1 bg-surface-container border border-outline-variant/20 text-[10px] text-neutral-400">USPTO</span>
+<span class="px-2 py-1 bg-surface-container border border-outline-variant/20 text-[10px] text-neutral-400">CANADA</span>
+<span class="px-2 py-1 bg-surface-container border border-outline-variant/20 text-[10px] text-neutral-400">UK</span>
+</div>
+</div>
+<div>
+<h4 class="text-yellow-600 label-md uppercase tracking-[0.1rem] mb-6 font-bold">LEGAL</h4>
+<ul class="space-y-4">
+<li><a class="text-neutral-500 hover:text-yellow-400 transition-all text-sm uppercase tracking-widest" href="#">Privacy Policy</a></li>
+<li><a class="text-neutral-500 hover:text-yellow-400 transition-all text-sm uppercase tracking-widest" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="flex flex-col justify-between items-end">
+<div class="text-yellow-500 underline text-xs tracking-tighter uppercase font-bold">Secure Your Asset</div>
+<div class="text-neutral-600 text-[10px] mt-8">© First of All®. All Rights Reserved.</div>
+</div>
+<!-- 1px Gold Bottom Bar mentioned in JSON -->
+<div class="col-span-full h-[1px] bg-gradient-to-r from-transparent via-yellow-600 to-transparent opacity-30 mt-12"></div>
+</footer>
+</body></html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Inter:ital,wght@0,300;0,400;1,300&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-variant": "#353535",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-fixed": "#ffdea7",
+                        "primary-container": "#d4af37",
+                        "on-primary-fixed-variant": "#574500",
+                        "inverse-primary": "#735c00",
+                        "secondary-container": "#765300",
+                        "on-primary": "#3c2f00",
+                        "on-tertiary-container": "#00502e",
+                        "secondary": "#efbf68",
+                        "surface-tint": "#e9c349",
+                        "tertiary-fixed": "#9af6bc",
+                        "surface-container-low": "#1b1b1b",
+                        "primary": "#f2ca50",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#7fd9a2",
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#20201f",
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "outline": "#99907c",
+                        "on-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-tertiary": "#00391f",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#00522f",
+                        "on-background": "#e5e2e1",
+                        "tertiary": "#87e1aa",
+                        "surface-container-highest": "#353535",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#241a00",
+                        "error-container": "#93000a",
+                        "outline-variant": "#4d4635",
+                        "primary-fixed-dim": "#e9c349",
+                        "primary-fixed": "#ffe088",
+                        "background": "#131313",
+                        "on-secondary": "#412d00",
+                        "tertiary-container": "#6bc590",
+                        "surface-dim": "#131313",
+                        "on-surface-variant": "#d0c5af",
+                        "secondary-fixed-dim": "#efbf68",
+                        "on-secondary-fixed": "#271900",
+                        "on-tertiary-fixed": "#002110",
+                        "on-secondary-container": "#faca71"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Cinzel", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .Cinzel { font-family: 'Cinzel', serif; }
+        .Inter { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent dark:bg-black/90 border-b border-yellow-600/20 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-6 w-full">
+<div class="text-2xl font-bold text-yellow-600 dark:text-yellow-500 tracking-tighter Cinzel">First of All®</div>
+<div class="hidden md:flex gap-12 font-serif tracking-widest uppercase text-sm Cinzel">
+<a class="text-yellow-500 font-bold transition-colors duration-500" href="#">MENU ☰</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="font-serif tracking-widest uppercase text-sm Cinzel text-neutral-400">FR|EN</span>
+<span class="material-symbols-outlined text-yellow-600 dark:text-yellow-500 cursor-pointer" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined text-yellow-600 dark:text-yellow-500 cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="cinematic close-up of a high-end textured luxury paper with golden embossed seals in a dark moody environment with sharp highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiZfJA5y5hEluJQER1raBXkKRIMMEVDqCMdWphmFYvJaWH80eMP3m3JENcRlvgPkYIJ9Xzvo_tLPwqbxyCYJuA7CcRitUVDTe-G24FNKBepPaWWPNWJK3Me9R5jH_XnEr2xFH6qI7owoMca49Ws8t-E68uERjW5UuMoX1QJntP-oZ8GgJcJxU0Kl03lP3jky_iNMGUgmPgpKlimQ7HaNO0a-G0zHuWxwrNdLWDgpaZeczfHQEd5a5w_Cy6ZZBe1rvMj84XspUSMbqL"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface/60 to-surface"></div>
+</div>
+<div class="relative z-10 text-center px-4">
+<h1 class="text-5xl md:text-8xl Cinzel font-bold text-primary tracking-[0.2em] uppercase">Notre Histoire</h1>
+<div class="mt-8 w-24 h-[1px] bg-primary mx-auto"></div>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="py-32 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-start-4 md:col-span-6 text-center">
+<p class="label-md text-primary tracking-[0.3em] uppercase mb-8 font-label">L'Avènement de la Vérité</p>
+<p class="text-2xl md:text-3xl font-body italic font-light leading-relaxed text-on-surface-variant">
+                    Prévu pour Octobre 2026, le lancement de First of All® sous l'égide d'Édouard Patrick Junior Onana marque une rupture définitive dans le monde de l'authenticité documentaire. Une ère où le prestige rencontre la sécurité inviolable.
+                </p>
+</div>
+</section>
+<!-- Inventor Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="aspect-[3/4] overflow-hidden grayscale contrast-125">
+<img class="w-full h-full object-cover" data-alt="dramatic portrait of a visionary black male entrepreneur in a sharp black suit against a dark background with rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfPQdXb-4RmkzYJg0liU_UbXBn5XA2d2X3Wb6_ahJ1DIbC0SsqCiG1_apflyDk3Jph0xdQjrYiWB0bkJR6Hm8O9YKpcwvyMnFtofcACi0uDt3cqmV2Ae0ZCF0d73jIii6Ik7CYe2QyDTjGTa87F3-2XwdcctId7O2b4G4CYgkljhtGfdJAKlkONA4jYD-QGWaBIrOrPIFhQv5NW6iRsFYjMu-Vv4qR-MixpPhNhGhERHrUPO3yv_Tb54IOybW_yjaolpdjbV8wi6NU"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 border-r border-b border-primary/30"></div>
+</div>
+<div class="space-y-8">
+<h2 class="text-4xl md:text-5xl Cinzel font-bold text-on-surface tracking-tight">L'Architecte de la Confiance</h2>
+<p class="font-body italic font-light text-xl text-on-surface-variant leading-relaxed">
+                        Édouard Patrick Junior Onana n'est pas seulement un entrepreneur ; il est le pionnier d'un nouveau paradigme de sécurité documentaire. Sa vision : éradiquer le faux par la fusion de l'artisanat de luxe et de la technologie de pointe.
+                    </p>
+<div class="pt-6">
+<button class="border border-primary px-10 py-4 Cinzel text-primary tracking-widest uppercase text-xs hover:bg-primary/5 transition-all duration-500">Découvrir la Vision</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="py-32 px-8 max-w-5xl mx-auto relative">
+<h2 class="text-center Cinzel text-3xl mb-24 tracking-[0.4em] uppercase text-primary">Le Registre Souverain</h2>
+<!-- Vertical Line -->
+<div class="absolute left-1/2 transform -translate-x-1/2 top-48 bottom-32 w-[1px] bg-gradient-to-b from-transparent via-primary-container to-transparent"></div>
+<div class="space-y-24">
+<!-- Milestone 1 -->
+<div class="flex flex-col md:flex-row items-center justify-between w-full">
+<div class="md:w-[45%] text-right pr-12 hidden md:block">
+<p class="label-md text-primary/60 mb-2">Janvier 2024</p>
+<h3 class="Cinzel text-xl text-on-surface">Fondation &amp; Copyright</h3>
+</div>
+<div class="z-10 w-4 h-4 bg-primary-container rounded-full ring-8 ring-surface shadow-[0_0_20px_rgba(212,175,55,0.4)]"></div>
+<div class="md:w-[45%] md:pl-12 text-left mt-4 md:mt-0">
+<div class="md:hidden">
+<p class="label-md text-primary/60 mb-2">Janvier 2024</p>
+<h3 class="Cinzel text-xl text-on-surface">Fondation &amp; Copyright</h3>
+</div>
+<p class="font-body italic font-light text-on-surface-variant">Dépôt initial des droits intellectuels et structuration de la propriété artistique de la marque.</p>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="flex flex-col md:flex-row items-center justify-between w-full">
+<div class="md:w-[45%] text-right pr-12 order-2 md:order-1 mt-4 md:mt-0">
+<div class="md:hidden">
+<p class="label-md text-primary/60 mb-2">Mai 2024</p>
+<h3 class="Cinzel text-xl text-on-surface">Expansion Stratégique</h3>
+</div>
+<p class="font-body italic font-light text-on-surface-variant">Publication officielle aux registres OAPI et OMPI, garantissant une protection continentale et mondiale.</p>
+</div>
+<div class="z-10 w-4 h-4 bg-primary-container rounded-full ring-8 ring-surface shadow-[0_0_20px_rgba(212,175,55,0.4)] order-1"></div>
+<div class="md:w-[45%] md:pl-12 text-left hidden md:block order-3">
+<p class="label-md text-primary/60 mb-2">Mai 2024</p>
+<h3 class="Cinzel text-xl text-on-surface">Publication OAPI / OMPI</h3>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="flex flex-col md:flex-row items-center justify-between w-full">
+<div class="md:w-[45%] text-right pr-12 hidden md:block">
+<p class="label-md text-primary/60 mb-2">2025</p>
+<h3 class="Cinzel text-xl text-on-surface">Silicon Valley Program</h3>
+</div>
+<div class="z-10 w-4 h-4 bg-primary-container rounded-full ring-8 ring-surface shadow-[0_0_20px_rgba(212,175,55,0.4)]"></div>
+<div class="md:w-[45%] md:pl-12 text-left mt-4 md:mt-0">
+<div class="md:hidden">
+<p class="label-md text-primary/60 mb-2">2025</p>
+<h3 class="Cinzel text-xl text-on-surface">Silicon Valley Program</h3>
+</div>
+<p class="font-body italic font-light text-on-surface-variant">Intégration technologique avancée et déploiement des infrastructures internationales.</p>
+</div>
+</div>
+<!-- Milestone 4 -->
+<div class="flex flex-col md:flex-row items-center justify-between w-full">
+<div class="md:w-[45%] text-right pr-12 order-2 md:order-1 mt-4 md:mt-0">
+<div class="md:hidden">
+<p class="label-md text-primary/60 mb-2">Octobre 2026</p>
+<h3 class="Cinzel text-xl text-on-surface">Lancement Commercial</h3>
+</div>
+<p class="font-body italic font-light text-on-surface-variant">Inauguration mondiale et mise en service du registre pour les partenaires certifiés.</p>
+</div>
+<div class="z-10 w-4 h-4 bg-primary rounded-full ring-[12px] ring-primary/20 shadow-[0_0_40px_rgba(242,202,80,0.6)] order-1"></div>
+<div class="md:w-[45%] md:pl-12 text-left hidden md:block order-3">
+<p class="label-md text-primary mb-2">Novembre 2026</p>
+<h3 class="Cinzel text-xl text-on-surface">Consécration Mondiale</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Protection Légale (Bento) -->
+<section class="py-32 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="Cinzel text-4xl font-bold tracking-tight mb-4">Protection Légale</h2>
+<div class="w-16 h-[2px] bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="p-8 bg-surface border-b border-primary/20 flex flex-col justify-between h-64 hover:bg-surface-container-low transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="security">security</span>
+<div>
+<h4 class="Cinzel text-lg font-bold mb-2">OAPI</h4>
+<p class="font-body text-xs uppercase tracking-widest text-on-surface-variant">Protection Africaine</p>
+</div>
+</div>
+<div class="p-8 bg-surface-container-low border-b border-primary/40 flex flex-col justify-between h-64 hover:bg-surface-container-high transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="gavel">gavel</span>
+<div>
+<h4 class="Cinzel text-lg font-bold mb-2">EUIPO</h4>
+<p class="font-body text-xs uppercase tracking-widest text-on-surface-variant">Union Européenne</p>
+</div>
+</div>
+<div class="p-8 bg-surface border-b border-primary/20 flex flex-col justify-between h-64 hover:bg-surface-container-low transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="public">public</span>
+<div>
+<h4 class="Cinzel text-lg font-bold mb-2">OMPI / WIPO</h4>
+<p class="font-body text-xs uppercase tracking-widest text-on-surface-variant">Gouvernance Mondiale</p>
+</div>
+</div>
+<div class="p-8 bg-surface-container-low border-b border-primary/40 flex flex-col justify-between h-64 hover:bg-surface-container-high transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="verified">verified</span>
+<div>
+<h4 class="Cinzel text-lg font-bold mb-2">Marque Mondiale</h4>
+<p class="font-body text-xs uppercase tracking-widest text-on-surface-variant">Sceau Universel</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision Section -->
+<section class="py-48 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<img class="w-full h-full object-cover" data-alt="abstract close-up of light reflecting on polished gold surface with micro-textures and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMFDzUHHFkxuctlhCT-luf4NIyf9aX5qTPzZhz3iITgRMCqTysmwr5nQ7J6MvCUI1CCV_r0mD9TC4Ru-cFbzQoNQKsH9B0xUVQuy4LTNP-LCIw2yeqf6KceWRc791rBqYBRJE3pT0rCMiHoZqKtyL6m2OsnA8EKuO81qvXgQALpJXhSVBAl7EezyNjxF_pIroLr9c5pHJmwrsormqy-0_Ql_GY1hhh_Shx5uO7aZr_IBipGOggA8EeQKzo1e7PNPM0h1f9MvAL_1Fm"/>
+</div>
+<div class="max-w-4xl mx-auto px-8 relative z-10 text-center">
+<span class="material-symbols-outlined text-primary text-6xl mb-12 block" data-icon="visibility">visibility</span>
+<h2 class="Cinzel text-4xl md:text-5xl font-bold mb-12 tracking-wider">Notre Vision</h2>
+<div class="space-y-8 font-body italic font-light text-2xl text-on-surface/80 leading-relaxed">
+<p>Réduire la fraude documentaire à un lointain souvenir. Restaurer l'intégrité de chaque titre de propriété, de chaque diplôme, de chaque acte souverain.</p>
+<p>L'authenticité n'est plus une question de confiance, mais une certitude mathématique gravée dans l'élégance.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 dark:bg-black w-full border-t border-yellow-900/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-full">
+<div class="space-y-6">
+<div class="text-xl font-bold text-yellow-500 Cinzel">First of All®</div>
+<p class="text-neutral-500 label-md uppercase tracking-[0.1rem] Inter Light text-xs">Marque Mondiale de Protection Documentaire</p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-yellow-600 font-bold uppercase text-xs tracking-widest Cinzel mb-2">Juridictions</h5>
+<a class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-widest Inter Light" href="#">EUIPO</a>
+<a class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-widest Inter Light" href="#">OAPI</a>
+<a class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-widest Inter Light" href="#">USPTO</a>
+<a class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-widest Inter Light" href="#">Canada</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-yellow-600 font-bold uppercase text-xs tracking-widest Cinzel mb-2">Légal</h5>
+<a class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-widest Inter Light" href="#">Privacy Policy</a>
+<a class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-widest Inter Light" href="#">Terms of Service</a>
+<a class="text-neutral-500 hover:text-yellow-400 transition-all text-xs uppercase tracking-widest Inter Light" href="#">UK Protection</a>
+</div>
+<div class="space-y-4">
+<h5 class="text-yellow-600 font-bold uppercase text-xs tracking-widest Cinzel mb-2">Archives</h5>
+<p class="text-neutral-500 text-xs Inter Light italic">© First of All®. All Rights Reserved.</p>
+<div class="h-px w-full bg-yellow-600/20"></div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-yellow-600/50 text-xl" data-icon="public">public</span>
+<span class="material-symbols-outlined text-yellow-600/50 text-xl" data-icon="lock">lock</span>
+</div>
+</div>
+</div>
+<div class="w-full h-1 bg-gradient-to-r from-transparent via-yellow-600 to-transparent opacity-30"></div>
+</footer>
+</body></html>

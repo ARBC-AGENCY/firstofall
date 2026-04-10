@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=Inter:ital,wght@0,300;0,400;1,300&amp;family=Newsreader:ital,wght@0,400;0,700;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-bright": "#393939",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-variant": "#353535",
+                    "surface-container-high": "#2a2a2a",
+                    "secondary-fixed": "#ffdea7",
+                    "primary-container": "#d4af37",
+                    "on-primary-fixed-variant": "#574500",
+                    "inverse-primary": "#735c00",
+                    "secondary-container": "#765300",
+                    "on-primary": "#3c2f00",
+                    "on-tertiary-container": "#00502e",
+                    "secondary": "#efbf68",
+                    "surface-tint": "#e9c349",
+                    "tertiary-fixed": "#9af6bc",
+                    "surface-container-low": "#1b1b1b",
+                    "primary": "#f2ca50",
+                    "on-error": "#690005",
+                    "tertiary-fixed-dim": "#7fd9a2",
+                    "inverse-on-surface": "#313030",
+                    "surface-container": "#20201f",
+                    "on-primary-container": "#554300",
+                    "on-secondary-fixed-variant": "#5e4200",
+                    "outline": "#99907c",
+                    "on-surface": "#e5e2e1",
+                    "surface": "#131313",
+                    "on-tertiary": "#00391f",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#00522f",
+                    "on-background": "#e5e2e1",
+                    "tertiary": "#87e1aa",
+                    "surface-container-highest": "#353535",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed": "#241a00",
+                    "error-container": "#93000a",
+                    "outline-variant": "#4d4635",
+                    "primary-fixed-dim": "#e9c349",
+                    "primary-fixed": "#ffe088",
+                    "background": "#131313",
+                    "on-secondary": "#412d00",
+                    "tertiary-container": "#6bc590",
+                    "surface-dim": "#131313",
+                    "on-surface-variant": "#d0c5af",
+                    "secondary-fixed-dim": "#efbf68",
+                    "on-secondary-fixed": "#271900",
+                    "on-tertiary-fixed": "#002110",
+                    "on-secondary-container": "#faca71"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Cinzel", "serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .cinzel { font-family: 'Cinzel', serif; }
+        .inter-light-italic { font-family: 'Inter', sans-serif; font-weight: 300; font-style: italic; }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            background-color: rgba(19, 19, 19, 0.8);
+        }
+    </style>
+</head>
+<body class="font-body">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-6 w-full border-b border-yellow-600/20 glass-nav">
+<div class="text-2xl font-bold text-yellow-600 dark:text-yellow-500 tracking-tighter cinzel">First of All®</div>
+<div class="hidden md:flex items-center space-gap-12 gap-12">
+<button class="text-yellow-500 font-bold font-serif tracking-widest uppercase text-sm cinzel">MENU ☰</button>
+</div>
+<div class="flex items-center gap-6">
+<span class="font-serif tracking-widest uppercase text-sm cinzel text-neutral-400 hover:text-yellow-500 transition-colors duration-500 cursor-pointer">FR|EN</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-yellow-600 dark:text-yellow-500 cursor-pointer">shopping_cart</span>
+<span class="material-symbols-outlined text-yellow-600 dark:text-yellow-500 cursor-pointer">account_circle</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32 pb-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface to-surface"></div>
+<img class="w-full h-full object-cover opacity-30" data-alt="abstract macro photography of dark metallic mesh with warm gold highlights creating a sense of depth and mystery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB88mEPACsVEU4hx8FATqe6MCg_IsI2PEJxCHR0PTuHeZgTpD5GKA-IqRF71EhuM_2K0RwuX3N3X5IDAw_JXILLXnGjrhyYlwoDl5ofRZJm5vRuA8k9uzrLc1FIw1m3KFYCmU282ZNwU9yvz8LdZFewOSMjsVZpXIOC8afNkhAXZatSXrCitlFPZvYW3S92GgZ4LCrdUDv1gsBLfDUFfrLCxrZpFy9ci8Lnb5tf3dyupgZeh_WU7mTubMCcLunRAc_h5ETT8igTAKpL"/>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto">
+<h1 class="text-5xl md:text-8xl font-bold cinzel text-primary tracking-tighter mb-8">La Collection First of All</h1>
+<p class="inter-light-italic text-xl md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-16">
+                Quatre versions. Une seule exigence : l'infalsifiable.
+            </p>
+<div class="flex flex-wrap justify-center gap-4">
+<span class="px-6 py-2 bg-surface-container-high text-xs tracking-[0.2rem] font-medium cinzel border border-primary/20 text-primary">EUIPO</span>
+<span class="px-6 py-2 bg-surface-container-high text-xs tracking-[0.2rem] font-medium cinzel border border-primary/20 text-primary">OAPI</span>
+<span class="px-6 py-2 bg-surface-container-high text-xs tracking-[0.2rem] font-medium cinzel border border-primary/20 text-primary">USPTO</span>
+<span class="px-6 py-2 bg-surface-container-high text-xs tracking-[0.2rem] font-medium cinzel border border-primary/20 text-primary">CANADA</span>
+<span class="px-6 py-2 bg-surface-container-high text-xs tracking-[0.2rem] font-medium cinzel border border-primary/20 text-primary">UK</span>
+</div>
+</div>
+<!-- Vertical Scroll Indicator -->
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+<div class="w-[1px] h-24 bg-gradient-to-b from-primary/60 to-transparent"></div>
+</div>
+</header>
+<!-- Product Sections -->
+<main class="relative">
+<!-- Version Essentiel -->
+<section class="min-h-screen flex flex-col md:flex-row items-center border-t border-primary/10">
+<div class="w-full md:w-1/2 p-12 md:p-24 flex flex-col items-start space-y-8">
+<span class="label-md uppercase tracking-[0.2rem] text-primary cinzel border-b border-primary/40 pb-2">SÉRIE LIMITÉE</span>
+<h2 class="text-4xl md:text-6xl cinzel font-bold text-on-surface">Version Essentiel</h2>
+<div class="inter-light-italic text-lg text-on-surface-variant space-y-6 leading-relaxed">
+<p>Fondée sur un socle de 9 niveaux de sécurité cryptographique, cette édition constitue le rempart fondamental contre l'usurpation.</p>
+<p class="text-primary font-bold cinzel not-italic">5,000 exemplaires numérotés.</p>
+</div>
+<button class="px-10 py-4 border border-primary text-primary cinzel tracking-widest hover:bg-primary/10 transition-all">
+                    [DÉCOUVRIR]
+                </button>
+</div>
+<div class="w-full md:w-1/2 h-[614px] md:h-screen relative overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="luxury microchip detail with gold circuitry on black matte surface, professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzcwgEcpUwlEeIAW0Xi4fm1emuu_WWIQ3ZElLzrnYVsellpQ3esPUsAA_HMQ8S2aPkNmso5bTGKBl8WhY7YBuwPvasTR8D122f-1vD92IXm4g9BQwBKQnKRbqYWp2LXqU7nGsjbxF4z0zuTHiJoovB3Mjs3HE6SJMvLu4w-7eGLVB6zOR0oBhh0tu7-UZnoHdsKypyU9hAYvwGjeU82vRjVRCSO6F6FOHcdNdvAXnM8mThmP37pXBEOm4MdgjHeywK5JHku4bgZa6q"/>
+</div>
+</section>
+<!-- Version Business -->
+<section class="min-h-screen flex flex-col md:flex-row-reverse items-center border-t border-primary/10">
+<div class="w-full md:w-1/2 p-12 md:p-24 flex flex-col items-start space-y-8">
+<span class="label-md uppercase tracking-[0.2rem] text-primary cinzel border-b border-primary/40 pb-2">EXCELLENCE INSTITUTIONNELLE</span>
+<h2 class="text-4xl md:text-6xl cinzel font-bold text-on-surface">Version Business</h2>
+<div class="inter-light-italic text-lg text-on-surface-variant space-y-6 leading-relaxed">
+<p>Conçue pour les infrastructures corporatives exigeantes, intégrant une gestion de flotte décentralisée et sécurisée par ledger souverain.</p>
+<p class="text-primary font-bold cinzel not-italic">2,000 exemplaires.</p>
+</div>
+<button class="px-10 py-4 border border-primary text-primary cinzel tracking-widest hover:bg-primary/10 transition-all">
+                    [DÉCOUVRIR]
+                </button>
+</div>
+<div class="w-full md:w-1/2 h-[614px] md:h-screen relative overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="minimalist architectural detail of a high-end corporate building atrium with geometric glass and metal lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtzZwaHZ-zTKcNvFekQG4W0OSbmohqog8sJ0FhLKeslRUv8jxaqBUrsr7RxJ0pzJ4vHpfSAZgy6EMn5sCZiVkS7uoe9SULKbM9mrw45BpZPi8jphwhikhKzOst4WfaXiOp5C4Q_MG5E0suX_ZH9WR9Ek-qEAsM8GaffL8S89uCdP6wSa-KnWbUYwNOkrVEEzkp_nj0_tU2xCuhoTM9I5w-Dq9A6-DMHIRxWzmAYyvRkgi_aOKfC96Fpk-riqL0LepfOvHCSM8L9xt9"/>
+</div>
+</section>
+<!-- Version Exécutive -->
+<section class="min-h-screen flex flex-col md:flex-row items-center border-t border-primary/10">
+<div class="w-full md:w-1/2 p-12 md:p-24 flex flex-col items-start space-y-8">
+<span class="label-md uppercase tracking-[0.2rem] text-primary cinzel border-b border-primary/40 pb-2">SOUVERAINETÉ &amp; PRESTIGE</span>
+<h2 class="text-4xl md:text-6xl cinzel font-bold text-on-surface">Version Exécutive</h2>
+<div class="inter-light-italic text-lg text-on-surface-variant space-y-6 leading-relaxed">
+<p>Déploiement spécifique pour les usages gouvernementaux et diplomatiques. Une protection physique et numérique impénétrable.</p>
+<p class="text-primary font-bold cinzel not-italic">1,000 exemplaires.</p>
+</div>
+<button class="px-10 py-4 border border-primary text-primary cinzel tracking-widest hover:bg-primary/10 transition-all">
+                    [DÉCOUVRIR]
+                </button>
+</div>
+<div class="w-full md:w-1/2 h-[614px] md:h-screen relative overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="close-up of a high-end business suit and luxury watch on a wrist, moody executive atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsf2_tP9X9afLnyot4i3Dp74rC_StSzIrYfBp8GJm7QRQWEaDvdFiuDdGGBDyS2GoYY3KqK0b48eSRk7_FhfkDtFZkZSWO3EfHObY1ghfN6yLLpOSZ1F-dnCZUYlGnNqE-XNVxwO8s8hR3cLf2Pp6LaJn7NLzY_7y5IpoFI7am891BTX4pcOp_0STHa-9BighCGomXfrm13TPmxXGiEDUcvauDHbKh06xeL4U4CPGwCx5verYRjTUcvaZ6oFbrvfTJVAvWJaipRm6c"/>
+</div>
+</section>
+<!-- Version Exclusive -->
+<section class="min-h-screen flex flex-col md:flex-row-reverse items-center border-t border-primary/10 bg-surface-container-lowest">
+<div class="w-full md:w-1/2 p-12 md:p-24 flex flex-col items-start space-y-8">
+<div class="flex items-center gap-4">
+<span class="label-md uppercase tracking-[0.2rem] text-primary cinzel border-b border-primary/40 pb-2">SUR INVITATION UNIQUEMENT</span>
+<div class="flex items-center gap-2 bg-primary/10 border border-primary/30 px-3 py-1">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] cinzel text-primary tracking-widest">ULTIME SECURITY</span>
+</div>
+</div>
+<h2 class="text-4xl md:text-6xl cinzel font-bold text-on-surface">Version Exclusive</h2>
+<div class="inter-light-italic text-lg text-on-surface-variant space-y-6 leading-relaxed">
+<p>Le sommet de l'artisanat sécuritaire. Un actif numérique unique lié à une identité biologique, forgé pour l'éternité.</p>
+<p class="text-primary font-bold cinzel not-italic">50 exemplaires mondiaux.</p>
+</div>
+<button class="px-10 py-4 bg-primary text-on-primary cinzel font-bold tracking-[0.2rem] hover:bg-primary-container transition-all">
+                    [DEMANDER L'ACCÈS]
+                </button>
+</div>
+<div class="w-full md:w-1/2 h-[614px] md:h-screen relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
+<img class="w-full h-full object-cover" data-alt="deep black obsidian texture with sharp crystalline edges and soft gold light reflecting on facets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnlbXY5p9Rat_VC3StIHqUz5RLM_oVw2c8RR21GzZ-0_mh46zgkFngDVQoYJJom6PXh7-AulhDQy7cuNQU_EFZkR1gfX_HPS6QbR15zvkYsgz9Bh5htDSJBBDG8h-eZJZIqmptrXx-99zBcMb_iWxWY5VniZ4tURdA-PMQthjWJYH_nPnyD4DevevNNU5t7CR1NwFELBaN2Uqv7Oz8EQlO_2hCYs2N4i0NUbJtWWFQ6ejeuFVNYYEjOh6XZWHVf9uwxJsunu6LCwZr"/>
+</div>
+</section>
+</main>
+<!-- SideNavBar (Hidden Hamburger Menu Overlay) -->
+<div class="hidden fixed inset-0 z-[60] w-full h-full bg-neutral-950 flex flex-col md:flex-row items-center justify-between px-20 h-full" id="side-nav">
+<div class="flex flex-col space-y-8">
+<div class="text-4xl font-bold text-yellow-500 mb-8 cinzel">The Sovereign Ledger</div>
+<div class="flex flex-col space-y-6">
+<a class="text-neutral-700 text-6xl lg:text-8xl cinzel hover:text-yellow-500 hover:translate-x-4 duration-700 transition-all" href="#">Collections</a>
+<a class="text-neutral-700 text-6xl lg:text-8xl cinzel hover:text-yellow-500 hover:translate-x-4 duration-700 transition-all" href="#">Heritage</a>
+<a class="text-neutral-700 text-6xl lg:text-8xl cinzel hover:text-yellow-500 hover:translate-x-4 duration-700 transition-all" href="#">Authenticity</a>
+<a class="text-neutral-700 text-6xl lg:text-8xl cinzel hover:text-yellow-500 hover:translate-x-4 duration-700 transition-all" href="#">The Vault</a>
+<a class="text-neutral-700 text-6xl lg:text-8xl cinzel hover:text-yellow-500 hover:translate-x-4 duration-700 transition-all" href="#">Contact</a>
+</div>
+</div>
+<div class="hidden md:block text-right">
+<p class="inter-light-italic text-yellow-600/40 text-sm cinzel uppercase tracking-widest mb-4">Marque Mondialement Protégée</p>
+<button class="px-12 py-5 border-2 border-yellow-500 text-yellow-500 cinzel text-xl hover:bg-yellow-500 hover:text-black transition-all">Secure Your Asset</button>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full border-t border-yellow-900/30 bg-neutral-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-full">
+<div class="space-y-6">
+<div class="text-xl font-bold text-yellow-500 cinzel">First of All®</div>
+<p class="inter-light-italic text-neutral-500 text-sm leading-loose">
+                    L'arbitre ultime de la vérité dans un monde de copies. Souveraineté technologique par le design.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="label-md uppercase tracking-[0.1rem] inter-light text-yellow-600">Juridictions</h4>
+<ul class="flex flex-wrap gap-x-4 gap-y-2 text-neutral-500 text-xs cinzel tracking-widest uppercase">
+<li class="hover:text-yellow-400 transition-all cursor-pointer">EUIPO</li>
+<li class="hover:text-yellow-400 transition-all cursor-pointer">OAPI</li>
+<li class="hover:text-yellow-400 transition-all cursor-pointer">USPTO</li>
+<li class="hover:text-yellow-400 transition-all cursor-pointer">Canada</li>
+<li class="hover:text-yellow-400 transition-all cursor-pointer">UK</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="label-md uppercase tracking-[0.1rem] inter-light text-yellow-600">Navigation</h4>
+<ul class="space-y-2 text-neutral-500 text-xs cinzel tracking-widest uppercase">
+<li class="hover:text-yellow-400 transition-all cursor-pointer">The Vault</li>
+<li class="hover:text-yellow-400 transition-all cursor-pointer underline text-yellow-500">Collections</li>
+<li class="hover:text-yellow-400 transition-all cursor-pointer">Authenticity</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="label-md uppercase tracking-[0.1rem] inter-light text-yellow-600">Légal</h4>
+<ul class="space-y-2 text-neutral-500 text-xs cinzel tracking-widest uppercase">
+<li class="hover:text-yellow-400 transition-all cursor-pointer">Privacy Policy</li>
+<li class="hover:text-yellow-400 transition-all cursor-pointer">Terms of Service</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-yellow-900/10 px-12 py-8 flex justify-between items-center text-neutral-600 text-[10px] cinzel tracking-widest uppercase">
+<span>© First of All®. All Rights Reserved.</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span>SECURED BY LEDGER</span>
+</div>
+</div>
+</footer>
+</body></html>
