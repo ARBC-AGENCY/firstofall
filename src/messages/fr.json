@@ -70,9 +70,9 @@
       "title": "Protégée sur cinq continents"
     },
     "siliconValley": {
-      "label": "PROGRAMME EXCLUSIF",
-      "title": "Le luxe qui change le monde",
-      "text": "5 % de chaque achat finance un voyage scientifique en Silicon Valley. Le luxe qui change le monde.",
+      "label": "PROGRAMME SILICON VALLEY AFRICA",
+      "title": "Inspirer l'Afrique de demain",
+      "text": "5 % du chiffre d'affaires de First of All® finance l'immersion de talents africains au cœur des Big Tech de la Silicon Valley.",
       "cta": "Découvrir le Programme"
     },
     "metrics": {
@@ -82,9 +82,9 @@
       "media": "Médias Mondiaux"
     },
     "club": {
-      "title": "Club First of All®",
-      "text": "L'accès à l'écosystème souverain se fait exclusivement sur invitation ou parrainage.",
-      "cta": "Faire une demande d'adhésion"
+      "title": "Club d'Affaires First of All®",
+      "text": "En devenant propriétaire d'un Cachet First of All®, vous intégrez automatiquement un cercle d'élite international. Un réseau pensé pour les leaders qui exigent l'excellence et l'infalsifiable.",
+      "cta": "Rejoindre le Club"
     }
   },
   "collection": {
@@ -314,9 +314,57 @@
     }
   },
   "club": {
-    "title": "Club First of All®",
-    "intro": "L'accès à l'écosystème souverain se fait exclusivement sur invitation ou parrainage.",
-    "text": "Le Club First of All® réunit les décideurs, dirigeants et institutions qui placent l'authenticité au cœur de leurs valeurs. Rejoignez une communauté d'élite engagée dans la lutte contre la fraude documentaire.",
+    "label": "CLUB D'AFFAIRES",
+    "title": "Club d'Affaires First of All®",
+    "heroTagline": "L'Excellence qui connecte.",
+    "heroSubtitle": "En devenant propriétaire d'un Cachet First of All®, vous intégrez automatiquement un cercle d'élite international. Un réseau pensé pour les leaders qui exigent l'excellence et l'infalsifiable.",
+    "about": {
+      "label": "UN CLUB D'EXCEPTION",
+      "title": "Un Club d'Affaires d'Exception",
+      "text": "Le Club d'Affaires First of All® s'inspire des cercles les plus prestigieux au monde — tout en étant unique par son accès automatique et son lien direct avec la sécurité documentaire d'excellence.",
+      "tiersIntro": "Dès l'acquisition de votre Cachet Infalsifiable, vous devenez membre à vie du Club, classé selon la version choisie :",
+      "tiers": [
+        { "version": "Essentiel", "level": "Membre Standard" },
+        { "version": "Business", "level": "Membre Business" },
+        { "version": "Exécutive", "level": "Membre Exécutive" },
+        { "version": "Exclusive", "level": "Membre Fondateur (accès prioritaire et privilèges supérieurs)" }
+      ],
+      "closing": "Ce n'est pas un simple club : c'est une communauté souveraine de dirigeants, entrepreneurs et visionnaires qui partagent les mêmes exigences d'excellence, de discrétion et d'innovation."
+    },
+    "benefits": {
+      "label": "AVANTAGES & EXPÉRIENCES",
+      "networkingTitle": "Networking d'exception",
+      "networkingText": "Rencontrez des pairs triés sur le volet lors d'événements privés organisés tous les trois ans dans l'un de nos bureaux phares : Toronto, Londres ou New York. Ces soirées exclusives combinent discussions stratégiques, dîners gastronomiques et opportunités de partenariats concrets dans un cadre intime et sécurisé.",
+      "privilegesTitle": "Autres privilèges",
+      "privileges": [
+        "Accès à un réseau international de membres vérifiés",
+        "Invitations prioritaires aux événements du Programme Silicon Valley",
+        "Conciergerie dédiée pour vos voyages d'affaires et séjours scientifiques",
+        "Forums privés en ligne (discussions confidentielles sur sécurité, innovation et stratégie)",
+        "Accès à des masterclasses et conférences avec des leaders mondiaux",
+        "Certification membre « First of All® » à apposer sur vos documents et profils professionnels"
+      ]
+    },
+    "tiers": {
+      "label": "NIVEAUX D'ADHÉSION",
+      "headers": {
+        "version": "Version du Cachet",
+        "level": "Niveau Club",
+        "benefits": "Avantages principaux",
+        "events": "Soirées Triennales"
+      },
+      "rows": [
+        { "version": "Essentiel", "level": "Membre Standard", "benefits": "Accès réseau + événements en ligne", "events": "Standard" },
+        { "version": "Business", "level": "Membre Business", "benefits": "+ Invitations physiques + masterclasses", "events": "Priorité" },
+        { "version": "Exécutive", "level": "Membre Exécutive", "benefits": "+ Conciergerie + accès Silicon Valley prioritaire", "events": "Haute priorité" },
+        { "version": "Exclusive", "level": "Membre Fondateur", "benefits": "Tous les privilèges + accès VIP + parrainage", "events": "Accès VIP + invité" }
+      ]
+    },
+    "spirit": {
+      "quote": "First of All n'est pas seulement un cachet. C'est l'entrée dans un cercle où la sécurité rencontre l'ambition, où la confiance devient un réseau puissant.",
+      "closing": "Rejoignez le Club d'Affaires First of All® — parce que l'excellence n'est pas solitaire.",
+      "cta": "Découvrir mon niveau d'adhésion"
+    },
     "waitlistTitle": "Liste d'Attente",
     "waitlistText": "Déposez votre candidature. Notre équipe vous contactera pour évaluer votre profil.",
     "form": {
@@ -335,29 +383,67 @@
     "readMore": "Lire la suite"
   },
   "siliconValley": {
-    "label": "PROGRAMME EXCLUSIF",
-    "title": "First of All finance le tourisme scientifique",
-    "intro": "Chaque cachet acheté permet à un chercheur ou entrepreneur de vivre une immersion exclusive en Silicon Valley. Postulez dès aujourd'hui.",
-    "text": "5 % de chaque achat finance un voyage scientifique en Silicon Valley. Le luxe qui change le monde.",
-    "howTitle": "Comment ça fonctionne",
-    "how": [
-      {
-        "step": "01",
-        "title": "Réservez votre cachet",
-        "desc": "Choisissez la version First of All qui correspond à vos besoins."
-      },
-      {
-        "step": "02",
-        "title": "5 % alloués au programme",
-        "desc": "Un pourcentage de votre achat est automatiquement alloué au fonds Silicon Valley."
-      },
-      {
-        "step": "03",
-        "title": "Postulez au programme",
-        "desc": "Chercheurs et entrepreneurs peuvent postuler pour une immersion en Silicon Valley."
-      }
-    ],
-    "applyTitle": "Postuler au Programme",
+    "label": "PROGRAMME SILICON VALLEY AFRICA",
+    "title": "Programme Silicon Valley Africa",
+    "heroTagline": "Inspirer l'Afrique de demain.",
+    "heroSubtitle": "5 % du chiffre d'affaires de First of All® est dédié à financer l'immersion de talents africains dans les Big Tech de la Silicon Valley. Parce que l'excellence infalsifiable passe aussi par la transmission du savoir.",
+    "heroCta": "Postuler pour l'édition Novembre 2026",
+    "commitment": {
+      "label": "NOTRE ENGAGEMENT",
+      "title": "Notre Engagement",
+      "text": "Le Programme Silicon Valley Africa incarne la vision philanthropique de First of All®. Chaque Cachet Infalsifiable acheté contribue directement : 5 % du chiffre d'affaires sont reversés au financement du programme. Un modèle responsable qui transforme l'achat d'un produit d'excellence en un véritable levier de développement scientifique pour l'Afrique.",
+      "objectiveTitle": "Objectif du programme",
+      "objectiveText": "Sélectionner, former et immerger les meilleurs talents africains — chercheurs, entrepreneurs technologiques, innovateurs — au cœur de la Silicon Valley. Ils y découvrent les dernières avancées des Big Tech (Google, Meta, Apple, OpenAI…), s'inspirent des écosystèmes d'innovation les plus performants au monde, puis reviennent impacter durablement le continent africain."
+    },
+    "program": {
+      "label": "UN PROGRAMME BIANNUEL D'EXCELLENCE",
+      "title": "Un Programme Biannuel d'Excellence",
+      "stats": [
+        { "value": "Biannuel", "label": "Fréquence" },
+        { "value": "Nov. 2026", "label": "Prochaine édition" },
+        { "value": "6 jours", "label": "Durée d'immersion" },
+        { "value": "15 – 25", "label": "Talents sélectionnés" }
+      ],
+      "coverageTitle": "Ce qui est couvert",
+      "coverage": [
+        "Transport international aller-retour",
+        "Hébergement durant le séjour",
+        "Repas et déplacements sur place",
+        "Assurances complètes",
+        "Programme sur mesure Big Tech"
+      ]
+    },
+    "journey": {
+      "label": "LE PARCOURS DES LAURÉATS",
+      "title": "Le Parcours des Lauréats",
+      "steps": [
+        { "phase": "Préparation", "title": "Ateliers & Mentoring", "desc": "Sessions en ligne et mentoring personnalisé avant le départ depuis l'Afrique." },
+        { "phase": "Immersion", "title": "Silicon Valley", "desc": "Visites privées chez les Big Tech, rencontres avec des leaders, workshops sur l'IA, la cybersécurité et l'entrepreneuriat tech." },
+        { "phase": "Réseautage", "title": "Diaspora & Investisseurs", "desc": "Événements exclusifs avec la diaspora tech africaine et les investisseurs de la Silicon Valley." },
+        { "phase": "Retour & Impact", "title": "Projet en Afrique", "desc": "Projet de restitution obligatoire (startup, recherche, programme éducatif) à implémenter en Afrique dans les 12 mois." },
+        { "phase": "Alumni", "title": "Suivi à vie", "desc": "Intégration au réseau alumni du Club d'Affaires First of All®." }
+      ]
+    },
+    "profile": {
+      "label": "LE PROFIL",
+      "title": "Profil des Candidats",
+      "note": "Priorité aux candidats francophones et anglophones d'Afrique (tous pays)",
+      "ageLabel": "Tranche d'âge",
+      "age": "22 à 40 ans",
+      "criteria": [
+        "Talent africain — chercheur, entrepreneur ou innovateur",
+        "Projet à fort impact potentiel sur le continent africain",
+        "Leadership et capacité à transmettre le savoir acquis",
+        "Maîtrise du français et/ou de l'anglais"
+      ],
+      "cta": "Soumettre ma candidature"
+    },
+    "finalCta": {
+      "quote": "Grâce à vous, propriétaire d'un Cachet First of All®, nous construisons un pont durable entre la Silicon Valley et l'Afrique. Un cercle vertueux où l'excellence technologique d'aujourd'hui forge les leaders scientifiques de demain.",
+      "applyBtn": "Postuler pour Novembre 2026",
+      "buyBtn": "Acheter un Cachet et contribuer"
+    },
+    "applyTitle": "Soumettre ma candidature",
     "form": {
       "name": "Nom complet",
       "email": "Adresse e-mail",
@@ -365,7 +451,7 @@
       "country": "Pays",
       "organisation": "Organisation / Université",
       "project": "Décrivez votre projet de recherche ou d'innovation",
-      "submit": "Soumettre ma candidature",
+      "submit": "Envoyer ma candidature",
       "success": "Votre candidature a été envoyée. Nous vous contacterons dans les meilleurs délais.",
       "error": "Une erreur est survenue. Veuillez réessayer."
     }

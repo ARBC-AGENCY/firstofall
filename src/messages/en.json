@@ -70,9 +70,9 @@
       "title": "Protected across five continents"
     },
     "siliconValley": {
-      "label": "EXCLUSIVE PROGRAM",
-      "title": "Luxury that changes the world",
-      "text": "5% of every purchase funds a scientific trip to Silicon Valley. Luxury that changes the world.",
+      "label": "SILICON VALLEY AFRICA PROGRAM",
+      "title": "Inspiring Africa's tomorrow",
+      "text": "5% of First of All®'s revenue funds the immersion of African talent into the Big Tech companies of Silicon Valley.",
       "cta": "Discover the Program"
     },
     "metrics": {
@@ -82,9 +82,9 @@
       "media": "Global Media"
     },
     "club": {
-      "title": "First of All® Club",
-      "text": "Access to the sovereign ecosystem is exclusively by invitation or sponsorship.",
-      "cta": "Submit a membership request"
+      "title": "First of All® Business Club",
+      "text": "Upon acquiring your First of All® Seal, you automatically join an international elite circle. A network designed for leaders who demand excellence and the infalsifiable.",
+      "cta": "Join the Club"
     }
   },
   "collection": {
@@ -308,9 +308,57 @@
     }
   },
   "club": {
-    "title": "First of All® Club",
-    "intro": "Access to the sovereign ecosystem is exclusively by invitation or sponsorship.",
-    "text": "The First of All® Club brings together decision-makers, executives and institutions that place authenticity at the heart of their values. Join an elite community committed to fighting documentary fraud.",
+    "label": "BUSINESS CLUB",
+    "title": "First of All® Business Club",
+    "heroTagline": "Excellence that connects.",
+    "heroSubtitle": "Upon acquiring your First of All® Seal, you automatically join an international elite circle. A network designed for leaders who demand excellence and the infalsifiable.",
+    "about": {
+      "label": "AN EXCEPTIONAL CLUB",
+      "title": "An Exceptional Business Club",
+      "text": "The First of All® Business Club draws inspiration from the world's most prestigious circles — while offering unique automatic membership tied to unparalleled document security.",
+      "tiersIntro": "Upon acquiring your Infalsifiable Seal, you automatically become a lifetime member, tiered by the version purchased:",
+      "tiers": [
+        { "version": "Essential", "level": "Standard Member" },
+        { "version": "Business", "level": "Business Member" },
+        { "version": "Executive", "level": "Executive Member" },
+        { "version": "Exclusive", "level": "Founder Member (priority access and superior privileges)" }
+      ],
+      "closing": "This is more than a club — it is a sovereign community of leaders, entrepreneurs, and visionaries who share the same demands for excellence, discretion, and innovation."
+    },
+    "benefits": {
+      "label": "BENEFITS & EXPERIENCES",
+      "networkingTitle": "Exceptional Networking",
+      "networkingText": "Connect with handpicked peers at exclusive private events held every three years in one of our flagship offices in Toronto, London, or New York. These soirées blend high-level strategic discussions, gourmet dinners, and tangible partnership opportunities in an intimate and secure setting.",
+      "privilegesTitle": "Other Privileges",
+      "privileges": [
+        "Access to a verified international member network",
+        "Priority invitations to Silicon Valley Programme events",
+        "Dedicated concierge for business travel and scientific immersions",
+        "Private online forums for confidential discussions on security, innovation and strategy",
+        "Masterclasses and conferences with global leaders",
+        "Official \"First of All®\" member certification for your documents and professional profiles"
+      ]
+    },
+    "tiers": {
+      "label": "MEMBERSHIP LEVELS",
+      "headers": {
+        "version": "Seal Version",
+        "level": "Club Level",
+        "benefits": "Key Benefits",
+        "events": "Triennial Events"
+      },
+      "rows": [
+        { "version": "Essential", "level": "Standard Member", "benefits": "Network access + online events", "events": "Standard" },
+        { "version": "Business", "level": "Business Member", "benefits": "+ In-person invitations + masterclasses", "events": "Priority" },
+        { "version": "Executive", "level": "Executive Member", "benefits": "+ Concierge + priority Silicon Valley access", "events": "High priority" },
+        { "version": "Exclusive", "level": "Founder Member", "benefits": "All privileges + VIP access + sponsorship", "events": "VIP + guest" }
+      ]
+    },
+    "spirit": {
+      "quote": "First of All is not merely a seal. It is entry into a circle where security meets ambition, where trust becomes a powerful network.",
+      "closing": "Join the First of All® Business Club — because excellence is not a solitary pursuit.",
+      "cta": "Discover my membership level"
+    },
     "waitlistTitle": "Waiting List",
     "waitlistText": "Submit your application. Our team will contact you to evaluate your profile.",
     "form": {
@@ -329,29 +377,67 @@
     "readMore": "Read more"
   },
   "siliconValley": {
-    "label": "EXCLUSIVE PROGRAM",
-    "title": "First of All funds scientific tourism",
-    "intro": "Each seal purchased allows a researcher or entrepreneur to experience an exclusive immersion in Silicon Valley. Apply today.",
-    "text": "5% of every purchase funds a scientific trip to Silicon Valley. Luxury that changes the world.",
-    "howTitle": "How it works",
-    "how": [
-      {
-        "step": "01",
-        "title": "Reserve your seal",
-        "desc": "Choose the First of All version that suits your needs."
-      },
-      {
-        "step": "02",
-        "title": "5% allocated to the program",
-        "desc": "A percentage of your purchase is automatically allocated to the Silicon Valley fund."
-      },
-      {
-        "step": "03",
-        "title": "Apply to the program",
-        "desc": "Researchers and entrepreneurs can apply for an immersion in Silicon Valley."
-      }
-    ],
-    "applyTitle": "Apply to the Program",
+    "label": "SILICON VALLEY AFRICA PROGRAM",
+    "title": "Silicon Valley Africa Program",
+    "heroTagline": "Inspiring Africa's tomorrow.",
+    "heroSubtitle": "5% of First of All®'s revenue is dedicated to funding the immersion of African talent into Big Tech companies in Silicon Valley. Because infalsifiable excellence also means passing on knowledge.",
+    "heroCta": "Apply for the November 2026 Edition",
+    "commitment": {
+      "label": "OUR COMMITMENT",
+      "title": "Our Commitment",
+      "text": "The Silicon Valley Africa Program embodies the philanthropic vision of First of All®. Every Infalsifiable Seal purchased contributes directly: 5% of revenue is allocated to fund the program. A responsible model that transforms the purchase of a product of excellence into a genuine lever for scientific development in Africa.",
+      "objectiveTitle": "Program objective",
+      "objectiveText": "To select, train and immerse the best African talent — researchers, tech entrepreneurs, innovators — at the heart of Silicon Valley. There they discover the latest advances from Big Tech (Google, Meta, Apple, OpenAI…), draw inspiration from the world's most powerful innovation ecosystems, and return to create a lasting impact on the African continent."
+    },
+    "program": {
+      "label": "A BIENNIAL PROGRAM OF EXCELLENCE",
+      "title": "A Biennial Program of Excellence",
+      "stats": [
+        { "value": "Biennial", "label": "Frequency" },
+        { "value": "Nov. 2026", "label": "Next edition" },
+        { "value": "6 days", "label": "Immersion duration" },
+        { "value": "15 – 25", "label": "Selected talents" }
+      ],
+      "coverageTitle": "What is covered",
+      "coverage": [
+        "Round-trip international flights",
+        "Accommodation throughout the stay",
+        "Meals and local transportation",
+        "Comprehensive insurance",
+        "Tailor-made Big Tech program"
+      ]
+    },
+    "journey": {
+      "label": "THE LAUREATES' JOURNEY",
+      "title": "The Laureates' Journey",
+      "steps": [
+        { "phase": "Preparation", "title": "Workshops & Mentoring", "desc": "Online sessions and personalised mentoring before departure from Africa." },
+        { "phase": "Immersion", "title": "Silicon Valley", "desc": "Private visits to Big Tech companies, meetings with leaders, workshops on AI, cybersecurity and tech entrepreneurship." },
+        { "phase": "Networking", "title": "Diaspora & Investors", "desc": "Exclusive events with the African tech diaspora and Silicon Valley investors." },
+        { "phase": "Return & Impact", "title": "Project in Africa", "desc": "Mandatory restitution project (startup, research, educational program) to implement in Africa within 12 months." },
+        { "phase": "Alumni", "title": "Lifelong follow-up", "desc": "Integration into the First of All® Business Club alumni network." }
+      ]
+    },
+    "profile": {
+      "label": "THE PROFILE",
+      "title": "Candidate Profile",
+      "note": "Priority given to French and English-speaking candidates from Africa (all countries)",
+      "ageLabel": "Age range",
+      "age": "22 to 40 years old",
+      "criteria": [
+        "African talent — researcher, entrepreneur or innovator",
+        "Project with strong potential impact on the African continent",
+        "Leadership and ability to transmit acquired knowledge",
+        "Proficiency in French and/or English"
+      ],
+      "cta": "Submit my application"
+    },
+    "finalCta": {
+      "quote": "Thanks to you, as the owner of a First of All® Seal, we are building a lasting bridge between Silicon Valley and Africa. A virtuous circle where today's technological excellence forges tomorrow's scientific leaders.",
+      "applyBtn": "Apply for November 2026",
+      "buyBtn": "Buy a Seal and contribute"
+    },
+    "applyTitle": "Submit my application",
     "form": {
       "name": "Full name",
       "email": "Email address",
@@ -359,7 +445,7 @@
       "country": "Country",
       "organisation": "Organisation / University",
       "project": "Describe your research or innovation project",
-      "submit": "Submit my application",
+      "submit": "Send my application",
       "success": "Your application has been sent. We will contact you as soon as possible.",
       "error": "An error occurred. Please try again."
     }
