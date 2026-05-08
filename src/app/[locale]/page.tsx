@@ -7,7 +7,7 @@ import essentialImg from "@/assets/images/IMG-20260422-WA0015.webp";
 import businessImg from "@/assets/images/IMG-20260422-WA0016.webp";
 import executiveImg from "@/assets/images/image-2.webp";
 import exclusiveImg from "@/assets/images/IMG-20260422-WA0018.webp";
-import technologyImg from "@/assets/images/technology.webp";
+import technologyImg from "@/assets/images/patented-tech.jpg";
 
 export async function generateMetadata({
   params,
