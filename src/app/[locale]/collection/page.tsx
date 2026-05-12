@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import essentialImg from "@/assets/images/IMG-20260422-WA0015.webp";
-import businessImg from "@/assets/images/IMG-20260422-WA0016.webp";
-import executiveImg from "@/assets/images/image-2.webp";
-import exclusiveImg from "@/assets/images/IMG-20260422-WA0018.webp";
+import essentialImg from "@/assets/images/Essentiel.webp";
+import businessImg from "@/assets/images/Business.webp";
+import executiveImg from "@/assets/images/Executive.webp";
+import exclusiveImg from "@/assets/images/Exclusive.webp";
 
 export async function generateMetadata({
   params,

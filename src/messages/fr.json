@@ -191,7 +191,10 @@
         "name": "OAPI",
         "desc": "Protection stratégique pour les 17 États membres en Afrique."
       },
-      { "name": "EUIPO", "desc": "Protection sur le marché européen." },
+      {
+        "name": "EUIPO",
+        "desc": "Protection sur le marché européen."
+      },
       {
         "name": "WIPO / OMPI",
         "desc": "Enregistrement international garantissant l'exclusivité mondiale de la technologie."
@@ -324,10 +327,22 @@
       "text": "Le Club d'Affaires First of All® s'inspire des cercles les plus prestigieux au monde — tout en étant unique par son accès automatique et son lien direct avec la sécurité documentaire d'excellence.",
       "tiersIntro": "Dès l'acquisition de votre Cachet Infalsifiable, vous devenez membre à vie du Club, classé selon la version choisie :",
       "tiers": [
-        { "version": "Essentiel", "level": "Membre Standard" },
-        { "version": "Business", "level": "Membre Business" },
-        { "version": "Exécutive", "level": "Membre Exécutive" },
-        { "version": "Exclusive", "level": "Membre Fondateur (accès prioritaire et privilèges supérieurs)" }
+        {
+          "version": "Essentiel",
+          "level": "Membre Standard"
+        },
+        {
+          "version": "Business",
+          "level": "Membre Business"
+        },
+        {
+          "version": "Exécutive",
+          "level": "Membre Exécutive"
+        },
+        {
+          "version": "Exclusive",
+          "level": "Membre Fondateur (accès prioritaire et privilèges supérieurs)"
+        }
       ],
       "closing": "Ce n'est pas un simple club : c'est une communauté souveraine de dirigeants, entrepreneurs et visionnaires qui partagent les mêmes exigences d'excellence, de discrétion et d'innovation."
     },
@@ -354,10 +369,30 @@
         "events": "Soirées Triennales"
       },
       "rows": [
-        { "version": "Essentiel", "level": "Membre Standard", "benefits": "Accès réseau + événements en ligne", "events": "Standard" },
-        { "version": "Business", "level": "Membre Business", "benefits": "+ Invitations physiques + masterclasses", "events": "Priorité" },
-        { "version": "Exécutive", "level": "Membre Exécutive", "benefits": "+ Conciergerie + accès Silicon Valley prioritaire", "events": "Haute priorité" },
-        { "version": "Exclusive", "level": "Membre Fondateur", "benefits": "Tous les privilèges + accès VIP + parrainage", "events": "Accès VIP + invité" }
+        {
+          "version": "Essentiel",
+          "level": "Membre Standard",
+          "benefits": "Accès réseau + événements en ligne",
+          "events": "Standard"
+        },
+        {
+          "version": "Business",
+          "level": "Membre Business",
+          "benefits": "+ Invitations physiques + masterclasses",
+          "events": "Priorité"
+        },
+        {
+          "version": "Exécutive",
+          "level": "Membre Exécutive",
+          "benefits": "+ Conciergerie + accès Silicon Valley prioritaire",
+          "events": "Haute priorité"
+        },
+        {
+          "version": "Exclusive",
+          "level": "Membre Fondateur",
+          "benefits": "Tous les privilèges + accès VIP + parrainage",
+          "events": "Accès VIP + invité"
+        }
       ]
     },
     "spirit": {
@@ -380,7 +415,13 @@
     "title": "Actualités",
     "intro": "Suivez l'actualité de First of All® et les dernières nouvelles de la sécurité documentaire mondiale.",
     "comingSoon": "Les actualités seront disponibles prochainement.",
-    "readMore": "Lire la suite"
+    "readMore": "Lire la suite",
+    "filters": {
+      "all": "Tout",
+      "image": "Photos",
+      "video": "Vidéos"
+    },
+    "empty": "Aucun contenu disponible."
   },
   "siliconValley": {
     "label": "PROGRAMME SILICON VALLEY AFRICA",
@@ -399,10 +440,22 @@
       "label": "UN PROGRAMME BIANNUEL D'EXCELLENCE",
       "title": "Un Programme Biannuel d'Excellence",
       "stats": [
-        { "value": "Biannuel", "label": "Fréquence" },
-        { "value": "Nov. 2026", "label": "Prochaine édition" },
-        { "value": "6 jours", "label": "Durée d'immersion" },
-        { "value": "15 – 25", "label": "Talents sélectionnés" }
+        {
+          "value": "Biannuel",
+          "label": "Fréquence"
+        },
+        {
+          "value": "Nov. 2026",
+          "label": "Prochaine édition"
+        },
+        {
+          "value": "6 jours",
+          "label": "Durée d'immersion"
+        },
+        {
+          "value": "15 – 25",
+          "label": "Talents sélectionnés"
+        }
       ],
       "coverageTitle": "Ce qui est couvert",
       "coverage": [
@@ -417,11 +470,31 @@
       "label": "LE PARCOURS DES LAURÉATS",
       "title": "Le Parcours des Lauréats",
       "steps": [
-        { "phase": "Préparation", "title": "Ateliers & Mentoring", "desc": "Sessions en ligne et mentoring personnalisé avant le départ depuis l'Afrique." },
-        { "phase": "Immersion", "title": "Silicon Valley", "desc": "Visites privées chez les Big Tech, rencontres avec des leaders, workshops sur l'IA, la cybersécurité et l'entrepreneuriat tech." },
-        { "phase": "Réseautage", "title": "Diaspora & Investisseurs", "desc": "Événements exclusifs avec la diaspora tech africaine et les investisseurs de la Silicon Valley." },
-        { "phase": "Retour & Impact", "title": "Projet en Afrique", "desc": "Projet de restitution obligatoire (startup, recherche, programme éducatif) à implémenter en Afrique dans les 12 mois." },
-        { "phase": "Alumni", "title": "Suivi à vie", "desc": "Intégration au réseau alumni du Club d'Affaires First of All®." }
+        {
+          "phase": "Préparation",
+          "title": "Ateliers & Mentoring",
+          "desc": "Sessions en ligne et mentoring personnalisé avant le départ depuis l'Afrique."
+        },
+        {
+          "phase": "Immersion",
+          "title": "Silicon Valley",
+          "desc": "Visites privées chez les Big Tech, rencontres avec des leaders, workshops sur l'IA, la cybersécurité et l'entrepreneuriat tech."
+        },
+        {
+          "phase": "Réseautage",
+          "title": "Diaspora & Investisseurs",
+          "desc": "Événements exclusifs avec la diaspora tech africaine et les investisseurs de la Silicon Valley."
+        },
+        {
+          "phase": "Retour & Impact",
+          "title": "Projet en Afrique",
+          "desc": "Projet de restitution obligatoire (startup, recherche, programme éducatif) à implémenter en Afrique dans les 12 mois."
+        },
+        {
+          "phase": "Alumni",
+          "title": "Suivi à vie",
+          "desc": "Intégration au réseau alumni du Club d'Affaires First of All®."
+        }
       ]
     },
     "profile": {

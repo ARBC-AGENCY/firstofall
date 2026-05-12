@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import MediaGallery from "@/components/ui/MediaGallery";
 
 export async function generateMetadata({
   params,
@@ -23,6 +24,7 @@ export default async function ActualitesPage({
 
   return (
     <>
+      {/* ── HERO ── */}
       <section className="pt-36 pb-20 bg-surface text-center px-6">
         <ScrollReveal>
           <span className="label-md text-primary block mb-4">{t("label")}</span>
@@ -35,16 +37,10 @@ export default async function ActualitesPage({
         </ScrollReveal>
       </section>
 
-      <section className="py-24 bg-surface-container-low px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <ScrollReveal>
-            <span className="material-symbols-outlined text-neutral-700 text-6xl font-light mb-6 block">
-              article
-            </span>
-            <p className="text-neutral-600 font-cinzel tracking-widest uppercase text-sm">
-              {t("comingSoon")}
-            </p>
-          </ScrollReveal>
+      {/* ── MEDIA GALLERY ── */}
+      <section className="py-16 bg-surface px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <MediaGallery />
         </div>
       </section>
     </>

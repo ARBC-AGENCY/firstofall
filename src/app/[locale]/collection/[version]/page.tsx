@@ -7,10 +7,10 @@ import { useTranslations } from "next-intl";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import ReservationModal from "@/components/ui/ReservationModal";
 import { use } from "react";
-import essentials from "@/assets/images/7.webp";
-import business from "@/assets/images/6.webp";
-import executive from "@/assets/images/999.webp";
-import exclusive from "@/assets/images/3.jpeg";
+import essentials from "@/assets/images/Essentiel.webp";
+import business from "@/assets/images/Business.webp";
+import executive from "@/assets/images/Executive.webp";
+import exclusive from "@/assets/images/Exclusive.webp";
 
 const VALID_VERSIONS = ["essential", "business", "executive", "exclusive"];
 
