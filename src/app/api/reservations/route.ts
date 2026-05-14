@@ -1,6 +1,133 @@
 import { NextRequest, NextResponse } from "next/server";
 import { reservationSchema } from "@/lib/validations";
 
+const STAMP_VERSIONS = ["essential", "business", "executive", "exclusive"];
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+
+function emailShell(content: string): string {
+  return `<div style="font-family:Georgia,serif;background:#131313;color:#e5e2e1;padding:40px;max-width:600px;margin:0 auto;">${content}<div style="margin-top:32px;height:1px;background:linear-gradient(to right,transparent,#d4af37,transparent);opacity:0.3;"></div><p style="margin-top:16px;font-size:10px;color:#4d4635;text-transform:uppercase;letter-spacing:0.1rem;">© 2026 First of All® — The Sovereign Ledger<br/>EUIPO · OAPI · USPTO · Canada · UK</p></div>`;
+}
+
+function dataRow(label: string, value: string): string {
+  return `<tr><td style="padding:8px 0;color:#99907c;font-size:12px;text-transform:uppercase;letter-spacing:0.1rem;width:140px;">${label}</td><td style="padding:8px 0;color:#e5e2e1;">${value}</td></tr>`;
+}
+
+function versionBadge(version: string): string {
+  const label =
+    version === "silicon-valley" ? "Silicon Valley" :
+    version === "dealer" ? "Revendeur" :
+    version.charAt(0).toUpperCase() + version.slice(1);
+  return `<span style="display:inline-block;padding:2px 10px;background:#1e1a0e;border:1px solid #d4af37;color:#f2ca50;font-size:11px;text-transform:uppercase;letter-spacing:0.1rem;">${label}</span>`;
+}
+
+function adminEmailHtml(data: ReturnType<typeof reservationSchema.parse>): string {
+  const typeLabel =
+    STAMP_VERSIONS.includes(data.version) ? `Réservation Timbre — ${data.version.toUpperCase()}` :
+    data.version === "silicon-valley" ? "Candidature Silicon Valley Africa" :
+    "Candidature Revendeur";
+
+  return emailShell(`
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
+      <h1 style="color:#f2ca50;font-size:20px;margin:0;letter-spacing:0.05rem;">${typeLabel}</h1>
+      ${versionBadge(data.version)}
+    </div>
+    <table style="width:100%;border-collapse:collapse;border-top:1px solid #2a2520;">
+      ${dataRow("Nom", escapeHtml(data.name))}
+      ${dataRow("Email", `<a href="mailto:${escapeHtml(data.email)}" style="color:#f2ca50;">${escapeHtml(data.email)}</a>`)}
+      ${dataRow("Téléphone", data.phone ? escapeHtml(data.phone) : "—")}
+      ${dataRow("Pays", escapeHtml(data.country))}
+      ${dataRow("Organisation", data.organisation ? escapeHtml(data.organisation) : "—")}
+      ${dataRow("Langue", data.locale.toUpperCase())}
+      ${data.message ? dataRow("Message", `<span style="font-style:italic;">${escapeHtml(data.message)}</span>`) : ""}
+    </table>
+  `);
+}
+
+function userEmailHtml(data: ReturnType<typeof reservationSchema.parse>): string {
+  const isFr = data.locale === "fr";
+
+  if (STAMP_VERSIONS.includes(data.version)) {
+    const versionName = data.version.charAt(0).toUpperCase() + data.version.slice(1);
+    return emailShell(`
+      <h1 style="color:#f2ca50;font-size:22px;margin-bottom:8px;">First of All®</h1>
+      <p style="color:#e5e2e1;line-height:1.8;margin-bottom:16px;">${isFr ? `Cher(e) ${escapeHtml(data.name)},` : `Dear ${escapeHtml(data.name)},`}</p>
+      <p style="color:#e5e2e1;line-height:1.8;margin-bottom:24px;">
+        ${isFr
+          ? `Votre réservation pour le timbre <strong style="color:#f2ca50;">First of All® ${versionName}</strong> a bien été enregistrée. Notre équipe vous contactera dans les <strong>48 heures</strong> pour finaliser votre commande.`
+          : `Your reservation for the <strong style="color:#f2ca50;">First of All® ${versionName}</strong> stamp has been registered. Our team will contact you within <strong>48 hours</strong> to finalize your order.`}
+      </p>
+      <p style="color:#99907c;font-size:13px;line-height:1.7;font-style:italic;">
+        ${isFr
+          ? "First of All® est une marque protégée internationalement. Votre intérêt nous honore."
+          : "First of All® is an internationally protected brand. We are honoured by your interest."}
+      </p>
+    `);
+  }
+
+  if (data.version === "silicon-valley") {
+    return emailShell(`
+      <h1 style="color:#f2ca50;font-size:22px;margin-bottom:8px;">Programme Silicon Valley Africa</h1>
+      <p style="color:#e5e2e1;line-height:1.8;margin-bottom:16px;">${isFr ? `Cher(e) ${escapeHtml(data.name)},` : `Dear ${escapeHtml(data.name)},`}</p>
+      <p style="color:#e5e2e1;line-height:1.8;margin-bottom:16px;">
+        ${isFr
+          ? "Votre candidature au <strong style=\"color:#f2ca50;\">Programme Silicon Valley Africa</strong> de First of All® a bien été reçue."
+          : "Your application to the <strong style=\"color:#f2ca50;\">First of All® Silicon Valley Africa Program</strong> has been received."}
+      </p>
+      <p style="color:#e5e2e1;line-height:1.8;margin-bottom:24px;">
+        ${isFr
+          ? "Notre comité de sélection examinera votre dossier et vous contactera prochainement pour les prochaines étapes."
+          : "Our selection committee will review your application and contact you soon regarding next steps."}
+      </p>
+      <p style="color:#99907c;font-size:13px;line-height:1.7;font-style:italic;">
+        ${isFr ? "Nous vous souhaitons bonne chance dans le processus de sélection." : "We wish you the best of luck in the selection process."}
+      </p>
+    `);
+  }
+
+  // dealer
+  return emailShell(`
+    <h1 style="color:#f2ca50;font-size:22px;margin-bottom:8px;">${isFr ? "Candidature Revendeur" : "Dealer Application"}</h1>
+    <p style="color:#e5e2e1;line-height:1.8;margin-bottom:16px;">${isFr ? `Cher(e) ${escapeHtml(data.name)},` : `Dear ${escapeHtml(data.name)},`}</p>
+    <p style="color:#e5e2e1;line-height:1.8;margin-bottom:24px;">
+      ${isFr
+        ? "Votre candidature au réseau de revendeurs <strong style=\"color:#f2ca50;\">First of All®</strong> a bien été enregistrée. Notre équipe commerciale étudiera votre dossier et vous contactera dans les meilleurs délais."
+        : "Your application to the <strong style=\"color:#f2ca50;\">First of All®</strong> dealer network has been registered. Our commercial team will review your application and contact you as soon as possible."}
+    </p>
+  `);
+}
+
+function adminSubject(data: ReturnType<typeof reservationSchema.parse>): string {
+  if (STAMP_VERSIONS.includes(data.version)) {
+    return `[FOA®] Réservation ${data.version.toUpperCase()} — ${data.name} (${data.country})`;
+  }
+  if (data.version === "silicon-valley") {
+    return `[FOA®] Candidature Silicon Valley — ${data.name} (${data.country})`;
+  }
+  return `[FOA®] Candidature Revendeur — ${data.organisation ?? data.name} (${data.country})`;
+}
+
+function userSubject(data: ReturnType<typeof reservationSchema.parse>): string {
+  const isFr = data.locale === "fr";
+  if (STAMP_VERSIONS.includes(data.version)) {
+    const v = data.version.charAt(0).toUpperCase() + data.version.slice(1);
+    return isFr ? `First of All® — Réservation ${v} confirmée` : `First of All® — ${v} reservation confirmed`;
+  }
+  if (data.version === "silicon-valley") {
+    return isFr
+      ? "First of All® — Votre candidature Silicon Valley Africa"
+      : "First of All® — Your Silicon Valley Africa application";
+  }
+  return isFr ? "First of All® — Votre candidature revendeur" : "First of All® — Your dealer application";
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -16,7 +143,6 @@ export async function POST(req: NextRequest) {
     const data = parsed.data;
 
     // === Supabase insert ===
-    // Only run if Supabase is configured
     if (
       process.env.NEXT_PUBLIC_SUPABASE_URL &&
       process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -38,70 +164,30 @@ export async function POST(req: NextRequest) {
       ]);
       if (error) {
         console.error("Supabase insert error:", error);
-        // Don't fail the request — still send email
       }
     }
 
-    // === Resend email ===
+    // === Resend emails ===
     if (process.env.RESEND_API_KEY) {
       const { Resend } = await import("resend");
       const resend = new Resend(process.env.RESEND_API_KEY);
-
       const fromEmail = process.env.RESEND_FROM_EMAIL ?? "noreply@firstofall.net";
       const adminEmail = process.env.ADMIN_EMAIL ?? "contact@firstofall.net";
 
-      // Admin notification
-      await resend.emails.send({
-        from: fromEmail,
-        to: adminEmail,
-        subject: `[First of All®] Nouvelle Réservation — ${data.version.toUpperCase()}`,
-        html: `
-          <div style="font-family:Georgia,serif;background:#131313;color:#e5e2e1;padding:40px;max-width:600px;margin:0 auto;">
-            <h1 style="color:#f2ca50;font-size:24px;margin-bottom:24px;">Nouvelle Réservation</h1>
-            <table style="width:100%;border-collapse:collapse;">
-              <tr><td style="padding:8px 0;color:#99907c;font-size:12px;text-transform:uppercase;letter-spacing:0.1rem;">Nom</td><td style="padding:8px 0;color:#e5e2e1;">${data.name}</td></tr>
-              <tr><td style="padding:8px 0;color:#99907c;font-size:12px;text-transform:uppercase;letter-spacing:0.1rem;">Email</td><td style="padding:8px 0;color:#e5e2e1;">${data.email}</td></tr>
-              <tr><td style="padding:8px 0;color:#99907c;font-size:12px;text-transform:uppercase;letter-spacing:0.1rem;">Téléphone</td><td style="padding:8px 0;color:#e5e2e1;">${data.phone ?? "—"}</td></tr>
-              <tr><td style="padding:8px 0;color:#99907c;font-size:12px;text-transform:uppercase;letter-spacing:0.1rem;">Pays</td><td style="padding:8px 0;color:#e5e2e1;">${data.country}</td></tr>
-              <tr><td style="padding:8px 0;color:#99907c;font-size:12px;text-transform:uppercase;letter-spacing:0.1rem;">Organisation</td><td style="padding:8px 0;color:#e5e2e1;">${data.organisation ?? "—"}</td></tr>
-              <tr><td style="padding:8px 0;color:#99907c;font-size:12px;text-transform:uppercase;letter-spacing:0.1rem;">Version</td><td style="padding:8px 0;color:#f2ca50;font-weight:bold;">${data.version.toUpperCase()}</td></tr>
-              <tr><td style="padding:8px 0;color:#99907c;font-size:12px;text-transform:uppercase;letter-spacing:0.1rem;">Langue</td><td style="padding:8px 0;color:#e5e2e1;">${data.locale.toUpperCase()}</td></tr>
-              <tr><td style="padding:8px 0;color:#99907c;font-size:12px;text-transform:uppercase;letter-spacing:0.1rem;vertical-align:top;">Message</td><td style="padding:8px 0;color:#e5e2e1;">${data.message ?? "—"}</td></tr>
-            </table>
-            <p style="margin-top:32px;font-size:10px;color:#4d4635;text-transform:uppercase;letter-spacing:0.1rem;">© First of All® — The Sovereign Ledger</p>
-          </div>
-        `,
-      });
-
-      // User confirmation
-      const isFr = data.locale === "fr";
-      await resend.emails.send({
-        from: fromEmail,
-        to: data.email,
-        subject: isFr
-          ? "First of All® — Votre réservation est confirmée"
-          : "First of All® — Your reservation is confirmed",
-        html: `
-          <div style="font-family:Georgia,serif;background:#131313;color:#e5e2e1;padding:40px;max-width:600px;margin:0 auto;">
-            <h1 style="color:#f2ca50;font-size:24px;margin-bottom:16px;">First of All®</h1>
-            <p style="color:#e5e2e1;line-height:1.7;">
-              ${isFr ? `Cher(e) ${data.name},` : `Dear ${data.name},`}
-            </p>
-            <p style="color:#e5e2e1;line-height:1.7;">
-              ${
-                isFr
-                  ? `Votre réservation pour la <strong style="color:#f2ca50;">${data.version.toUpperCase()}</strong> a bien été enregistrée. Notre équipe vous contactera dans les 48 heures pour finaliser votre commande.`
-                  : `Your reservation for the <strong style="color:#f2ca50;">${data.version.toUpperCase()}</strong> has been registered. Our team will contact you within 48 hours to finalize your order.`
-              }
-            </p>
-            <div style="margin:32px 0;height:1px;background:linear-gradient(to right,transparent,#d4af37,transparent);opacity:0.4;"></div>
-            <p style="font-size:10px;color:#4d4635;text-transform:uppercase;letter-spacing:0.1rem;">
-              ${isFr ? "Marque protégée internationalement" : "Internationally protected trademark"} — EUIPO • OAPI • USPTO • Canada • UK<br/>
-              © 2026 First of All®
-            </p>
-          </div>
-        `,
-      });
+      await Promise.allSettled([
+        resend.emails.send({
+          from: fromEmail,
+          to: adminEmail,
+          subject: adminSubject(data),
+          html: adminEmailHtml(data),
+        }),
+        resend.emails.send({
+          from: fromEmail,
+          to: data.email,
+          subject: userSubject(data),
+          html: userEmailHtml(data),
+        }),
+      ]);
     }
 
     return NextResponse.json({ success: true }, { status: 201 });

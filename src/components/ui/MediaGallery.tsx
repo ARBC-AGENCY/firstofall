@@ -113,6 +113,36 @@ const MEDIA_ITEMS: MediaItem[] = [
     src: "https://first-of-all-media.s3.eu-west-3.amazonaws.com/INVITE-DU-JT-11.mp4",
     poster: "/image.png",
   },
+    {
+    id: 47,
+    type: "video",
+    src: "https://first-of-all-media.s3.eu-west-3.amazonaws.com/IMG_6628.MP4",
+    poster: "/image.png",
+  },
+      {
+    id: 48,
+    type: "video",
+    src: "https://first-of-all-media.s3.eu-west-3.amazonaws.com/IMG_6629.MP4",
+    poster: "/image.png",
+  },
+      {
+    id: 49,
+    type: "video",
+    src: "https://first-of-all-media.s3.eu-west-3.amazonaws.com/IMG_6630.MP4",
+    poster: "/image.png",
+  },
+      {
+    id: 50,
+    type: "video",
+    src: "https://first-of-all-media.s3.eu-west-3.amazonaws.com/IMG_6632.MP4",
+    poster: "/image.png",
+  },
+      {
+    id: 51,
+    type: "video",
+    src: "https://first-of-all-media.s3.eu-west-3.amazonaws.com/IMG_6633.MP4",
+    poster: "/image.png",
+  },
 ];
 
 export default function MediaGallery() {
