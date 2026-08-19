@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { BRAND_HAS_IP, BRAND_MARK } from "@/lib/brand";
 
 export async function generateMetadata({
   params,
@@ -31,8 +32,8 @@ export default async function LegalPage({
           </h1>
           <div className="space-y-8 text-neutral-400 leading-relaxed text-sm">
             <p>
-              <strong className="text-on-surface font-cinzel">First of All™</strong>{" "}
-              {t("p1")}
+              <strong className="text-on-surface font-cinzel">{BRAND_MARK}</strong>{" "}
+              {BRAND_HAS_IP ? t("p1") : t("p1NoIp")}
             </p>
             <p>{t("p2")}</p>
             <p>{t("copyright")}</p>

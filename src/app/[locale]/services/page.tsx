@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import AuthenticationCta from "@/components/ui/AuthenticationCta";
+import { BRAND_HAS_IP } from "@/lib/brand";
 
 export async function generateMetadata({
   params,
@@ -79,24 +80,26 @@ export default async function ServicesPage({
         </div>
       </section>
 
-      {/* Protection badges */}
-      <section className="py-20 bg-surface text-center px-6">
-        <ScrollReveal>
-          <h2 className="text-2xl font-cinzel text-on-surface mb-10 uppercase tracking-widest">
-            {t("protectionTitle")}
-          </h2>
-          <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
-            {["EUIPO", "OAPI", "USPTO", "CANADA", "UK"].map((j) => (
-              <div
-                key={j}
-                className="px-6 py-3 border border-primary-container/30 bg-surface-container-high text-primary font-cinzel tracking-widest text-xs"
-              >
-                {j}
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
-      </section>
+      {/* Protection badges — the registrations are brand-specific */}
+      {BRAND_HAS_IP && (
+        <section className="py-20 bg-surface text-center px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl font-cinzel text-on-surface mb-10 uppercase tracking-widest">
+              {t("protectionTitle")}
+            </h2>
+            <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+              {["EUIPO", "OAPI", "USPTO", "CANADA", "UK"].map((j) => (
+                <div
+                  key={j}
+                  className="px-6 py-3 border border-primary-container/30 bg-surface-container-high text-primary font-cinzel tracking-widest text-xs"
+                >
+                  {j}
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </section>
+      )}
     </>
   );
 }

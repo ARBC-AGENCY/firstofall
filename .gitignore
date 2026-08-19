@@ -7,6 +7,9 @@ out/
 node_modules/
 
 # Environment variables
+# NB: .env.local.example is intentionally NOT ignored — it is the committed
+# template. Listing it here had no effect (it was already tracked) and only
+# made it look safe to type real secrets into.
 .env
 .env.local
 .env.*.local

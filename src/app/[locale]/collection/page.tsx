@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { BRAND_HAS_IP } from "@/lib/brand";
 import essentialImg from "@/assets/images/Essentiel.webp";
 import businessImg from "@/assets/images/Business.webp";
 import executiveImg from "@/assets/images/Executive.webp";
@@ -60,7 +61,7 @@ export default async function CollectionPage({
             {t("title")}
           </h1>
           <p className="text-neutral-400 text-lg italic font-light max-w-2xl mx-auto leading-relaxed">
-            {t("intro")}
+            {BRAND_HAS_IP ? t("intro") : t("introNoIp")}
           </p>
         </ScrollReveal>
       </section>
@@ -90,12 +91,14 @@ export default async function CollectionPage({
 
             {/* Content */}
             <ScrollReveal className="lg:w-1/2 px-8 md:px-16 py-16 lg:py-0">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 border border-primary/30 px-4 py-2 mb-8">
-                <span className="text-primary text-[10px] font-cinzel tracking-widest">
-                  {t("badge")}
-                </span>
-              </div>
+              {/* Badge — asserts a registration, so brand-gated */}
+              {BRAND_HAS_IP && (
+                <div className="inline-flex items-center gap-2 border border-primary/30 px-4 py-2 mb-8">
+                  <span className="text-primary text-[10px] font-cinzel tracking-widest">
+                    {t("badge")}
+                  </span>
+                </div>
+              )}
 
               <span className="label-md text-primary block mb-3">
                 {t("limited")}

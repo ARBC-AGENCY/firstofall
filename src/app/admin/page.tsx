@@ -1,4 +1,5 @@
 import BfcacheGuard from "@/components/admin/BfcacheGuard";
+import { BRAND_MARK_UPPER } from "@/lib/brand";
 
 type Props = { searchParams: Promise<{ error?: string }> };
 
@@ -11,7 +12,7 @@ export default async function AdminLoginPage({ searchParams }: Props) {
       <div className="w-full max-w-sm">
         <div className="text-center mb-10">
           <p className="font-cinzel text-2xl text-[#f2ca50] tracking-[0.3rem] mb-1">
-            FIRST OF ALL™
+            {BRAND_MARK_UPPER}
           </p>
           <p className="text-neutral-600 text-[10px] tracking-[0.25rem] uppercase">
             Espace Administrateur

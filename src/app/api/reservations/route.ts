@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { reservationSchema } from "@/lib/validations";
+import { BRAND_HAS_IP, BRAND_ID, BRAND_MARK } from "@/lib/brand";
 
 const STAMP_VERSIONS = ["essential", "business", "executive", "exclusive"];
 
@@ -13,7 +14,7 @@ function escapeHtml(s: string): string {
 }
 
 function emailShell(content: string): string {
-  return `<div style="font-family:Georgia,serif;background:#131313;color:#e5e2e1;padding:40px;max-width:600px;margin:0 auto;">${content}<div style="margin-top:32px;height:1px;background:linear-gradient(to right,transparent,#d4af37,transparent);opacity:0.3;"></div><p style="margin-top:16px;font-size:10px;color:#4d4635;text-transform:uppercase;letter-spacing:0.1rem;">© 2026 First of All™ — The Sovereign Ledger<br/>EUIPO · OAPI · USPTO · Canada · UK</p></div>`;
+  return `<div style="font-family:Georgia,serif;background:#131313;color:#e5e2e1;padding:40px;max-width:600px;margin:0 auto;">${content}<div style="margin-top:32px;height:1px;background:linear-gradient(to right,transparent,#d4af37,transparent);opacity:0.3;"></div><p style="margin-top:16px;font-size:10px;color:#4d4635;text-transform:uppercase;letter-spacing:0.1rem;">© 2026 ${BRAND_MARK} — The Sovereign Ledger${BRAND_HAS_IP ? "<br/>EUIPO · OAPI · USPTO · Canada · UK" : ""}</p></div>`;
 }
 
 function dataRow(label: string, value: string): string {
@@ -59,17 +60,21 @@ function userEmailHtml(data: ReturnType<typeof reservationSchema.parse>): string
   if (STAMP_VERSIONS.includes(data.version)) {
     const versionName = data.version.charAt(0).toUpperCase() + data.version.slice(1);
     return emailShell(`
-      <h1 style="color:#f2ca50;font-size:22px;margin-bottom:8px;">First of All™</h1>
+      <h1 style="color:#f2ca50;font-size:22px;margin-bottom:8px;">${BRAND_MARK}</h1>
       <p style="color:#e5e2e1;line-height:1.8;margin-bottom:16px;">${isFr ? `Cher(e) ${escapeHtml(data.name)},` : `Dear ${escapeHtml(data.name)},`}</p>
       <p style="color:#e5e2e1;line-height:1.8;margin-bottom:24px;">
         ${isFr
-          ? `Votre réservation pour le timbre <strong style="color:#f2ca50;">First of All™ ${versionName}</strong> a bien été enregistrée. Notre équipe vous contactera dans les <strong>48 heures</strong> pour finaliser votre commande.`
-          : `Your reservation for the <strong style="color:#f2ca50;">First of All™ ${versionName}</strong> stamp has been registered. Our team will contact you within <strong>48 hours</strong> to finalize your order.`}
+          ? `Votre réservation pour le timbre <strong style="color:#f2ca50;">${BRAND_MARK} ${versionName}</strong> a bien été enregistrée. Notre équipe vous contactera dans les <strong>48 heures</strong> pour finaliser votre commande.`
+          : `Your reservation for the <strong style="color:#f2ca50;">${BRAND_MARK} ${versionName}</strong> stamp has been registered. Our team will contact you within <strong>48 hours</strong> to finalize your order.`}
       </p>
       <p style="color:#99907c;font-size:13px;line-height:1.7;font-style:italic;">
-        ${isFr
-          ? "First of All™ est une marque protégée internationalement. Votre intérêt nous honore."
-          : "First of All™ is an internationally protected brand. We are honoured by your interest."}
+        ${BRAND_HAS_IP
+          ? isFr
+            ? `${BRAND_MARK} est une marque protégée internationalement. Votre intérêt nous honore.`
+            : `${BRAND_MARK} is an internationally protected brand. We are honoured by your interest.`
+          : isFr
+            ? "Votre intérêt nous honore."
+            : "We are honoured by your interest."}
       </p>
     `);
   }
@@ -80,8 +85,8 @@ function userEmailHtml(data: ReturnType<typeof reservationSchema.parse>): string
       <p style="color:#e5e2e1;line-height:1.8;margin-bottom:16px;">${isFr ? `Cher(e) ${escapeHtml(data.name)},` : `Dear ${escapeHtml(data.name)},`}</p>
       <p style="color:#e5e2e1;line-height:1.8;margin-bottom:16px;">
         ${isFr
-          ? "Votre candidature au <strong style=\"color:#f2ca50;\">Programme Silicon Valley Africa</strong> de First of All™ a bien été reçue."
-          : "Your application to the <strong style=\"color:#f2ca50;\">First of All™ Silicon Valley Africa Program</strong> has been received."}
+          ? `Votre candidature au <strong style="color:#f2ca50;">Programme Silicon Valley Africa</strong> de ${BRAND_MARK} a bien été reçue.`
+          : `Your application to the <strong style="color:#f2ca50;">${BRAND_MARK} Silicon Valley Africa Program</strong> has been received.`}
       </p>
       <p style="color:#e5e2e1;line-height:1.8;margin-bottom:24px;">
         ${isFr
@@ -100,8 +105,8 @@ function userEmailHtml(data: ReturnType<typeof reservationSchema.parse>): string
       <p style="color:#e5e2e1;line-height:1.8;margin-bottom:16px;">${isFr ? `Cher(e) ${escapeHtml(data.name)},` : `Dear ${escapeHtml(data.name)},`}</p>
       <p style="color:#e5e2e1;line-height:1.8;margin-bottom:24px;">
         ${isFr
-          ? "Votre demande d'authentification a bien été reçue par <strong style=\"color:#f2ca50;\">First of All™</strong>. Notre équipe d'experts examinera votre dossier et vous contactera sous <strong>48 heures</strong>."
-          : "Your authentication request has been received by <strong style=\"color:#f2ca50;\">First of All™</strong>. Our team of experts will review your request and contact you within <strong>48 hours</strong>."}
+          ? `Votre demande d'authentification a bien été reçue par <strong style="color:#f2ca50;">${BRAND_MARK}</strong>. Notre équipe d'experts examinera votre dossier et vous contactera sous <strong>48 heures</strong>.`
+          : `Your authentication request has been received by <strong style="color:#f2ca50;">${BRAND_MARK}</strong>. Our team of experts will review your request and contact you within <strong>48 hours</strong>.`}
       </p>
       <p style="color:#99907c;font-size:13px;line-height:1.7;font-style:italic;">
         ${isFr
@@ -117,42 +122,42 @@ function userEmailHtml(data: ReturnType<typeof reservationSchema.parse>): string
     <p style="color:#e5e2e1;line-height:1.8;margin-bottom:16px;">${isFr ? `Cher(e) ${escapeHtml(data.name)},` : `Dear ${escapeHtml(data.name)},`}</p>
     <p style="color:#e5e2e1;line-height:1.8;margin-bottom:24px;">
       ${isFr
-        ? "Votre candidature au réseau de revendeurs <strong style=\"color:#f2ca50;\">First of All™</strong> a bien été enregistrée. Notre équipe commerciale étudiera votre dossier et vous contactera dans les meilleurs délais."
-        : "Your application to the <strong style=\"color:#f2ca50;\">First of All™</strong> dealer network has been registered. Our commercial team will review your application and contact you as soon as possible."}
+        ? `Votre candidature au réseau de revendeurs <strong style="color:#f2ca50;">${BRAND_MARK}</strong> a bien été enregistrée. Notre équipe commerciale étudiera votre dossier et vous contactera dans les meilleurs délais.`
+        : `Your application to the <strong style="color:#f2ca50;">${BRAND_MARK}</strong> dealer network has been registered. Our commercial team will review your application and contact you as soon as possible.`}
     </p>
   `);
 }
 
 function adminSubject(data: ReturnType<typeof reservationSchema.parse>): string {
   if (STAMP_VERSIONS.includes(data.version)) {
-    return `[FOA™] Réservation ${data.version.toUpperCase()} — ${data.name} (${data.country})`;
+    return `[${BRAND_MARK}] Réservation ${data.version.toUpperCase()} — ${data.name} (${data.country})`;
   }
   if (data.version === "silicon-valley") {
-    return `[FOA™] Candidature Silicon Valley — ${data.name} (${data.country})`;
+    return `[${BRAND_MARK}] Candidature Silicon Valley — ${data.name} (${data.country})`;
   }
   if (data.version === "authentication") {
-    return `[FOA™] Demande d'Authentification — ${data.name} (${data.country})`;
+    return `[${BRAND_MARK}] Demande d'Authentification — ${data.name} (${data.country})`;
   }
-  return `[FOA™] Candidature Revendeur — ${data.organisation ?? data.name} (${data.country})`;
+  return `[${BRAND_MARK}] Candidature Revendeur — ${data.organisation ?? data.name} (${data.country})`;
 }
 
 function userSubject(data: ReturnType<typeof reservationSchema.parse>): string {
   const isFr = data.locale === "fr";
   if (STAMP_VERSIONS.includes(data.version)) {
     const v = data.version.charAt(0).toUpperCase() + data.version.slice(1);
-    return isFr ? `First of All™ — Réservation ${v} confirmée` : `First of All™ — ${v} reservation confirmed`;
+    return isFr ? `${BRAND_MARK} — Réservation ${v} confirmée` : `${BRAND_MARK} — ${v} reservation confirmed`;
   }
   if (data.version === "silicon-valley") {
     return isFr
-      ? "First of All™ — Votre candidature Silicon Valley Africa"
-      : "First of All™ — Your Silicon Valley Africa application";
+      ? `${BRAND_MARK} — Votre candidature Silicon Valley Africa`
+      : `${BRAND_MARK} — Your Silicon Valley Africa application`;
   }
   if (data.version === "authentication") {
     return isFr
-      ? "First of All™ — Votre demande d'authentification"
-      : "First of All™ — Your authentication request";
+      ? `${BRAND_MARK} — Votre demande d'authentification`
+      : `${BRAND_MARK} — Your authentication request`;
   }
-  return isFr ? "First of All™ — Votre candidature revendeur" : "First of All™ — Your dealer application";
+  return isFr ? `${BRAND_MARK} — Votre candidature revendeur` : `${BRAND_MARK} — Your dealer application`;
 }
 
 export async function POST(req: NextRequest) {
@@ -186,6 +191,7 @@ export async function POST(req: NextRequest) {
           version: data.version,
           message: data.message ?? null,
           locale: data.locale,
+          brand: BRAND_ID,
           status: "pending",
         },
       ]);

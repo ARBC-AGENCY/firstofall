@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import LangSwitcher from "@/components/ui/LangSwitcher";
+import { BRAND_HAS_IP, BRAND_MARK } from "@/lib/brand";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -150,7 +151,13 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <div className="absolute bottom-10 right-10 text-right">
           <div className="font-cinzel text-primary font-bold text-sm mb-1">{t("ledger")}</div>
           <div className="text-[10px] text-neutral-600 uppercase tracking-widest leading-relaxed">
-            EUIPO • OAPI • USPTO • UK • WIPO<br />© First of All™ 2026
+            {BRAND_HAS_IP && (
+              <>
+                EUIPO • OAPI • USPTO • UK • WIPO
+                <br />
+              </>
+            )}
+            © {BRAND_MARK} 2026
           </div>
         </div>
       </div>

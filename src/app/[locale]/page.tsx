@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import AuthenticationCta from "@/components/ui/AuthenticationCta";
+import { BRAND_HAS_IP, BRAND_MARK, BRAND_NAME } from "@/lib/brand";
 import essentialImg from "@/assets/images/IMG-20260422-WA0015.webp";
 import businessImg from "@/assets/images/IMG-20260422-WA0016.webp";
 import executiveImg from "@/assets/images/image-2.webp";
@@ -18,7 +19,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
   return {
-    title: `First of All™ | ${t("hero.headlineSub")}`,
+    title: `${BRAND_MARK} | ${t("hero.headlineSub")}`,
   };
 }
 
@@ -160,7 +161,7 @@ export default async function HomePage({
             <div className="absolute -inset-4 border border-primary/20 scale-105 pointer-events-none" />
             <Image
               src={technologyImg}
-              alt="Technologie First of All"
+              alt={`Technologie ${BRAND_NAME}`}
               width={700}
               height={500}
               className="w-full grayscale-0 hover:grayscale-0 transition-all duration-1000 object-cover"
@@ -187,24 +188,26 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* ── PROTECTIONS MONDIALES ────────────────────────────── */}
-      <section className="py-20 bg-surface text-center px-6">
-        <ScrollReveal>
-          <h2 className="text-2xl md:text-3xl font-cinzel text-on-surface mb-12 uppercase tracking-widest">
-            {t("protection.title")}
-          </h2>
-          <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-            {["EUIPO", "OAPI", "USPTO", "CANADA", "UK"].map((j) => (
-              <div
-                key={j}
-                className="px-8 py-3 border border-primary-container/30 bg-surface-container-high text-primary font-cinzel tracking-widest text-xs"
-              >
-                {j}
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
-      </section>
+      {/* ── PROTECTIONS MONDIALES — brand-specific registrations ── */}
+      {BRAND_HAS_IP && (
+        <section className="py-20 bg-surface text-center px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl md:text-3xl font-cinzel text-on-surface mb-12 uppercase tracking-widest">
+              {t("protection.title")}
+            </h2>
+            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+              {["EUIPO", "OAPI", "USPTO", "CANADA", "UK"].map((j) => (
+                <div
+                  key={j}
+                  className="px-8 py-3 border border-primary-container/30 bg-surface-container-high text-primary font-cinzel tracking-widest text-xs"
+                >
+                  {j}
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </section>
+      )}
 
       {/* ── PROGRAMME SILICON VALLEY ─────────────────────────── */}
       <section className="bg-surface relative overflow-hidden min-h-[560px] flex items-center">
@@ -243,7 +246,9 @@ export default async function HomePage({
       <section className="py-28 bg-surface-container-lowest border-y border-yellow-900/10">
         <ScrollReveal
           stagger
-          className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-10"
+          className={`max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 gap-10 ${
+            BRAND_HAS_IP ? "md:grid-cols-4" : "md:grid-cols-3"
+          }`}
         >
           <div className="text-center">
             <div className="text-5xl font-cinzel text-primary font-black mb-2">
@@ -253,14 +258,17 @@ export default async function HomePage({
               {t("metrics.levels")}
             </div>
           </div>
-          <div className="text-center">
-            <div className="text-5xl font-cinzel text-primary font-black mb-2">
-              5
+          {/* "5 jurisdictions" is a registration claim, not a product fact */}
+          {BRAND_HAS_IP && (
+            <div className="text-center">
+              <div className="text-5xl font-cinzel text-primary font-black mb-2">
+                5
+              </div>
+              <div className="text-xs uppercase tracking-widest text-neutral-400">
+                {t("metrics.jurisdictions")}
+              </div>
             </div>
-            <div className="text-xs uppercase tracking-widest text-neutral-400">
-              {t("metrics.jurisdictions")}
-            </div>
-          </div>
+          )}
           <div className="text-center">
             <div className="text-5xl font-cinzel text-primary font-black mb-2">
               8 050

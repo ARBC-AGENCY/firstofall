@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, Fragment } from "react";
+import { BRAND_MARK_UPPER } from "@/lib/brand";
 
 type ReservationRow = {
   id: string;
@@ -13,6 +14,7 @@ type ReservationRow = {
   version: string;
   message?: string;
   locale: string;
+  brand?: string;
   status: string;
   notes?: string;
 };
@@ -23,6 +25,7 @@ type WaitlistRow = {
   name: string;
   email: string;
   locale: string;
+  brand?: string;
   status: string;
   notes?: string;
 };
@@ -100,11 +103,12 @@ export default function AdminDashboard() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [updating, setUpdating] = useState<string | null>(null);
   const [noteEdits, setNoteEdits] = useState<Record<string, string>>({});
+  const [allBrands, setAllBrands] = useState(false);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/admin/data");
+      const res = await fetch(`/api/admin/data${allBrands ? "?scope=all" : ""}`);
       if (!res.ok) throw new Error();
       const { reservations, waitlist } = await res.json();
       const all: Entry[] = [
@@ -117,7 +121,7 @@ export default function AdminDashboard() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [allBrands]);
 
   useEffect(() => {
     fetchData();
@@ -174,10 +178,19 @@ export default function AdminDashboard() {
       {/* Header */}
       <header className="border-b border-[#1e1a0e] px-8 py-5 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <p className="font-cinzel text-[#f2ca50] tracking-[0.2rem] text-sm">FIRST OF ALL™</p>
+          <p className="font-cinzel text-[#f2ca50] tracking-[0.2rem] text-sm">{BRAND_MARK_UPPER}</p>
           <span className="text-neutral-700 text-xs tracking-widest uppercase">Tableau de bord</span>
         </div>
         <div className="flex items-center gap-4">
+          <button
+            onClick={() => setAllBrands((v) => !v)}
+            className={`text-[10px] font-cinzel tracking-widest uppercase transition-colors duration-200 ${
+              allBrands ? "text-[#f2ca50]" : "text-neutral-600 hover:text-[#f2ca50]"
+            }`}
+            title="Afficher les demandes de toutes les marques"
+          >
+            {allBrands ? "Toutes les marques" : "Cette marque"}
+          </button>
           <button
             onClick={fetchData}
             className="text-neutral-600 hover:text-[#f2ca50] transition-colors duration-200"
@@ -278,7 +291,14 @@ export default function AdminDashboard() {
                           {(entry as ReservationRow).country ?? "—"}
                         </td>
                         <td className="py-3.5 px-3">
-                          <TypeBadge version={version} />
+                          <div className="flex items-center gap-2">
+                            <TypeBadge version={version} />
+                            {allBrands && entry.brand && (
+                              <span className="text-[10px] px-2 py-1 border border-neutral-700 text-neutral-500 font-cinzel tracking-wider uppercase">
+                                {entry.brand}
+                              </span>
+                            )}
+                          </div>
                         </td>
                         <td className="py-3.5 px-3">
                           <StatusBadge status={entry.status} />

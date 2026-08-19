@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import MobileMenu from "./MobileMenu";
 import LangSwitcher from "@/components/ui/LangSwitcher";
+import { BRAND_MARK } from "@/lib/brand";
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -29,9 +30,9 @@ export default function Header() {
           <Link
             href="/"
             className="text-xl md:text-2xl font-bold text-primary font-cinzel tracking-tight hover:text-primary-container transition-colors duration-300"
-            aria-label="First of All™ — Home"
+            aria-label={`${BRAND_MARK} — Home`}
           >
-            First of All™
+            {BRAND_MARK}
           </Link>
 
           {/* Hamburger — center */}

@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { BRAND_CONTACT_EMAIL, BRAND_HAS_IP, BRAND_MARK } from "@/lib/brand";
 
 export default async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "footer" });
@@ -7,41 +8,50 @@ export default async function Footer({ locale }: { locale: string }) {
   return (
     <footer className="bg-neutral-950 border-t border-yellow-900/30">
       <div className="max-w-7xl mx-auto px-8 md:px-12 py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 gap-12 ${
+            BRAND_HAS_IP ? "lg:grid-cols-5" : "lg:grid-cols-4"
+          }`}
+        >
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <div className="text-xl font-bold text-primary font-cinzel">
-              First of All™
+              {BRAND_MARK}
             </div>
             <p className="text-neutral-500 text-xs tracking-wider leading-relaxed uppercase">
               {t("tagline")}
             </p>
-            <div className="flex flex-wrap gap-2 mt-2">
-              {["EUIPO 🇪🇺", "USPTO 🇺🇸", "OAPI 🌍", "CA 🇨🇦", "UK 🇬🇧"].map((j) => (
-                <span
-                  key={j}
-                  className="text-[10px] text-primary border border-primary/30 px-2 py-1 font-cinzel"
-                >
-                  {j}
-                </span>
-              ))}
-            </div>
+            {/* Registrations belong to a specific brand — never shown for one that lacks them */}
+            {BRAND_HAS_IP && (
+              <div className="flex flex-wrap gap-2 mt-2">
+                {["EUIPO 🇪🇺", "USPTO 🇺🇸", "OAPI 🌍", "CA 🇨🇦", "UK 🇬🇧"].map((j) => (
+                  <span
+                    key={j}
+                    className="text-[10px] text-primary border border-primary/30 px-2 py-1 font-cinzel"
+                  >
+                    {j}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Gouvernance */}
-          <div className="flex flex-col gap-3">
-            <span className="label-md text-on-surface mb-2">
-              {t("sections.gouvernance")}
-            </span>
-            {["EUIPO", "OAPI", "USPTO", "WIPO / OMPI"].map((g) => (
-              <span
-                key={g}
-                className="text-neutral-500 text-xs uppercase tracking-widest"
-              >
-                {g}
+          {BRAND_HAS_IP && (
+            <div className="flex flex-col gap-3">
+              <span className="label-md text-on-surface mb-2">
+                {t("sections.gouvernance")}
               </span>
-            ))}
-          </div>
+              {["EUIPO", "OAPI", "USPTO", "WIPO / OMPI"].map((g) => (
+                <span
+                  key={g}
+                  className="text-neutral-500 text-xs uppercase tracking-widest"
+                >
+                  {g}
+                </span>
+              ))}
+            </div>
+          )}
 
           {/* Quick links */}
           <div className="flex flex-col gap-3">
@@ -109,10 +119,10 @@ export default async function Footer({ locale }: { locale: string }) {
               {t("entity.country")}
             </address>
             <a
-              href="mailto:contact@firstofall.net"
+              href={`mailto:${BRAND_CONTACT_EMAIL}`}
               className="text-neutral-500 text-xs tracking-widest hover:text-primary transition-colors"
             >
-              contact@firstofall.net
+              {BRAND_CONTACT_EMAIL}
             </a>
           </div>
         </div>
@@ -121,7 +131,7 @@ export default async function Footer({ locale }: { locale: string }) {
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <p className="text-neutral-600 text-[10px] leading-relaxed max-w-xl">
-            {t("legal")}
+            {BRAND_HAS_IP ? t("legal") : t("legalNoIp")}
           </p>
           <div className="flex flex-col items-start md:items-end gap-2">
             <div className="text-neutral-600 text-[10px] uppercase tracking-widest whitespace-nowrap">

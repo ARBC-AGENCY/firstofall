@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Inter } from "next/font/google";
 import { getLocale } from "next-intl/server";
+import { BRAND_HAS_IP, BRAND_MARK } from "@/lib/brand";
 import "@/styles/globals.css";
 
 const cinzel = Cinzel({
@@ -20,11 +21,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | First of All™",
-    default: "First of All™ | L'Excellence Infalsifiable",
+    template: `%s | ${BRAND_MARK}`,
+    default: `${BRAND_MARK} | L'Excellence Infalsifiable`,
   },
-  description:
-    "First of All™ — La première technologie cryptofiduciaire protégée dans cinq juridictions mondiales. EUIPO • OAPI • USPTO • Canada • UK.",
+  description: BRAND_HAS_IP
+    ? `${BRAND_MARK} — La première technologie cryptofiduciaire protégée dans cinq juridictions mondiales. EUIPO • OAPI • USPTO • Canada • UK.`
+    : `${BRAND_MARK} — Services d'authentification de documents, cachets et œuvres d'art, sécurisés par une technologie cryptofiduciaire.`,
 };
 
 export default async function RootLayout({

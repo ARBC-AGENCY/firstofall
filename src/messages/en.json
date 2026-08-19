@@ -4,12 +4,12 @@
     "taglineSub": "Globally Protected Brand",
     "ledger": "The Sovereign Ledger",
     "ipLabel": "Global Intellectual Property",
-    "collection": "First of All",
-    "univers": "The First of All Universe",
+    "collection": "%BRAND_NAME%",
+    "univers": "The %BRAND_NAME% Universe",
     "services": "Authentication Services",
     "boutique": "Boutique",
     "dealers": "Find an Official Distributor",
-    "club": "First of All Club",
+    "club": "%BRAND_NAME% Club",
     "siliconValley": "Silicon Valley Program",
     "actualites": "News",
     "close": "Close",
@@ -24,12 +24,12 @@
       "histoire": "Our Story",
       "engagements": "Scientific Commitments",
       "dealers": "Find a Distributor",
-      "club": "First of All Club"
+      "club": "%BRAND_NAME% Club"
     }
   },
   "home": {
     "hero": {
-      "headline": "First of All.",
+      "headline": "%BRAND_NAME%.",
       "headlineSub": "Unforgeable Legacy.",
       "serviceLine": "Global Authentication Services for Documents, Stamps, and Works of Art.",
       "subtext": "Secured by our patented crypto-fiduciary technology.",
@@ -45,7 +45,7 @@
       "versions": {
         "essential": {
           "name": "Essential Version",
-          "desc": "The quintessence of First of All authenticity."
+          "desc": "The quintessence of %BRAND_NAME% authenticity."
         },
         "business": {
           "name": "Business Version",
@@ -64,7 +64,7 @@
     "technology": {
       "label": "PATENTED TECHNOLOGY",
       "title": "Nine levels of protection. Zero compromise.",
-      "text": "Every First of All™ seal is a feat of crypto-fiduciary engineering. By combining nanostructured inks and a sovereign ledger architecture, we create a physically anchored digital asset, impossible to duplicate.",
+      "text": "Every %BRAND% seal is a feat of crypto-fiduciary engineering. By combining nanostructured inks and a sovereign ledger architecture, we create a physically anchored digital asset, impossible to duplicate.",
       "cta": "Discover the Technology"
     },
     "protection": {
@@ -73,7 +73,7 @@
     "siliconValley": {
       "label": "SILICON VALLEY AFRICA PROGRAM",
       "title": "Inspiring Africa's tomorrow",
-      "text": "5% of First of All™'s revenue funds the immersion of African talent into the Big Tech companies of Silicon Valley.",
+      "text": "5% of %BRAND%'s revenue funds the immersion of African talent into the Big Tech companies of Silicon Valley.",
       "cta": "Discover the Program"
     },
     "metrics": {
@@ -83,8 +83,8 @@
       "media": "Global Media"
     },
     "club": {
-      "title": "First of All™ Business Club",
-      "text": "Upon acquiring your First of All™ Seal, you automatically join an international elite circle. A network designed for leaders who demand excellence and the infalsifiable.",
+      "title": "%BRAND% Business Club",
+      "text": "Upon acquiring your %BRAND% Seal, you automatically join an international elite circle. A network designed for leaders who demand excellence and the infalsifiable.",
       "cta": "Join the Club"
     }
   },
@@ -93,8 +93,9 @@
     "protectionLevels": "{count} Levels of Protection",
     "reserveTitle": "Reserve your {name}",
     "availableWorldwide": "available worldwide.",
-    "title": "The First of All Collection",
+    "title": "The %BRAND_NAME% Collection",
     "intro": "Four versions. One single requirement: the infalsifiable. Brand protected EUIPO • OAPI • USPTO • Canada • UK.",
+    "introNoIp": "Four versions. One single requirement: the infalsifiable.",
     "badge": "™ Globally Protected Brand",
     "reserve": "Reserve",
     "discover": "Discover",
@@ -124,19 +125,19 @@
   },
   "univers": {
     "label": "THE UNIVERSE",
-    "title": "The First of All Universe",
-    "intro": "Discover the history, philosophy and commitments of the First of All™ brand.",
+    "title": "The %BRAND_NAME% Universe",
+    "intro": "Discover the history, philosophy and commitments of the %BRAND% brand.",
     "explore": "EXPLORE ⟶",
     "links": {
       "histoire": "Our Story",
       "engagements": "Scientific Commitments",
       "dealers": "Official Distributors",
-      "club": "First of All Club"
+      "club": "%BRAND_NAME% Club"
     }
   },
   "histoire": {
     "title": "Our Story",
-    "launch": "October 1st, 2026 marks the international commercial launch of Édouard Patrick Junior Onana's infalsifiable seal — a multilayer document security solution now distributed worldwide by the First of All brand.",
+    "launch": "October 1st, 2026 marks the international commercial launch of Édouard Patrick Junior Onana's infalsifiable seal — a multilayer document security solution now distributed worldwide by the %BRAND_NAME% brand.",
     "intro": "We tell you its origin, its uniqueness, its philosophy, its business model and its official timeline, from creation to launch.",
     "invention": {
       "title": "PRESENTATION OF THE INVENTION",
@@ -213,7 +214,7 @@
       "Annual limited series: 5,000 Essential; 2,000 Business; 1,000 Executive; 50 Exclusive; 10 Exclusive+ (controlled global distribution)."
     ],
     "structureTitle": "COMMERCIALIZATION STRUCTURE AND BRAND",
-    "structure": "First of All — positioned as the premium reference in document security. Commercial implantation: commercial entities established in the United States, United Kingdom and Canada; selective distribution network and institutional partnerships for integration into administrative and financial processes.",
+    "structure": "%BRAND_NAME% — positioned as the premium reference in document security. Commercial implantation: commercial entities established in the United States, United Kingdom and Canada; selective distribution network and institutional partnerships for integration into administrative and financial processes.",
     "visionTitle": "VISION",
     "vision": "To become the global reference for decision-makers' seal authenticity, combining technological innovation and ethics. Objective: significantly reduce documentary fraud and establish international standards of trust.",
     "timelineTitle": "TIMELINE",
@@ -228,7 +229,7 @@
       },
       {
         "date": "August 2024",
-        "event": "Creation of the First of All brand; EUIPO and OAPI filings."
+        "event": "Creation of the %BRAND_NAME% brand; EUIPO and OAPI filings."
       },
       {
         "date": "December 2024",
@@ -258,7 +259,7 @@
   },
   "engagements": {
     "title": "Scientific Commitments",
-    "intro": "First of All™ is committed to funding research and scientific innovation around the world.",
+    "intro": "%BRAND% is committed to funding research and scientific innovation around the world.",
     "items": [
       {
         "title": "Silicon Valley Program",
@@ -307,9 +308,9 @@
     "networkLabel": "NETWORK",
     "mapPlaceholder": "Global Network — Interactive Map coming soon",
     "title": "Find an Official Distributor",
-    "intro": "First of All™ relies on a global network of distributors selected according to strict integrity criteria.",
+    "intro": "%BRAND% relies on a global network of distributors selected according to strict integrity criteria.",
     "formTitle": "Become an Official Distributor",
-    "formIntro": "Join the exclusive network of First of All™ distributors and participate in the document security revolution.",
+    "formIntro": "Join the exclusive network of %BRAND% distributors and participate in the document security revolution.",
     "form": {
       "name": "Full name",
       "email": "Email address",
@@ -324,13 +325,13 @@
   },
   "club": {
     "label": "BUSINESS CLUB",
-    "title": "First of All™ Business Club",
+    "title": "%BRAND% Business Club",
     "heroTagline": "Excellence that connects.",
-    "heroSubtitle": "Upon acquiring your First of All™ Seal, you automatically join an international elite circle. A network designed for leaders who demand excellence and the infalsifiable.",
+    "heroSubtitle": "Upon acquiring your %BRAND% Seal, you automatically join an international elite circle. A network designed for leaders who demand excellence and the infalsifiable.",
     "about": {
       "label": "AN EXCEPTIONAL CLUB",
       "title": "An Exceptional Business Club",
-      "text": "The First of All™ Business Club draws inspiration from the world's most prestigious circles — while offering unique automatic membership tied to unparalleled document security.",
+      "text": "The %BRAND% Business Club draws inspiration from the world's most prestigious circles — while offering unique automatic membership tied to unparalleled document security.",
       "tiersIntro": "Upon acquiring your Infalsifiable Seal, you automatically become a lifetime member, tiered by the version purchased:",
       "tiers": [
         {
@@ -363,7 +364,7 @@
         "Dedicated concierge for business travel and scientific immersions",
         "Private online forums for confidential discussions on security, innovation and strategy",
         "Masterclasses and conferences with global leaders",
-        "Official \"First of All™\" member certification for your documents and professional profiles"
+        "Official \"%BRAND%\" member certification for your documents and professional profiles"
       ]
     },
     "tiers": {
@@ -402,8 +403,8 @@
       ]
     },
     "spirit": {
-      "quote": "First of All is not merely a seal. It is entry into a circle where security meets ambition, where trust becomes a powerful network.",
-      "closing": "Join the First of All™ Business Club — because excellence is not a solitary pursuit.",
+      "quote": "%BRAND_NAME% is not merely a seal. It is entry into a circle where security meets ambition, where trust becomes a powerful network.",
+      "closing": "Join the %BRAND% Business Club — because excellence is not a solitary pursuit.",
       "cta": "Discover my membership level"
     },
     "waitlistTitle": "Waiting List",
@@ -419,7 +420,7 @@
   "actualites": {
     "label": "NEWS",
     "title": "News",
-    "intro": "Follow First of All™ news and the latest from the world of document security.",
+    "intro": "Follow %BRAND% news and the latest from the world of document security.",
     "comingSoon": "News will be available soon.",
     "readMore": "Read more",
     "filters": {
@@ -433,12 +434,12 @@
     "label": "SILICON VALLEY AFRICA PROGRAM",
     "title": "Silicon Valley Africa Program",
     "heroTagline": "Inspiring Africa's tomorrow.",
-    "heroSubtitle": "5% of First of All™'s revenue is dedicated to funding the immersion of African talent into Big Tech companies in Silicon Valley. Because infalsifiable excellence also means passing on knowledge.",
+    "heroSubtitle": "5% of %BRAND%'s revenue is dedicated to funding the immersion of African talent into Big Tech companies in Silicon Valley. Because infalsifiable excellence also means passing on knowledge.",
     "heroCta": "Apply for the November 2026 Edition",
     "commitment": {
       "label": "OUR COMMITMENT",
       "title": "Our Commitment",
-      "text": "The Silicon Valley Africa Program embodies the philanthropic vision of First of All™. Every Infalsifiable Seal purchased contributes directly: 5% of revenue is allocated to fund the program. A responsible model that transforms the purchase of a product of excellence into a genuine lever for scientific development in Africa.",
+      "text": "The Silicon Valley Africa Program embodies the philanthropic vision of %BRAND%. Every Infalsifiable Seal purchased contributes directly: 5% of revenue is allocated to fund the program. A responsible model that transforms the purchase of a product of excellence into a genuine lever for scientific development in Africa.",
       "objectiveTitle": "Program objective",
       "objectiveText": "To select, train and immerse the best African talent — researchers, tech entrepreneurs, innovators — at the heart of Silicon Valley. There they discover the latest advances from Big Tech (Google, Meta, Apple, OpenAI…), draw inspiration from the world's most powerful innovation ecosystems, and return to create a lasting impact on the African continent."
     },
@@ -499,7 +500,7 @@
         {
           "phase": "Alumni",
           "title": "Lifelong follow-up",
-          "desc": "Integration into the First of All™ Business Club alumni network."
+          "desc": "Integration into the %BRAND% Business Club alumni network."
         }
       ]
     },
@@ -518,7 +519,7 @@
       "cta": "Submit my application"
     },
     "finalCta": {
-      "quote": "Thanks to you, as the owner of a First of All™ Seal, we are building a lasting bridge between Silicon Valley and Africa. A virtuous circle where today's technological excellence forges tomorrow's scientific leaders.",
+      "quote": "Thanks to you, as the owner of a %BRAND% Seal, we are building a lasting bridge between Silicon Valley and Africa. A virtuous circle where today's technological excellence forges tomorrow's scientific leaders.",
       "applyBtn": "Apply for November 2026",
       "buyBtn": "Buy a Seal and contribute"
     },
@@ -537,7 +538,7 @@
   },
   "reservation": {
     "title": "Reserve",
-    "intro": "Reserve your First of All™ seal. Our team will contact you to finalize your order.",
+    "intro": "Reserve your %BRAND% seal. Our team will contact you to finalize your order.",
     "fields": {
       "name": "Full name",
       "email": "Email address",
@@ -585,14 +586,16 @@
   "legal": {
     "label": "LEGAL",
     "title": "Legal Notice",
-    "p1": "First of All™ is an internationally protected trademark: Europe (EUIPO), Africa (OAPI), United States (USPTO), Canada, United Kingdom.",
+    "p1": "is an internationally protected trademark: Europe (EUIPO), Africa (OAPI), United States (USPTO), Canada, United Kingdom.",
+    "p1NoIp": "is a trademark used to identify our document authentication services.",
     "p2": "Company registered in the United States, United Kingdom and Canada. Any reproduction, use or exploitation of the brand, technologies or content of this site without prior authorisation is strictly prohibited.",
-    "copyright": "© 2026 First of All™. All Rights Reserved."
+    "copyright": "© 2026 %BRAND%. All Rights Reserved."
   },
   "footer": {
     "crafted": "Crafted by",
     "tagline": "The global reference in protected crypto-fiduciary technology.",
-    "legal": "First of All™ – Internationally protected trademark: Europe (EUIPO), Africa (OAPI), United States (USPTO), Canada, United Kingdom. Company registered in the United States, United Kingdom and Canada.",
+    "legal": "%BRAND% – Internationally protected trademark: Europe (EUIPO), Africa (OAPI), United States (USPTO), Canada, United Kingdom. Company registered in the United States, United Kingdom and Canada.",
+    "legalNoIp": "%BRAND% – Company registered in the United States, United Kingdom and Canada.",
     "sections": {
       "gouvernance": "GOVERNANCE",
       "regions": "REGIONS",
@@ -619,6 +622,6 @@
       "uk": "United Kingdom",
       "silicon": "Silicon Valley Office"
     },
-    "copyright": "© 2026 First of All™. All Rights Reserved."
+    "copyright": "© 2026 %BRAND%. All Rights Reserved."
   }
 }
