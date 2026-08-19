@@ -49,12 +49,7 @@ export default function Header() {
 
           {/* Right: services entry point + lang switcher */}
           <div className="flex items-center gap-6">
-            <Link
-              href="/services"
-              className="hidden md:block text-[11px] font-cinzel font-bold tracking-[0.2rem] uppercase text-neutral-400 hover:text-primary transition-colors duration-300 whitespace-nowrap"
-            >
-              {t("services")}
-            </Link>
+
             <LangSwitcher />
           </div>
         </div>
