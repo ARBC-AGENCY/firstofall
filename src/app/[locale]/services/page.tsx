@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import AuthenticationCta from "@/components/ui/AuthenticationCta";
 
 export async function generateMetadata({
   params,
@@ -55,6 +56,25 @@ export default async function ServicesPage({
                 <p className="text-neutral-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </ScrollReveal>
+
+          {/* Engage the service — request / expert / quote */}
+          <ScrollReveal className="mt-16 border border-primary/20 bg-surface p-8 md:p-12 text-center">
+            <h2 className="text-2xl md:text-3xl font-cinzel font-bold text-on-surface mb-4">
+              {t("ctaTitle")}
+            </h2>
+            <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-10">
+              {t("ctaText")}
+            </p>
+            <AuthenticationCta
+              size="md"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center"
+              buttons={[
+                { type: "authentication", label: t("ctaRequest") },
+                { type: "expert", label: t("ctaExpert"), style: "outline" },
+                { type: "quote", label: t("ctaQuote"), style: "outline" },
+              ]}
+            />
           </ScrollReveal>
         </div>
       </section>

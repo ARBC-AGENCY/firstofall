@@ -6,7 +6,7 @@
     "ipLabel": "Propriété Intellectuelle Globale",
     "collection": "First of All",
     "univers": "L'Univers First of All",
-    "services": "Services & Garantie",
+    "services": "Services d'Authentification",
     "boutique": "Boutique",
     "dealers": "Trouver un Distributeur Officiel",
     "club": "Club First of All",
@@ -31,9 +31,10 @@
     "hero": {
       "headline": "First of All.",
       "headlineSub": "L'Excellence Infalsifiable.",
-      "subtext": "La première technologie cryptofiduciaire protégée dans cinq juridictions mondiales.",
-      "cta": "Découvrir la Collection",
-      "ctaSecondary": "Notre Histoire",
+      "serviceLine": "Services d'authentification mondiaux pour documents, cachets et œuvres d'art.",
+      "subtext": "Sécurisés par notre technologie cryptofiduciaire brevetée.",
+      "cta": "Demander une Authentification",
+      "ctaSecondary": "Découvrir la Collection",
       "scroll": "DÉFILER"
     },
     "collection": {
@@ -63,7 +64,7 @@
     "technology": {
       "label": "TECHNOLOGIE BREVETÉE",
       "title": "Neuf niveaux de protection. Zéro compromis.",
-      "text": "Chaque sceau First of All® est une prouesse d'ingénierie cryptofiduciaire. En combinant des encres nanostructurées et une architecture de ledger souveraine, nous créons un actif numérique physiquement ancré, impossible à dupliquer.",
+      "text": "Chaque sceau First of All™ est une prouesse d'ingénierie cryptofiduciaire. En combinant des encres nanostructurées et une architecture de ledger souveraine, nous créons un actif numérique physiquement ancré, impossible à dupliquer.",
       "cta": "Découvrir la Technologie"
     },
     "protection": {
@@ -72,7 +73,7 @@
     "siliconValley": {
       "label": "PROGRAMME SILICON VALLEY AFRICA",
       "title": "Inspirer l'Afrique de demain",
-      "text": "5 % du chiffre d'affaires de First of All® finance l'immersion de talents africains au cœur des Big Tech de la Silicon Valley.",
+      "text": "5 % du chiffre d'affaires de First of All™ finance l'immersion de talents africains au cœur des Big Tech de la Silicon Valley.",
       "cta": "Découvrir le Programme"
     },
     "metrics": {
@@ -82,8 +83,8 @@
       "media": "Médias Mondiaux"
     },
     "club": {
-      "title": "Club d'Affaires First of All®",
-      "text": "En devenant propriétaire d'un Cachet First of All®, vous intégrez automatiquement un cercle d'élite international. Un réseau pensé pour les leaders qui exigent l'excellence et l'infalsifiable.",
+      "title": "Club d'Affaires First of All™",
+      "text": "En devenant propriétaire d'un Cachet First of All™, vous intégrez automatiquement un cercle d'élite international. Un réseau pensé pour les leaders qui exigent l'excellence et l'infalsifiable.",
       "cta": "Rejoindre le Club"
     }
   },
@@ -94,7 +95,7 @@
     "availableWorldwide": "disponibles dans le monde.",
     "title": "La Collection First of All",
     "intro": "Quatre versions. Une seule exigence : l'infalsifiable. Marque protégée EUIPO • OAPI • USPTO • Canada • UK.",
-    "badge": "® Marque mondialement Protégée",
+    "badge": "™ Marque mondialement Protégée",
     "reserve": "Réserver",
     "discover": "Découvrir",
     "limited": "Série Limitée",
@@ -124,7 +125,7 @@
   "univers": {
     "label": "L'UNIVERS",
     "title": "L'Univers First of All",
-    "intro": "Découvrez l'histoire, la philosophie et les engagements de la marque First of All®.",
+    "intro": "Découvrez l'histoire, la philosophie et les engagements de la marque First of All™.",
     "explore": "EXPLORER ⟶",
     "links": {
       "histoire": "Notre Histoire",
@@ -257,7 +258,7 @@
   },
   "engagements": {
     "title": "Engagements Scientifiques",
-    "intro": "First of All® s'engage à financer la recherche et l'innovation scientifique à travers le monde.",
+    "intro": "First of All™ s'engage à financer la recherche et l'innovation scientifique à travers le monde.",
     "items": [
       {
         "title": "Programme Silicon Valley",
@@ -274,10 +275,10 @@
     ]
   },
   "services": {
-    "label": "SERVICES",
+    "label": "SERVICES D'AUTHENTIFICATION",
     "protectionTitle": "Protection Mondiale Garantie",
-    "title": "Services & Garantie",
-    "intro": "First of All® offre une gamme complète de services pour garantir l'authenticité et la pérennité de votre investissement.",
+    "title": "Authentification & Vérification",
+    "intro": "Nous fournissons des services d'authentification experts pour les cachets officiels, les documents et les œuvres d'art. Grâce à nos protocoles de haute sécurité et à notre technologie infalsifiable, nous garantissons l'origine et l'intégrité de vos actifs les plus sensibles.",
     "items": [
       {
         "title": "Certification d'Authenticité",
@@ -295,15 +296,20 @@
         "title": "Support Institutionnel",
         "desc": "Accompagnement personnalisé pour les institutions gouvernementales, bancaires et académiques."
       }
-    ]
+    ],
+    "ctaTitle": "Solliciter nos experts en authentification",
+    "ctaText": "Soumettez vos documents, cachets ou œuvres d'art pour une authentification experte. Notre équipe répond à chaque demande sous 48 heures, partout dans le monde.",
+    "ctaRequest": "Demander une Authentification",
+    "ctaExpert": "Contacter un Expert",
+    "ctaQuote": "Obtenir un Devis"
   },
   "dealers": {
     "networkLabel": "RÉSEAU",
     "mapPlaceholder": "Réseau Mondial — Carte Interactive à venir",
     "title": "Trouver un Distributeur Officiel",
-    "intro": "First of All® s'appuie sur un réseau mondial de distributeurs sélectionnés selon des critères stricts d'intégrité.",
+    "intro": "First of All™ s'appuie sur un réseau mondial de distributeurs sélectionnés selon des critères stricts d'intégrité.",
     "formTitle": "Devenir Distributeur Officiel",
-    "formIntro": "Rejoignez le réseau exclusif de distributeurs First of All® et participez à la révolution de la sécurité documentaire.",
+    "formIntro": "Rejoignez le réseau exclusif de distributeurs First of All™ et participez à la révolution de la sécurité documentaire.",
     "form": {
       "name": "Nom complet",
       "email": "Adresse e-mail",
@@ -318,13 +324,13 @@
   },
   "club": {
     "label": "CLUB D'AFFAIRES",
-    "title": "Club d'Affaires First of All®",
+    "title": "Club d'Affaires First of All™",
     "heroTagline": "L'Excellence qui connecte.",
-    "heroSubtitle": "En devenant propriétaire d'un Cachet First of All®, vous intégrez automatiquement un cercle d'élite international. Un réseau pensé pour les leaders qui exigent l'excellence et l'infalsifiable.",
+    "heroSubtitle": "En devenant propriétaire d'un Cachet First of All™, vous intégrez automatiquement un cercle d'élite international. Un réseau pensé pour les leaders qui exigent l'excellence et l'infalsifiable.",
     "about": {
       "label": "UN CLUB D'EXCEPTION",
       "title": "Un Club d'Affaires d'Exception",
-      "text": "Le Club d'Affaires First of All® s'inspire des cercles les plus prestigieux au monde — tout en étant unique par son accès automatique et son lien direct avec la sécurité documentaire d'excellence.",
+      "text": "Le Club d'Affaires First of All™ s'inspire des cercles les plus prestigieux au monde — tout en étant unique par son accès automatique et son lien direct avec la sécurité documentaire d'excellence.",
       "tiersIntro": "Dès l'acquisition de votre Cachet Infalsifiable, vous devenez membre à vie du Club, classé selon la version choisie :",
       "tiers": [
         {
@@ -357,7 +363,7 @@
         "Conciergerie dédiée pour vos voyages d'affaires et séjours scientifiques",
         "Forums privés en ligne (discussions confidentielles sur sécurité, innovation et stratégie)",
         "Accès à des masterclasses et conférences avec des leaders mondiaux",
-        "Certification membre « First of All® » à apposer sur vos documents et profils professionnels"
+        "Certification membre « First of All™ » à apposer sur vos documents et profils professionnels"
       ]
     },
     "tiers": {
@@ -397,7 +403,7 @@
     },
     "spirit": {
       "quote": "First of All n'est pas seulement un cachet. C'est l'entrée dans un cercle où la sécurité rencontre l'ambition, où la confiance devient un réseau puissant.",
-      "closing": "Rejoignez le Club d'Affaires First of All® — parce que l'excellence n'est pas solitaire.",
+      "closing": "Rejoignez le Club d'Affaires First of All™ — parce que l'excellence n'est pas solitaire.",
       "cta": "Découvrir mon niveau d'adhésion"
     },
     "waitlistTitle": "Liste d'Attente",
@@ -413,7 +419,7 @@
   "actualites": {
     "label": "ACTUALITÉS",
     "title": "Actualités",
-    "intro": "Suivez l'actualité de First of All® et les dernières nouvelles de la sécurité documentaire mondiale.",
+    "intro": "Suivez l'actualité de First of All™ et les dernières nouvelles de la sécurité documentaire mondiale.",
     "comingSoon": "Les actualités seront disponibles prochainement.",
     "readMore": "Lire la suite",
     "filters": {
@@ -427,12 +433,12 @@
     "label": "PROGRAMME SILICON VALLEY AFRICA",
     "title": "Programme Silicon Valley Africa",
     "heroTagline": "Inspirer l'Afrique de demain.",
-    "heroSubtitle": "5 % du chiffre d'affaires de First of All® est dédié à financer l'immersion de talents africains dans les Big Tech de la Silicon Valley. Parce que l'excellence infalsifiable passe aussi par la transmission du savoir.",
+    "heroSubtitle": "5 % du chiffre d'affaires de First of All™ est dédié à financer l'immersion de talents africains dans les Big Tech de la Silicon Valley. Parce que l'excellence infalsifiable passe aussi par la transmission du savoir.",
     "heroCta": "Postuler pour l'édition Novembre 2026",
     "commitment": {
       "label": "NOTRE ENGAGEMENT",
       "title": "Notre Engagement",
-      "text": "Le Programme Silicon Valley Africa incarne la vision philanthropique de First of All®. Chaque Cachet Infalsifiable acheté contribue directement : 5 % du chiffre d'affaires sont reversés au financement du programme. Un modèle responsable qui transforme l'achat d'un produit d'excellence en un véritable levier de développement scientifique pour l'Afrique.",
+      "text": "Le Programme Silicon Valley Africa incarne la vision philanthropique de First of All™. Chaque Cachet Infalsifiable acheté contribue directement : 5 % du chiffre d'affaires sont reversés au financement du programme. Un modèle responsable qui transforme l'achat d'un produit d'excellence en un véritable levier de développement scientifique pour l'Afrique.",
       "objectiveTitle": "Objectif du programme",
       "objectiveText": "Sélectionner, former et immerger les meilleurs talents africains — chercheurs, entrepreneurs technologiques, innovateurs — au cœur de la Silicon Valley. Ils y découvrent les dernières avancées des Big Tech (Google, Meta, Apple, OpenAI…), s'inspirent des écosystèmes d'innovation les plus performants au monde, puis reviennent impacter durablement le continent africain."
     },
@@ -493,7 +499,7 @@
         {
           "phase": "Alumni",
           "title": "Suivi à vie",
-          "desc": "Intégration au réseau alumni du Club d'Affaires First of All®."
+          "desc": "Intégration au réseau alumni du Club d'Affaires First of All™."
         }
       ]
     },
@@ -512,7 +518,7 @@
       "cta": "Soumettre ma candidature"
     },
     "finalCta": {
-      "quote": "Grâce à vous, propriétaire d'un Cachet First of All®, nous construisons un pont durable entre la Silicon Valley et l'Afrique. Un cercle vertueux où l'excellence technologique d'aujourd'hui forge les leaders scientifiques de demain.",
+      "quote": "Grâce à vous, propriétaire d'un Cachet First of All™, nous construisons un pont durable entre la Silicon Valley et l'Afrique. Un cercle vertueux où l'excellence technologique d'aujourd'hui forge les leaders scientifiques de demain.",
       "applyBtn": "Postuler pour Novembre 2026",
       "buyBtn": "Acheter un Cachet et contribuer"
     },
@@ -531,7 +537,7 @@
   },
   "reservation": {
     "title": "Réserver",
-    "intro": "Réservez votre cachet First of All®. Notre équipe vous contactera pour finaliser votre commande.",
+    "intro": "Réservez votre cachet First of All™. Notre équipe vous contactera pour finaliser votre commande.",
     "fields": {
       "name": "Nom complet",
       "email": "Adresse e-mail",
@@ -553,29 +559,59 @@
     "error": "Une erreur est survenue. Veuillez réessayer.",
     "close": "Fermer"
   },
+  "authentication": {
+    "title": "Demander une Authentification",
+    "intro": "Soumettez votre demande d'authentification de documents, cachets ou œuvres d'art. Nos experts répondent sous 48 heures.",
+    "types": {
+      "authentication": "Demande d'authentification",
+      "expert": "Parler à un expert",
+      "quote": "Demander un devis"
+    },
+    "fields": {
+      "type": "Type de demande",
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "country": "Pays",
+      "organisation": "Organisation (optionnel)",
+      "message": "Décrivez les documents, cachets ou œuvres d'art à authentifier",
+      "gdpr": "J'accepte que mes données soient utilisées pour traiter ma demande conformément à la politique de confidentialité."
+    },
+    "submit": "Envoyer ma demande",
+    "success": "Votre demande a bien été reçue. Notre équipe d'authentification vous contactera sous 48h.",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "close": "Fermer"
+  },
   "legal": {
     "label": "LÉGAL",
     "title": "Mentions Légales",
-    "p1": "First of All® est une marque protégée internationalement : Europe (EUIPO), Afrique (OAPI), États-Unis (USPTO), Canada, Royaume-Uni.",
+    "p1": "First of All™ est une marque protégée internationalement : Europe (EUIPO), Afrique (OAPI), États-Unis (USPTO), Canada, Royaume-Uni.",
     "p2": "Société enregistrée aux États-Unis, au Royaume-Uni et au Canada. Toute reproduction, utilisation ou exploitation de la marque, des technologies ou du contenu de ce site sans autorisation préalable est strictement interdite.",
-    "copyright": "© 2026 First of All®. Tous droits réservés."
+    "copyright": "© 2026 First of All™. Tous droits réservés."
   },
   "footer": {
     "crafted": "Réalisé par",
     "tagline": "La référence mondiale en technologie cryptofiduciaire protégée.",
-    "legal": "First of All® – Marque protégée internationalement : Europe (EUIPO), Afrique (OAPI), États-Unis (USPTO), Canada, Royaume-Uni. Société enregistrée aux États-Unis, au Royaume-Uni et au Canada.",
+    "legal": "First of All™ – Marque protégée internationalement : Europe (EUIPO), Afrique (OAPI), États-Unis (USPTO), Canada, Royaume-Uni. Société enregistrée aux États-Unis, au Royaume-Uni et au Canada.",
     "sections": {
       "gouvernance": "GOUVERNANCE",
       "regions": "RÉGIONS",
       "legal": "LÉGAL",
-      "links": "LIENS RAPIDES"
+      "links": "LIENS RAPIDES",
+      "contact": "CONTACT"
+    },
+    "entity": {
+      "name": "FIRST OF ALL LLC",
+      "address1": "1012 Marquez Place Ste. 106-B",
+      "address2": "Santa Fe, NM 87505",
+      "country": "États-Unis"
     },
     "links": {
       "privacy": "Politique de Confidentialité",
       "terms": "Conditions d'Utilisation",
       "collection": "La Collection",
       "histoire": "Notre Histoire",
-      "services": "Services & Garantie",
+      "services": "Services d'Authentification",
       "contact": "Contact"
     },
     "regions": {
@@ -583,6 +619,6 @@
       "uk": "Royaume-Uni",
       "silicon": "Bureau Silicon Valley"
     },
-    "copyright": "© 2026 First of All®. Tous droits réservés."
+    "copyright": "© 2026 First of All™. Tous droits réservés."
   }
 }

@@ -7,11 +7,11 @@ export default async function Footer({ locale }: { locale: string }) {
   return (
     <footer className="bg-neutral-950 border-t border-yellow-900/30">
       <div className="max-w-7xl mx-auto px-8 md:px-12 py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <div className="text-xl font-bold text-primary font-cinzel">
-              First of All®
+              First of All™
             </div>
             <p className="text-neutral-500 text-xs tracking-wider leading-relaxed uppercase">
               {t("tagline")}
@@ -91,6 +91,29 @@ export default async function Footer({ locale }: { locale: string }) {
             >
               {t("links.terms")}
             </Link>
+          </div>
+
+          {/* Contact — US entity */}
+          <div className="flex flex-col gap-3">
+            <span className="label-md text-on-surface mb-2">
+              {t("sections.contact")}
+            </span>
+            <address className="not-italic text-neutral-500 text-xs leading-relaxed">
+              <span className="text-primary font-cinzel tracking-widest block mb-1">
+                {t("entity.name")}
+              </span>
+              {t("entity.address1")}
+              <br />
+              {t("entity.address2")}
+              <br />
+              {t("entity.country")}
+            </address>
+            <a
+              href="mailto:contact@firstofall.net"
+              className="text-neutral-500 text-xs tracking-widest hover:text-primary transition-colors"
+            >
+              contact@firstofall.net
+            </a>
           </div>
         </div>
 

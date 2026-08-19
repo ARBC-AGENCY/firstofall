@@ -11,7 +11,7 @@ function escapeHtml(s: string): string {
 }
 
 function emailShell(content: string): string {
-  return `<div style="font-family:Georgia,serif;background:#131313;color:#e5e2e1;padding:40px;max-width:600px;margin:0 auto;">${content}<div style="margin-top:32px;height:1px;background:linear-gradient(to right,transparent,#d4af37,transparent);opacity:0.3;"></div><p style="margin-top:16px;font-size:10px;color:#4d4635;text-transform:uppercase;letter-spacing:0.1rem;">© 2026 First of All® — The Sovereign Ledger</p></div>`;
+  return `<div style="font-family:Georgia,serif;background:#131313;color:#e5e2e1;padding:40px;max-width:600px;margin:0 auto;">${content}<div style="margin-top:32px;height:1px;background:linear-gradient(to right,transparent,#d4af37,transparent);opacity:0.3;"></div><p style="margin-top:16px;font-size:10px;color:#4d4635;text-transform:uppercase;letter-spacing:0.1rem;">© 2026 First of All™ — The Sovereign Ledger</p></div>`;
 }
 
 export async function POST(req: NextRequest) {
@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
         resend.emails.send({
           from: fromEmail,
           to: adminEmail,
-          subject: `[FOA®] Nouveau membre Club — ${data.name}`,
+          subject: `[FOA™] Nouveau membre Club — ${data.name}`,
           html: emailShell(`
             <h1 style="color:#f2ca50;font-size:20px;margin-bottom:24px;">Nouvelle inscription Club</h1>
             <table style="width:100%;border-collapse:collapse;border-top:1px solid #2a2520;">
@@ -68,18 +68,18 @@ export async function POST(req: NextRequest) {
           from: fromEmail,
           to: data.email,
           subject: isFr
-            ? "First of All® Club — Votre inscription est confirmée"
-            : "First of All® Club — Your registration is confirmed",
+            ? "First of All™ Club — Votre inscription est confirmée"
+            : "First of All™ Club — Your registration is confirmed",
           html: emailShell(`
-            <h1 style="color:#f2ca50;font-size:22px;margin-bottom:8px;">Club First of All®</h1>
+            <h1 style="color:#f2ca50;font-size:22px;margin-bottom:8px;">Club First of All™</h1>
             <p style="color:#e5e2e1;line-height:1.8;margin-bottom:16px;">${isFr ? `Cher(e) ${escapeHtml(data.name)},` : `Dear ${escapeHtml(data.name)},`}</p>
             <p style="color:#e5e2e1;line-height:1.8;margin-bottom:24px;">
               ${isFr
-                ? "Votre inscription au Club First of All® a bien été enregistrée. Notre équipe examinera votre profil et vous contactera prochainement pour les prochaines étapes."
-                : "Your First of All® Club registration has been registered. Our team will review your profile and contact you soon with next steps."}
+                ? "Votre inscription au Club First of All™ a bien été enregistrée. Notre équipe examinera votre profil et vous contactera prochainement pour les prochaines étapes."
+                : "Your First of All™ Club registration has been registered. Our team will review your profile and contact you soon with next steps."}
             </p>
             <p style="color:#99907c;font-size:13px;line-height:1.7;font-style:italic;">
-              ${isFr ? "Bienvenue dans l'univers d'exception First of All®." : "Welcome to the First of All® world of exception."}
+              ${isFr ? "Bienvenue dans l'univers d'exception First of All™." : "Welcome to the First of All™ world of exception."}
             </p>
           `),
         }),

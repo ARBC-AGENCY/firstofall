@@ -31,7 +31,7 @@ export default async function LegalPage({
           </h1>
           <div className="space-y-8 text-neutral-400 leading-relaxed text-sm">
             <p>
-              <strong className="text-on-surface font-cinzel">First of All®</strong>{" "}
+              <strong className="text-on-surface font-cinzel">First of All™</strong>{" "}
               {t("p1")}
             </p>
             <p>{t("p2")}</p>

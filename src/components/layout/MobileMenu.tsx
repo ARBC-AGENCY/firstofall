@@ -97,7 +97,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <li key={item.key} className="group cursor-pointer">
               <Link href={item.href} onClick={onClose}>
                 <div className="flex items-center gap-4 transition-all duration-500 text-neutral-700 hover:text-primary hover:translate-x-3">
-                  <span className="text-3xl md:text-5xl lg:text-6xl font-cinzel font-bold uppercase leading-none">
+                  <span className="text-2xl md:text-4xl lg:text-3xl font-cinzel font-bold uppercase leading-none">
                     {item.label}
                   </span>
                   <span className="material-symbols-outlined text-3xl opacity-0 group-hover:opacity-100 transition-all duration-300 font-light">
@@ -127,7 +127,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Right: decorative panel */}
       <div
         ref={rightRef}
-        className="hidden md:flex w-1/2 h-full relative items-center justify-center border-l border-yellow-600/20"
+        className="hidden lg:flex w-1/2 h-full relative items-center justify-center border-l border-yellow-600/20"
       >
         <div className="relative z-10 text-center px-12">
           <h2 className="font-cinzel text-4xl lg:text-6xl font-black italic text-primary drop-shadow-[0_0_30px_rgba(242,202,80,0.25)]">
@@ -142,15 +142,15 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <div className="absolute bottom-10 left-10 flex flex-col gap-4">
           <LangSwitcher />
           <div className="flex gap-5 mt-2">
-            <span className="material-symbols-outlined text-neutral-600 text-lg cursor-pointer hover:text-primary transition-colors font-light">language</span>
-            <span className="material-symbols-outlined text-neutral-600 text-lg cursor-pointer hover:text-primary transition-colors font-light">shield</span>
+            <span className="material-symbols-outlined text-neutral-600 text-lg hover:text-primary transition-colors font-light">language</span>
+            <span className="material-symbols-outlined text-neutral-600 text-lg  hover:text-primary transition-colors font-light">shield</span>
           </div>
         </div>
 
         <div className="absolute bottom-10 right-10 text-right">
           <div className="font-cinzel text-primary font-bold text-sm mb-1">{t("ledger")}</div>
           <div className="text-[10px] text-neutral-600 uppercase tracking-widest leading-relaxed">
-            EUIPO • OAPI • USPTO • UK • WIPO<br />© First of All® 2026
+            EUIPO • OAPI • USPTO • UK • WIPO<br />© First of All™ 2026
           </div>
         </div>
       </div>

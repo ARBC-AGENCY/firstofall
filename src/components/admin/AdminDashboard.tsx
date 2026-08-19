@@ -29,7 +29,7 @@ type WaitlistRow = {
 
 type Entry = (ReservationRow | WaitlistRow) & { _table: "reservations" | "waitlist" };
 
-type Tab = "all" | "stamps" | "silicon-valley" | "dealers" | "club";
+type Tab = "all" | "stamps" | "authentication" | "silicon-valley" | "dealers" | "club";
 
 const STAMP_VERSIONS = ["essential", "business", "executive", "exclusive"];
 const STATUS_LABELS: Record<string, string> = {
@@ -51,6 +51,7 @@ const VERSION_LABELS: Record<string, string> = {
   exclusive: "Exclusive",
   "silicon-valley": "Silicon Valley",
   dealer: "Revendeur",
+  authentication: "Authentification",
   waitlist: "Club",
 };
 
@@ -144,6 +145,7 @@ export default function AdminDashboard() {
   const filtered = entries.filter((e) => {
     if (activeTab === "all") return true;
     if (activeTab === "stamps") return STAMP_VERSIONS.includes((e as ReservationRow).version ?? "");
+    if (activeTab === "authentication") return (e as ReservationRow).version === "authentication";
     if (activeTab === "silicon-valley") return (e as ReservationRow).version === "silicon-valley";
     if (activeTab === "dealers") return (e as ReservationRow).version === "dealer";
     if (activeTab === "club") return e._table === "waitlist";
@@ -152,6 +154,7 @@ export default function AdminDashboard() {
 
   const stats = {
     stamps: entries.filter((e) => STAMP_VERSIONS.includes((e as ReservationRow).version ?? "")).length,
+    authentication: entries.filter((e) => (e as ReservationRow).version === "authentication").length,
     sv: entries.filter((e) => (e as ReservationRow).version === "silicon-valley").length,
     dealers: entries.filter((e) => (e as ReservationRow).version === "dealer").length,
     club: entries.filter((e) => e._table === "waitlist").length,
@@ -160,6 +163,7 @@ export default function AdminDashboard() {
   const tabs: { key: Tab; label: string; count: number }[] = [
     { key: "all", label: "Tout", count: entries.length },
     { key: "stamps", label: "Timbres", count: stats.stamps },
+    { key: "authentication", label: "Authentification", count: stats.authentication },
     { key: "silicon-valley", label: "Silicon Valley", count: stats.sv },
     { key: "dealers", label: "Revendeurs", count: stats.dealers },
     { key: "club", label: "Club", count: stats.club },
@@ -170,7 +174,7 @@ export default function AdminDashboard() {
       {/* Header */}
       <header className="border-b border-[#1e1a0e] px-8 py-5 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <p className="font-cinzel text-[#f2ca50] tracking-[0.2rem] text-sm">FIRST OF ALL®</p>
+          <p className="font-cinzel text-[#f2ca50] tracking-[0.2rem] text-sm">FIRST OF ALL™</p>
           <span className="text-neutral-700 text-xs tracking-widest uppercase">Tableau de bord</span>
         </div>
         <div className="flex items-center gap-4">
@@ -194,9 +198,10 @@ export default function AdminDashboard() {
 
       <main className="px-8 py-8 max-w-[1400px] mx-auto">
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-10">
           {[
             { label: "Timbres réservés", value: stats.stamps, color: "#f2ca50" },
+            { label: "Demandes d'authentification", value: stats.authentication, color: "#e11d48" },
             { label: "Silicon Valley", value: stats.sv, color: "#3b82f6" },
             { label: "Revendeurs", value: stats.dealers, color: "#8b5cf6" },
             { label: "Club — Liste d'attente", value: stats.club, color: "#22c55e" },

@@ -6,7 +6,7 @@ export const reservationSchema = z.object({
   phone:        z.string().max(30).optional(),
   country:      z.string().min(1, "Country is required").max(100).transform(s => s.trim()),
   organisation: z.string().max(200).optional().transform(s => s?.trim()),
-  version:      z.enum(["essential", "business", "executive", "exclusive", "silicon-valley", "dealer"]),
+  version:      z.enum(["essential", "business", "executive", "exclusive", "silicon-valley", "dealer", "authentication"]),
   message:      z.string().max(2000).optional().transform(s => s?.trim()),
   locale:       z.enum(["fr", "en"]).default("fr"),
   gdpr:         z.literal(true, { errorMap: () => ({ message: "GDPR consent required" }) }),

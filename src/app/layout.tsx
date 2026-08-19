@@ -20,11 +20,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | First of All®",
-    default: "First of All® | L'Excellence Infalsifiable",
+    template: "%s | First of All™",
+    default: "First of All™ | L'Excellence Infalsifiable",
   },
   description:
-    "First of All® — La première technologie cryptofiduciaire protégée dans cinq juridictions mondiales. EUIPO • OAPI • USPTO • Canada • UK.",
+    "First of All™ — La première technologie cryptofiduciaire protégée dans cinq juridictions mondiales. EUIPO • OAPI • USPTO • Canada • UK.",
 };
 
 export default async function RootLayout({

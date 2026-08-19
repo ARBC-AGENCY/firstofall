@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import AuthenticationCta from "@/components/ui/AuthenticationCta";
 import essentialImg from "@/assets/images/IMG-20260422-WA0015.webp";
 import businessImg from "@/assets/images/IMG-20260422-WA0016.webp";
 import executiveImg from "@/assets/images/image-2.webp";
@@ -17,7 +18,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
   return {
-    title: `First of All® | ${t("hero.headlineSub")}`,
+    title: `First of All™ | ${t("hero.headlineSub")}`,
   };
 }
 
@@ -71,18 +72,19 @@ export default async function HomePage({
             <br />
             <span className="text-primary">{t("hero.headlineSub")}</span>
           </h1>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-cinzel text-on-surface mb-4 max-w-3xl mx-auto leading-snug">
+            {t("hero.serviceLine")}
+          </h2>
           <p className="text-lg md:text-xl font-light italic text-neutral-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             {t("hero.subtext")}
           </p>
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <AuthenticationCta
+              buttons={[{ type: "authentication", label: t("hero.cta") }]}
+              className="contents"
+            />
             <Link
               href="/collection"
-              className="primary-cta-gradient text-on-primary px-10 py-5 font-cinzel font-bold tracking-widest uppercase glow-gold hover:scale-105 transition-transform duration-300 text-sm"
-            >
-              {t("hero.cta")}
-            </Link>
-            <Link
-              href="/univers/notre-histoire"
               className="border border-primary/60 text-primary px-10 py-5 font-cinzel font-bold tracking-widest uppercase hover:border-primary transition-all duration-300 text-sm"
             >
               {t("hero.ctaSecondary")}

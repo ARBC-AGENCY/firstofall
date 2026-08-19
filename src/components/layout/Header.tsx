@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import MobileMenu from "./MobileMenu";
 import LangSwitcher from "@/components/ui/LangSwitcher";
 
 export default function Header() {
+  const t = useTranslations("nav");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -27,9 +29,9 @@ export default function Header() {
           <Link
             href="/"
             className="text-xl md:text-2xl font-bold text-primary font-cinzel tracking-tight hover:text-primary-container transition-colors duration-300"
-            aria-label="First of All® — Home"
+            aria-label="First of All™ — Home"
           >
-            First of All®
+            First of All™
           </Link>
 
           {/* Hamburger — center */}
@@ -45,8 +47,14 @@ export default function Header() {
             <span className="block w-6 h-[1.5px] bg-primary transition-all duration-300 group-hover:w-8" />
           </button>
 
-          {/* Right: lang switcher */}
-          <div className="flex items-center">
+          {/* Right: services entry point + lang switcher */}
+          <div className="flex items-center gap-6">
+            <Link
+              href="/services"
+              className="hidden md:block text-[11px] font-cinzel font-bold tracking-[0.2rem] uppercase text-neutral-400 hover:text-primary transition-colors duration-300 whitespace-nowrap"
+            >
+              {t("services")}
+            </Link>
             <LangSwitcher />
           </div>
         </div>
