@@ -1,11 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import {
-  BRAND_MARK,
-  IS_SUB_BRAND,
-  PARENT_BRAND_MARK,
-  PARENT_BRAND_URL,
-} from "@/lib/brand";
+import { BRAND_MARK, IS_SUB_BRAND, PARENT_BRAND_MARK } from "@/lib/brand";
 
 /**
  * States the brand architecture: inventor → Maison → invention.

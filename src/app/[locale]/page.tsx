@@ -97,11 +97,7 @@ export default async function HomePage({
         </div>
 
         {/* Attribution to the parent Maison — hidden on the parent's own site */}
-        {IS_SUB_BRAND && (
-          <p className="absolute bottom-28 left-1/2 -translate-x-1/2 w-full px-6 text-center text-[11px] md:text-xs tracking-widest uppercase text-neutral-500">
-            {tp("heroLine")}
-          </p>
-        )}
+
 
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-40">

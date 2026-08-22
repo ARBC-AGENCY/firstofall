@@ -1,6 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { reservationSchema } from "@/lib/validations";
-import { BRAND_HAS_IP, BRAND_ID, BRAND_MARK } from "@/lib/brand";
+import {
+  BRAND_CONTACT_EMAIL,
+  BRAND_DOMAIN,
+  BRAND_HAS_IP,
+  BRAND_ID,
+  BRAND_MARK,
+} from "@/lib/brand";
 
 const STAMP_VERSIONS = ["essential", "business", "executive", "exclusive"];
 
@@ -204,8 +210,9 @@ export async function POST(req: NextRequest) {
     if (process.env.RESEND_API_KEY) {
       const { Resend } = await import("resend");
       const resend = new Resend(process.env.RESEND_API_KEY);
-      const fromEmail = process.env.RESEND_FROM_EMAIL ?? "noreply@firstofall.net";
-      const adminEmail = process.env.ADMIN_EMAIL ?? "contact@firstofall.net";
+      // Fall back to this brand's own domain, never another brand's
+      const fromEmail = process.env.RESEND_FROM_EMAIL ?? `noreply@${BRAND_DOMAIN}`;
+      const adminEmail = process.env.ADMIN_EMAIL ?? BRAND_CONTACT_EMAIL;
 
       await Promise.allSettled([
         resend.emails.send({

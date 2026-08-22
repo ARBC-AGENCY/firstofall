@@ -73,9 +73,10 @@ export default function Header() {
             <span className="block w-6 h-[1.5px] bg-primary transition-all duration-300 group-hover:w-8" />
           </button>
 
-          {/* Right: services entry point + lang switcher */}
-          <div className="flex items-center gap-6">
-
+          {/* Right: lang switcher — below sm it lives in the mobile menu instead.
+              The whole container is dropped from the layout there, leaving two
+              flex children so justify-between pushes the hamburger to the right. */}
+          <div className="hidden sm:flex items-center gap-6">
             <LangSwitcher />
           </div>
         </div>

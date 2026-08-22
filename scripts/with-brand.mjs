@@ -27,6 +27,13 @@ if (!existsSync(envFile)) {
 
 const env = { ...process.env };
 
+// Give this brand its own build directory. NEXT_PUBLIC_* values are inlined at
+// compile time, so sharing .next across brands mixes one brand's compiled
+// modules into another's render — the classic symptom is a hydration mismatch
+// where the server shows one brand and the client the other.
+const slug = envFile.replace(/^.*[\\/]/, "").replace(/^\.env\.?/, "") || "brand";
+env.NEXT_DIST_DIR = env.NEXT_DIST_DIR || `.next-${slug}`;
+
 for (const rawLine of readFileSync(envFile, "utf8").split("\n")) {
   const line = rawLine.trim();
   if (!line || line.startsWith("#")) continue;
@@ -41,7 +48,8 @@ for (const rawLine of readFileSync(envFile, "utf8").split("\n")) {
 console.log(
   `\n  ${env.NEXT_PUBLIC_BRAND_NAME ?? "(default brand)"}` +
     `  ·  logo: ${env.NEXT_PUBLIC_BRAND_LOGO ? "yes" : "text wordmark"}` +
-    `  ·  IP claims: ${env.NEXT_PUBLIC_BRAND_HAS_IP === "false" ? "hidden" : "shown"}\n`
+    `  ·  IP claims: ${env.NEXT_PUBLIC_BRAND_HAS_IP === "false" ? "hidden" : "shown"}` +
+    `  ·  build dir: ${env.NEXT_DIST_DIR}\n`
 );
 
 const child = spawn("npx", ["next", ...command], {

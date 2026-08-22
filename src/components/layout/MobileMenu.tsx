@@ -91,8 +91,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </span>
       </button>
 
-      {/* Left: nav links */}
-      <div className="w-full md:w-1/2 h-full flex flex-col justify-center pt-24 md:pt-0">
+      {/* Left: nav links — flex-1 on mobile so the bottom bar keeps its space.
+          h-full here would push it past the viewport, and the overlay is fixed
+          with no scroll, so it could never be reached. */}
+      <div className="w-full md:w-1/2 flex-1 min-h-0 md:h-full overflow-y-auto flex flex-col justify-center pt-24 md:pt-0">
         <ul ref={itemsRef} className="space-y-6 md:space-y-3">
           {menuItems.map((item) => (
             <li key={item.key} className="group cursor-pointer">
@@ -162,15 +164,16 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </div>
       </div>
 
-      {/* Mobile bottom bar */}
-      <div className="md:hidden w-full pb-10 pt-6 flex justify-between items-end border-t border-yellow-900/30">
+      {/* Mobile bottom bar — sole language switcher below sm, where the header
+          no longer shows one */}
+      <div className="md:hidden w-full shrink-0 pb-10 pt-6 flex justify-between items-end border-t border-yellow-900/30">
         <div className="flex gap-4">
           <span className="material-symbols-outlined text-primary font-light">verified</span>
           <span className="material-symbols-outlined text-primary font-light">public</span>
         </div>
-        <div className="text-right">
+        <div className="flex flex-col items-end gap-2">
           <LangSwitcher />
-          <div className="text-[8px] text-neutral-500 mt-2 uppercase tracking-tighter">{t("ipLabel")}</div>
+          <div className="text-[8px] text-neutral-500 uppercase tracking-tighter">{t("ipLabel")}</div>
         </div>
       </div>
     </div>
