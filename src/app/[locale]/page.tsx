@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import ParentBrandSection from "@/components/ui/ParentBrandSection";
+import { pageMetadata } from "@/lib/seo";
 import { BRAND_HAS_IP, BRAND_MARK, BRAND_NAME, IS_SUB_BRAND } from "@/lib/brand";
 import essentialImg from "@/assets/images/IMG-20260422-WA0015.webp";
 import businessImg from "@/assets/images/IMG-20260422-WA0016.webp";
@@ -17,9 +18,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "home" });
+  const t = await getTranslations({ locale, namespace: "seo" });
+  // The home page is the one title that should not be suffixed by the template
   return {
-    title: `${BRAND_MARK} | ${t("hero.headlineSub")}`,
+    ...pageMetadata({
+      locale,
+      path: "",
+      title: `${BRAND_MARK} — ${t("home.title")}`,
+      description: t("home.description"),
+    }),
+    title: { absolute: `${BRAND_MARK} — ${t("home.title")}` },
   };
 }
 

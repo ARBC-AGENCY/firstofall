@@ -643,5 +643,54 @@
       "silicon": "Silicon Valley Office"
     },
     "copyright": "© 2026 %PARENT%. All Rights Reserved."
+  },
+  "seo": {
+    "home": {
+      "title": "Document Authentication & Security",
+      "description": "Global authentication services for documents, stamps and works of art, secured by a nine-layer crypto-fiduciary seal. Request an authentication or a quote."
+    },
+    "collection": {
+      "title": "The Collection",
+      "description": "Four versions of the infalsifiable seal — Essential, Business, Executive and Exclusive — each with its own level of protection and annual limited series."
+    },
+    "collectionVersion": {
+      "description": "Discover the {name}: protection levels, intended use and annual availability. Reserve yours and our team will contact you within 48 hours."
+    },
+    "services": {
+      "title": "Authentication Services",
+      "description": "Expert authentication of official stamps, documents and works of art. Certification, lifetime warranty, 24/7 verification and institutional support."
+    },
+    "univers": {
+      "title": "The Universe",
+      "description": "The story, philosophy and scientific commitments behind the infalsifiable seal, its inventor and the Maison that carries it internationally."
+    },
+    "histoire": {
+      "title": "Our Story",
+      "description": "From the 2024 invention by Édouard Patrick Junior Onana to the international launch: the nine levels of protection, the timeline and the vision."
+    },
+    "engagements": {
+      "title": "Scientific Commitments",
+      "description": "Funding research and innovation worldwide: the Silicon Valley Africa Program, intellectual property and the shaping of documentary trust standards."
+    },
+    "dealers": {
+      "title": "Find an Official Distributor",
+      "description": "A worldwide network of distributors selected on strict integrity criteria. Apply to join the official distribution network."
+    },
+    "club": {
+      "title": "Business Club",
+      "description": "Acquiring a seal grants lifetime membership of an international circle of leaders: private events, verified network and dedicated concierge."
+    },
+    "siliconValley": {
+      "title": "Silicon Valley Africa Program",
+      "description": "5% of revenue funds the immersion of African talent in Silicon Valley Big Tech. Applications open for the November 2026 edition."
+    },
+    "actualites": {
+      "title": "News",
+      "description": "Follow the latest from the brand and the world of document security: announcements, press coverage and media gallery."
+    },
+    "legal": {
+      "title": "Legal Notice",
+      "description": "Legal information, trademark and company details, terms of use and privacy policy."
+    }
   }
 }

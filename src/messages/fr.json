@@ -643,5 +643,54 @@
       "silicon": "Bureau Silicon Valley"
     },
     "copyright": "© 2026 %PARENT%. Tous droits réservés."
+  },
+  "seo": {
+    "home": {
+      "title": "Authentification et sécurité documentaire",
+      "description": "Services d'authentification mondiaux pour documents, cachets et œuvres d'art, sécurisés par un sceau cryptofiduciaire à neuf niveaux. Demandez une authentification."
+    },
+    "collection": {
+      "title": "La Collection",
+      "description": "Quatre versions du cachet infalsifiable — Essentiel, Business, Exécutive et Exclusive — chacune avec son niveau de protection et sa série limitée annuelle."
+    },
+    "collectionVersion": {
+      "description": "Découvrez la {name} : niveaux de protection, usages prévus et disponibilité annuelle. Réservez la vôtre, notre équipe vous contacte sous 48 heures."
+    },
+    "services": {
+      "title": "Services d'authentification",
+      "description": "Authentification experte de cachets officiels, documents et œuvres d'art. Certification, garantie à vie, vérification 24h/24 et support institutionnel."
+    },
+    "univers": {
+      "title": "L'Univers",
+      "description": "L'histoire, la philosophie et les engagements scientifiques derrière le cachet infalsifiable, son inventeur et la Maison qui le porte à l'international."
+    },
+    "histoire": {
+      "title": "Notre Histoire",
+      "description": "De l'invention en 2024 par Édouard Patrick Junior Onana au lancement international : les neuf niveaux de protection, la chronologie et la vision."
+    },
+    "engagements": {
+      "title": "Engagements scientifiques",
+      "description": "Financer la recherche et l'innovation dans le monde : le Programme Silicon Valley Africa, la propriété intellectuelle et les standards de confiance documentaire."
+    },
+    "dealers": {
+      "title": "Trouver un distributeur officiel",
+      "description": "Un réseau mondial de distributeurs sélectionnés selon des critères stricts d'intégrité. Candidatez pour rejoindre le réseau de distribution officiel."
+    },
+    "club": {
+      "title": "Club d'Affaires",
+      "description": "L'acquisition d'un cachet ouvre l'adhésion à vie à un cercle international de dirigeants : événements privés, réseau vérifié et conciergerie dédiée."
+    },
+    "siliconValley": {
+      "title": "Programme Silicon Valley Africa",
+      "description": "5 % du chiffre d'affaires finance l'immersion de talents africains dans les Big Tech de la Silicon Valley. Candidatures ouvertes pour l'édition de novembre 2026."
+    },
+    "actualites": {
+      "title": "Actualités",
+      "description": "Suivez l'actualité de la marque et du monde de la sécurité documentaire : annonces, retombées presse et galerie média."
+    },
+    "legal": {
+      "title": "Mentions légales",
+      "description": "Informations légales, mentions de marque et de société, conditions d'utilisation et politique de confidentialité."
+    }
   }
 }

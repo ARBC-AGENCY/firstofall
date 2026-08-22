@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import { metadataFromSeo } from "@/lib/seo";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import AuthenticationSection from "@/components/ui/AuthenticationSection";
 import { BRAND_HAS_IP } from "@/lib/brand";
@@ -10,8 +11,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "services" });
-  return { title: t("title") };
+  return metadataFromSeo(locale, "services", "/services");
 }
 
 const ICONS = ["verified", "shield", "wifi_calling", "handshake"];

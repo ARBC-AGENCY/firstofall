@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import { metadataFromSeo } from "@/lib/seo";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export async function generateMetadata({
@@ -8,8 +9,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "histoire" });
-  return { title: t("title") };
+  return metadataFromSeo(locale, "histoire", "/univers/notre-histoire");
 }
 
 export default async function NotrHistoirePage({

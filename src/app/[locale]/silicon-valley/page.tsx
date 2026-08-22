@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import { metadataFromSeo } from "@/lib/seo";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SiliconValleyForm from "@/components/ui/SiliconValleyForm";
@@ -14,8 +15,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "siliconValley" });
-  return { title: t("title") };
+  return metadataFromSeo(locale, "siliconValley", "/silicon-valley");
 }
 
 export default async function SiliconValleyPage({

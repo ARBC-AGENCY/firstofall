@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Cinzel, Inter } from "next/font/google";
 import { getLocale } from "next-intl/server";
-import { BRAND_FAVICON, BRAND_HAS_IP, BRAND_MARK } from "@/lib/brand";
+import { BRAND_FAVICON, BRAND_MARK } from "@/lib/brand";
+import { SITE_URL } from "@/lib/seo";
 import "@/styles/globals.css";
 
 const cinzel = Cinzel({
@@ -20,10 +21,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  // Resolves relative URLs in Open Graph / canonical tags
+  metadataBase: new URL(SITE_URL),
   title: {
     template: `%s | ${BRAND_MARK}`,
-    default: `${BRAND_MARK} | L'Excellence Infalsifiable`,
+    default: BRAND_MARK,
   },
+  robots: { index: true, follow: true },
   // Omitted entirely when the brand has no icon, so nothing is inherited
   ...(BRAND_FAVICON
     ? {
@@ -34,9 +38,9 @@ export const metadata: Metadata = {
         },
       }
     : {}),
-  description: BRAND_HAS_IP
-    ? `${BRAND_MARK} — La première technologie cryptofiduciaire protégée dans cinq juridictions mondiales. EUIPO • OAPI • USPTO • Canada • UK.`
-    : `${BRAND_MARK} — Services d'authentification de documents, cachets et œuvres d'art, sécurisés par une technologie cryptofiduciaire.`,
+  // No description here: this layout sits above [locale] and cannot know the
+  // language, so a fixed one served French copy to English pages. Every page
+  // supplies its own, localised.
 };
 
 export default async function RootLayout({
