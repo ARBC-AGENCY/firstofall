@@ -62,7 +62,7 @@ export default function Header() {
                   height={BRAND_LOGO_HEIGHT}
                   priority
                   className={`h-7 md:h-9 w-auto transition-[filter] duration-500 ${
-                    !onLight && BRAND_LOGO_INVERT_ON_DARK ? "invert" : ""
+                    !onLight && BRAND_LOGO_INVERT_ON_DARK ? "" : ""
                   }`}
                 />
               ) : (
