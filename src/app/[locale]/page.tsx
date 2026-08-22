@@ -69,9 +69,15 @@ export default async function HomePage({
         </div>
 
         <div className="relative z-10 text-center max-w-5xl px-6">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-cinzel font-black tracking-tight text-on-surface mb-4 leading-none">
-            {t("hero.headline")}
-            <br />
+          {/* The brand name leads the hero only on the parent site; a sub-brand
+              already carries it in the header and would just repeat itself. */}
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-cinzel font-black tracking-tight text-on-surface mb-4 leading-none">
+            {!IS_SUB_BRAND && (
+              <>
+                {t("hero.headline")}
+                <br />
+              </>
+            )}
             <span className="text-primary">{t("hero.headlineSub")}</span>
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-cinzel text-on-surface mb-4 max-w-3xl mx-auto leading-snug">

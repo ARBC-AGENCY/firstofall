@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Inter } from "next/font/google";
 import { getLocale } from "next-intl/server";
-import { BRAND_HAS_IP, BRAND_MARK } from "@/lib/brand";
+import { BRAND_FAVICON, BRAND_HAS_IP, BRAND_MARK } from "@/lib/brand";
 import "@/styles/globals.css";
 
 const cinzel = Cinzel({
@@ -24,6 +24,16 @@ export const metadata: Metadata = {
     template: `%s | ${BRAND_MARK}`,
     default: `${BRAND_MARK} | L'Excellence Infalsifiable`,
   },
+  // Omitted entirely when the brand has no icon, so nothing is inherited
+  ...(BRAND_FAVICON
+    ? {
+        icons: {
+          icon: [{ url: BRAND_FAVICON, type: "image/png" }],
+          shortcut: [{ url: BRAND_FAVICON }],
+          apple: [{ url: BRAND_FAVICON }],
+        },
+      }
+    : {}),
   description: BRAND_HAS_IP
     ? `${BRAND_MARK} — La première technologie cryptofiduciaire protégée dans cinq juridictions mondiales. EUIPO • OAPI • USPTO • Canada • UK.`
     : `${BRAND_MARK} — Services d'authentification de documents, cachets et œuvres d'art, sécurisés par une technologie cryptofiduciaire.`,

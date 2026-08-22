@@ -37,11 +37,27 @@ export const BRAND_DOMAIN = process.env.NEXT_PUBLIC_BRAND_DOMAIN ?? "firstofall.
 export const BRAND_LOGO =
   process.env.NEXT_PUBLIC_BRAND_LOGO ?? "/brand/first-of-all.png";
 export const BRAND_LOGO_WIDTH = Number(
-  process.env.NEXT_PUBLIC_BRAND_LOGO_WIDTH ?? 250
+  process.env.NEXT_PUBLIC_BRAND_LOGO_WIDTH ?? 4500
 );
 export const BRAND_LOGO_HEIGHT = Number(
-  process.env.NEXT_PUBLIC_BRAND_LOGO_HEIGHT ?? 43
+  process.env.NEXT_PUBLIC_BRAND_LOGO_HEIGHT ?? 1000
 );
+
+/**
+ * The First of All wordmark is black artwork on transparency, so it vanishes on
+ * dark surfaces (the header over the hero, the footer). Inverting flips it to
+ * white there. Set to "false" for a logo that already reads on dark.
+ */
+export const BRAND_LOGO_INVERT_ON_DARK =
+  (process.env.NEXT_PUBLIC_BRAND_LOGO_INVERT_ON_DARK ?? "true").toLowerCase() !==
+  "false";
+
+/**
+ * Browser tab icon. Empty string leaves the browser default, which is what a
+ * brand without its own icon should get rather than inheriting another's.
+ */
+export const BRAND_FAVICON =
+  process.env.NEXT_PUBLIC_BRAND_FAVICON ?? "/brand/first-of-all-icon.png";
 
 /**
  * Parent brand — the Maison that carries the invention.
@@ -65,6 +81,16 @@ export const PARENT_BRAND_URL =
 
 /** True when this deployment is an invention carried by the parent Maison. */
 export const IS_SUB_BRAND = BRAND_ID !== PARENT_BRAND_ID;
+
+/**
+ * Header background once the page is scrolled: "light" gives a white bar,
+ * "dark" keeps the black one. The header is transparent at the top of the page
+ * either way.
+ *
+ * Chosen per brand so the wordmark stays legible against it.
+ */
+export const HEADER_SCROLLED_THEME =
+  process.env.NEXT_PUBLIC_BRAND_HEADER_SCROLLED === "dark" ? "dark" : "light";
 
 /**
  * Product noun used with the brand name, per language. Set both to an empty

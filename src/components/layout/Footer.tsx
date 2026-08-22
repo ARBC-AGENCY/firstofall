@@ -6,6 +6,7 @@ import {
   BRAND_HAS_IP,
   BRAND_LOGO,
   BRAND_LOGO_HEIGHT,
+  BRAND_LOGO_INVERT_ON_DARK,
   BRAND_LOGO_WIDTH,
   BRAND_MARK,
   IS_SUB_BRAND,
@@ -32,7 +33,8 @@ export default async function Footer({ locale }: { locale: string }) {
                 alt={BRAND_MARK}
                 width={BRAND_LOGO_WIDTH}
                 height={BRAND_LOGO_HEIGHT}
-                className="h-8 w-auto"
+                // The footer is always dark
+                className={`h-8 w-auto ${BRAND_LOGO_INVERT_ON_DARK ? "invert" : ""}`}
               />
             ) : (
               <div className="text-xl font-bold text-primary font-cinzel">

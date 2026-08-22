@@ -14,8 +14,22 @@ function stripLocale(pathname: string): string {
   return pathname;
 }
 
-export default function LangSwitcher() {
+/**
+ * `variant` follows the surface behind it: the default token colours are made
+ * for dark backgrounds and wash out on a white header.
+ */
+export default function LangSwitcher({
+  variant = "dark",
+}: {
+  variant?: "dark" | "light";
+}) {
   const locale = useLocale() as Locale;
+  const light = variant === "light";
+
+  const activeClass = light ? "text-primary font-bold" : "text-primary font-bold";
+  const idleClass = light
+    ? "text-neutral-500 hover:text-neutral-900"
+    : "text-on-surface-variant hover:text-primary";
 
   function switchLocale(next: Locale) {
     if (next === locale) return;
@@ -38,21 +52,17 @@ export default function LangSwitcher() {
       <button
         onClick={() => switchLocale("fr")}
         className={`transition-colors duration-300 ${
-          locale === "fr"
-            ? "text-primary font-bold"
-            : "text-on-surface-variant hover:text-primary"
+          locale === "fr" ? activeClass : idleClass
         }`}
         aria-label="Français"
       >
         FR
       </button>
-      <span className="text-outline-variant">|</span>
+      <span className={light ? "text-neutral-300" : "text-outline-variant"}>|</span>
       <button
         onClick={() => switchLocale("en")}
         className={`transition-colors duration-300 ${
-          locale === "en"
-            ? "text-primary font-bold"
-            : "text-on-surface-variant hover:text-primary"
+          locale === "en" ? activeClass : idleClass
         }`}
         aria-label="English"
       >
