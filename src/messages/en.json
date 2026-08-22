@@ -9,11 +9,12 @@
     "services": "Authentication Services",
     "boutique": "Boutique",
     "dealers": "Find an Official Distributor",
-    "club": "%BRAND_NAME% Club",
+    "club": "%PARENT_NAME% Club",
     "siliconValley": "Silicon Valley Program",
     "actualites": "News",
     "close": "Close",
     "menu": "Menu",
+    "parentBadge": "A %PARENT% invention",
     "subVersions": {
       "essential": "Essential",
       "business": "Business",
@@ -24,7 +25,7 @@
       "histoire": "Our Story",
       "engagements": "Scientific Commitments",
       "dealers": "Find a Distributor",
-      "club": "%BRAND_NAME% Club"
+      "club": "%PARENT_NAME% Club"
     }
   },
   "home": {
@@ -64,7 +65,7 @@
     "technology": {
       "label": "PATENTED TECHNOLOGY",
       "title": "Nine levels of protection. Zero compromise.",
-      "text": "Every %BRAND% seal is a feat of crypto-fiduciary engineering. By combining nanostructured inks and a sovereign ledger architecture, we create a physically anchored digital asset, impossible to duplicate.",
+      "text": "Every %SEAL% is a feat of crypto-fiduciary engineering. By combining nanostructured inks and a sovereign ledger architecture, we create a physically anchored digital asset, impossible to duplicate.",
       "cta": "Discover the Technology"
     },
     "protection": {
@@ -73,7 +74,7 @@
     "siliconValley": {
       "label": "SILICON VALLEY AFRICA PROGRAM",
       "title": "Inspiring Africa's tomorrow",
-      "text": "5% of %BRAND%'s revenue funds the immersion of African talent into the Big Tech companies of Silicon Valley.",
+      "text": "5% of %PARENT%'s revenue funds the immersion of African talent into the Big Tech companies of Silicon Valley.",
       "cta": "Discover the Program"
     },
     "metrics": {
@@ -83,8 +84,8 @@
       "media": "Global Media"
     },
     "club": {
-      "title": "%BRAND% Business Club",
-      "text": "Upon acquiring your %BRAND% Seal, you automatically join an international elite circle. A network designed for leaders who demand excellence and the infalsifiable.",
+      "title": "%PARENT% Business Club",
+      "text": "Upon acquiring your %SEAL%, you automatically join an international elite circle. A network designed for leaders who demand excellence and the infalsifiable.",
       "cta": "Join the Club"
     }
   },
@@ -126,18 +127,18 @@
   "univers": {
     "label": "THE UNIVERSE",
     "title": "The %BRAND_NAME% Universe",
-    "intro": "Discover the history, philosophy and commitments of the %BRAND% brand.",
+    "intro": "Discover the history, philosophy and commitments of the %PARENT% brand.",
     "explore": "EXPLORE ⟶",
     "links": {
       "histoire": "Our Story",
       "engagements": "Scientific Commitments",
       "dealers": "Official Distributors",
-      "club": "%BRAND_NAME% Club"
+      "club": "%PARENT_NAME% Club"
     }
   },
   "histoire": {
     "title": "Our Story",
-    "launch": "October 1st, 2026 marks the international commercial launch of Édouard Patrick Junior Onana's infalsifiable seal — a multilayer document security solution now distributed worldwide by the %BRAND_NAME% brand.",
+    "launch": "October 1st, 2026 marks the international commercial launch of Édouard Patrick Junior Onana's infalsifiable seal — a multilayer document security solution now distributed worldwide by the %PARENT_NAME% brand.",
     "intro": "We tell you its origin, its uniqueness, its philosophy, its business model and its official timeline, from creation to launch.",
     "invention": {
       "title": "PRESENTATION OF THE INVENTION",
@@ -214,7 +215,7 @@
       "Annual limited series: 5,000 Essential; 2,000 Business; 1,000 Executive; 50 Exclusive; 10 Exclusive+ (controlled global distribution)."
     ],
     "structureTitle": "COMMERCIALIZATION STRUCTURE AND BRAND",
-    "structure": "%BRAND_NAME% — positioned as the premium reference in document security. Commercial implantation: commercial entities established in the United States, United Kingdom and Canada; selective distribution network and institutional partnerships for integration into administrative and financial processes.",
+    "structure": "%PARENT_NAME% — positioned as the premium reference in document security. Commercial implantation: commercial entities established in the United States, United Kingdom and Canada; selective distribution network and institutional partnerships for integration into administrative and financial processes.",
     "visionTitle": "VISION",
     "vision": "To become the global reference for decision-makers' seal authenticity, combining technological innovation and ethics. Objective: significantly reduce documentary fraud and establish international standards of trust.",
     "timelineTitle": "TIMELINE",
@@ -229,7 +230,7 @@
       },
       {
         "date": "August 2024",
-        "event": "Creation of the %BRAND_NAME% brand; EUIPO and OAPI filings."
+        "event": "Creation of the %PARENT_NAME% brand; EUIPO and OAPI filings."
       },
       {
         "date": "December 2024",
@@ -259,7 +260,7 @@
   },
   "engagements": {
     "title": "Scientific Commitments",
-    "intro": "%BRAND% is committed to funding research and scientific innovation around the world.",
+    "intro": "%PARENT% is committed to funding research and scientific innovation around the world.",
     "items": [
       {
         "title": "Silicon Valley Program",
@@ -325,13 +326,13 @@
   },
   "club": {
     "label": "BUSINESS CLUB",
-    "title": "%BRAND% Business Club",
+    "title": "%PARENT% Business Club",
     "heroTagline": "Excellence that connects.",
-    "heroSubtitle": "Upon acquiring your %BRAND% Seal, you automatically join an international elite circle. A network designed for leaders who demand excellence and the infalsifiable.",
+    "heroSubtitle": "Upon acquiring your %SEAL%, you automatically join an international elite circle. A network designed for leaders who demand excellence and the infalsifiable.",
     "about": {
       "label": "AN EXCEPTIONAL CLUB",
       "title": "An Exceptional Business Club",
-      "text": "The %BRAND% Business Club draws inspiration from the world's most prestigious circles — while offering unique automatic membership tied to unparalleled document security.",
+      "text": "The %PARENT% Business Club draws inspiration from the world's most prestigious circles — while offering unique automatic membership tied to unparalleled document security.",
       "tiersIntro": "Upon acquiring your Infalsifiable Seal, you automatically become a lifetime member, tiered by the version purchased:",
       "tiers": [
         {
@@ -364,7 +365,7 @@
         "Dedicated concierge for business travel and scientific immersions",
         "Private online forums for confidential discussions on security, innovation and strategy",
         "Masterclasses and conferences with global leaders",
-        "Official \"%BRAND%\" member certification for your documents and professional profiles"
+        "Official \"%PARENT%\" member certification for your documents and professional profiles"
       ]
     },
     "tiers": {
@@ -404,7 +405,7 @@
     },
     "spirit": {
       "quote": "%BRAND_NAME% is not merely a seal. It is entry into a circle where security meets ambition, where trust becomes a powerful network.",
-      "closing": "Join the %BRAND% Business Club — because excellence is not a solitary pursuit.",
+      "closing": "Join the %PARENT% Business Club — because excellence is not a solitary pursuit.",
       "cta": "Discover my membership level"
     },
     "waitlistTitle": "Waiting List",
@@ -420,7 +421,7 @@
   "actualites": {
     "label": "NEWS",
     "title": "News",
-    "intro": "Follow %BRAND% news and the latest from the world of document security.",
+    "intro": "Follow %PARENT% news and the latest from the world of document security.",
     "comingSoon": "News will be available soon.",
     "readMore": "Read more",
     "filters": {
@@ -434,12 +435,12 @@
     "label": "SILICON VALLEY AFRICA PROGRAM",
     "title": "Silicon Valley Africa Program",
     "heroTagline": "Inspiring Africa's tomorrow.",
-    "heroSubtitle": "5% of %BRAND%'s revenue is dedicated to funding the immersion of African talent into Big Tech companies in Silicon Valley. Because infalsifiable excellence also means passing on knowledge.",
+    "heroSubtitle": "5% of %PARENT%'s revenue is dedicated to funding the immersion of African talent into Big Tech companies in Silicon Valley. Because infalsifiable excellence also means passing on knowledge.",
     "heroCta": "Apply for the November 2026 Edition",
     "commitment": {
       "label": "OUR COMMITMENT",
       "title": "Our Commitment",
-      "text": "The Silicon Valley Africa Program embodies the philanthropic vision of %BRAND%. Every Infalsifiable Seal purchased contributes directly: 5% of revenue is allocated to fund the program. A responsible model that transforms the purchase of a product of excellence into a genuine lever for scientific development in Africa.",
+      "text": "The Silicon Valley Africa Program embodies the philanthropic vision of %PARENT%. Every Infalsifiable Seal purchased contributes directly: 5% of revenue is allocated to fund the program. A responsible model that transforms the purchase of a product of excellence into a genuine lever for scientific development in Africa.",
       "objectiveTitle": "Program objective",
       "objectiveText": "To select, train and immerse the best African talent — researchers, tech entrepreneurs, innovators — at the heart of Silicon Valley. There they discover the latest advances from Big Tech (Google, Meta, Apple, OpenAI…), draw inspiration from the world's most powerful innovation ecosystems, and return to create a lasting impact on the African continent."
     },
@@ -500,7 +501,7 @@
         {
           "phase": "Alumni",
           "title": "Lifelong follow-up",
-          "desc": "Integration into the %BRAND% Business Club alumni network."
+          "desc": "Integration into the %PARENT% Business Club alumni network."
         }
       ]
     },
@@ -519,7 +520,7 @@
       "cta": "Submit my application"
     },
     "finalCta": {
-      "quote": "Thanks to you, as the owner of a %BRAND% Seal, we are building a lasting bridge between Silicon Valley and Africa. A virtuous circle where today's technological excellence forges tomorrow's scientific leaders.",
+      "quote": "Thanks to you, as the owner of a %SEAL%, we are building a lasting bridge between Silicon Valley and Africa. A virtuous circle where today's technological excellence forges tomorrow's scientific leaders.",
       "applyBtn": "Apply for November 2026",
       "buyBtn": "Buy a Seal and contribute"
     },
@@ -538,7 +539,7 @@
   },
   "reservation": {
     "title": "Reserve",
-    "intro": "Reserve your %BRAND% seal. Our team will contact you to finalize your order.",
+    "intro": "Reserve your %SEAL%. Our team will contact you to finalize your order.",
     "fields": {
       "name": "Full name",
       "email": "Email address",
@@ -548,6 +549,10 @@
       "version": "Desired version",
       "message": "Message (optional)",
       "gdpr": "I agree that my data will be used to process my reservation in accordance with the privacy policy."
+    },
+    "placeholders": {
+      "country": "United States",
+      "organisation": "Organisation, ministry…"
     },
     "versions": {
       "essential": "Essential Version",
@@ -578,10 +583,25 @@
       "message": "Describe the documents, stamps or works of art to authenticate",
       "gdpr": "I agree that my data will be used to process my request in accordance with the privacy policy."
     },
+    "placeholders": {
+      "country": "United States"
+    },
     "submit": "Send my request",
     "success": "Your request has been received. Our authentication team will contact you within 48h.",
     "error": "An error occurred. Please try again.",
     "close": "Close"
+  },
+  "parentBrand": {
+    "label": "BRAND ARCHITECTURE",
+    "badge": "A %PARENT% invention",
+    "heroLine": "An invention by Édouard Patrick Junior Onana — carried by %PARENT%",
+    "title": "An invention carried by %PARENT%",
+    "statement": "%BRAND% is an invention by Édouard Patrick Junior Onana, carried by %PARENT%, a brand founded by Édouard Patrick Junior Onana and deployed internationally.",
+    "detail": "%PARENT% is the parent brand under which the %BRAND_NAME% invention is developed and deployed internationally.",
+    "inventorRole": "Inventor & Founder",
+    "maisonRole": "The Maison",
+    "inventionRole": "The invention",
+    "cta": "DISCOVER %PARENT%"
   },
   "legal": {
     "label": "LEGAL",
@@ -589,13 +609,13 @@
     "p1": "is an internationally protected trademark: Europe (EUIPO), Africa (OAPI), United States (USPTO), Canada, United Kingdom.",
     "p1NoIp": "is a trademark used to identify our document authentication services.",
     "p2": "Company registered in the United States, United Kingdom and Canada. Any reproduction, use or exploitation of the brand, technologies or content of this site without prior authorisation is strictly prohibited.",
-    "copyright": "© 2026 %BRAND%. All Rights Reserved."
+    "copyright": "© 2026 %PARENT%. All Rights Reserved."
   },
   "footer": {
     "crafted": "Crafted by",
     "tagline": "The global reference in protected crypto-fiduciary technology.",
-    "legal": "%BRAND% – Internationally protected trademark: Europe (EUIPO), Africa (OAPI), United States (USPTO), Canada, United Kingdom. Company registered in the United States, United Kingdom and Canada.",
-    "legalNoIp": "%BRAND% – Company registered in the United States, United Kingdom and Canada.",
+    "legal": "%PARENT% – Internationally protected trademark: Europe (EUIPO), Africa (OAPI), United States (USPTO), Canada, United Kingdom. Company registered in the United States, United Kingdom and Canada.",
+    "legalNoIp": "%PARENT% – Company registered in the United States, United Kingdom and Canada.",
     "sections": {
       "gouvernance": "GOVERNANCE",
       "regions": "REGIONS",
@@ -622,6 +642,6 @@
       "uk": "United Kingdom",
       "silicon": "Silicon Valley Office"
     },
-    "copyright": "© 2026 %BRAND%. All Rights Reserved."
+    "copyright": "© 2026 %PARENT%. All Rights Reserved."
   }
 }

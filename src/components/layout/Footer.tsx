@@ -1,9 +1,20 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { BRAND_CONTACT_EMAIL, BRAND_HAS_IP, BRAND_MARK } from "@/lib/brand";
+import Image from "next/image";
+import {
+  BRAND_CONTACT_EMAIL,
+  BRAND_HAS_IP,
+  BRAND_LOGO,
+  BRAND_LOGO_HEIGHT,
+  BRAND_LOGO_WIDTH,
+  BRAND_MARK,
+  IS_SUB_BRAND,
+  PARENT_BRAND_URL,
+} from "@/lib/brand";
 
 export default async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "footer" });
+  const tp = await getTranslations({ locale, namespace: "parentBrand" });
 
   return (
     <footer className="bg-neutral-950 border-t border-yellow-900/30">
@@ -15,12 +26,35 @@ export default async function Footer({ locale }: { locale: string }) {
         >
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <div className="text-xl font-bold text-primary font-cinzel">
-              {BRAND_MARK}
-            </div>
+            {BRAND_LOGO ? (
+              <Image
+                src={BRAND_LOGO}
+                alt={BRAND_MARK}
+                width={BRAND_LOGO_WIDTH}
+                height={BRAND_LOGO_HEIGHT}
+                className="h-8 w-auto"
+              />
+            ) : (
+              <div className="text-xl font-bold text-primary font-cinzel">
+                {BRAND_MARK}
+              </div>
+            )}
             <p className="text-neutral-500 text-xs tracking-wider leading-relaxed uppercase">
               {t("tagline")}
             </p>
+            {IS_SUB_BRAND && (
+              <p className="text-neutral-500 text-xs leading-relaxed">
+                {tp("statement")}{" "}
+                <a
+                  href={PARENT_BRAND_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  {PARENT_BRAND_URL.replace(/^https?:\/\//, "")}
+                </a>
+              </p>
+            )}
             {/* Registrations belong to a specific brand — never shown for one that lacks them */}
             {BRAND_HAS_IP && (
               <div className="flex flex-wrap gap-2 mt-2">

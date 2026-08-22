@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:cachet": "node scripts/with-brand.mjs .env.cachet dev -p 3002",
+    "build:cachet": "node scripts/with-brand.mjs .env.cachet build",
+    "start:cachet": "node scripts/with-brand.mjs .env.cachet start -p 3002"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",

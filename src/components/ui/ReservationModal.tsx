@@ -199,7 +199,7 @@ export default function ReservationModal({
                   value={form.country}
                   onChange={(e) => setForm({ ...form, country: e.target.value })}
                   className={inputClass}
-                  placeholder="France"
+                  placeholder={t("placeholders.country")}
                 />
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function ReservationModal({
                   setForm({ ...form, organisation: e.target.value })
                 }
                 className={inputClass}
-                placeholder="Organisation, Ministère..."
+                placeholder={t("placeholders.organisation")}
               />
             </div>
 

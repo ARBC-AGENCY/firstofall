@@ -5,7 +5,14 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import MobileMenu from "./MobileMenu";
 import LangSwitcher from "@/components/ui/LangSwitcher";
-import { BRAND_MARK } from "@/lib/brand";
+import Image from "next/image";
+import {
+  BRAND_LOGO,
+  BRAND_LOGO_HEIGHT,
+  BRAND_LOGO_WIDTH,
+  BRAND_MARK,
+  IS_SUB_BRAND,
+} from "@/lib/brand";
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -27,13 +34,31 @@ export default function Header() {
       >
         <div className="flex items-center justify-between px-6 md:px-10 py-5">
           {/* Logo — left */}
-          <Link
-            href="/"
-            className="text-xl md:text-2xl font-bold text-primary font-cinzel tracking-tight hover:text-primary-container transition-colors duration-300"
-            aria-label={`${BRAND_MARK} — Home`}
-          >
-            {BRAND_MARK}
-          </Link>
+          <div className="flex flex-col">
+            <Link
+              href="/"
+              className="text-xl md:text-2xl font-bold text-primary font-cinzel tracking-tight hover:text-primary-container transition-colors duration-300"
+              aria-label={`${BRAND_MARK} — Home`}
+            >
+              {BRAND_LOGO ? (
+                <Image
+                  src={BRAND_LOGO}
+                  alt={BRAND_MARK}
+                  width={BRAND_LOGO_WIDTH}
+                  height={BRAND_LOGO_HEIGHT}
+                  priority
+                  className="h-7 md:h-9 w-auto"
+                />
+              ) : (
+                BRAND_MARK
+              )}
+            </Link>
+            {IS_SUB_BRAND && (
+              <span className="text-[9px] md:text-[10px] tracking-[0.15rem] uppercase text-neutral-500 mt-0.5">
+                {t("parentBadge")}
+              </span>
+            )}
+          </div>
 
           {/* Hamburger — center */}
           <button

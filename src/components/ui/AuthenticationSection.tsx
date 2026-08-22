@@ -1,28 +1,22 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+import { useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 
-export type AuthRequestType = "authentication" | "expert" | "quote";
-
-interface AuthenticationModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  defaultType?: AuthRequestType;
-}
+type AuthRequestType = "authentication" | "expert" | "quote";
 
 const TYPES: AuthRequestType[] = ["authentication", "expert", "quote"];
 
-export default function AuthenticationModal({
-  isOpen,
-  onClose,
-  defaultType = "authentication",
-}: AuthenticationModalProps) {
+/**
+ * The authentication request form, rendered inline on the page rather than in
+ * a modal: its height follows its fields, so it never scrolls inside itself.
+ * The three buttons pick the request type and bring the form into view.
+ */
+export default function AuthenticationSection() {
   const t = useTranslations("authentication");
+  const ts = useTranslations("services");
   const locale = useLocale();
-  const overlayRef = useRef<HTMLDivElement>(null);
-  const modalRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLDivElement>(null);
 
   const [form, setForm] = useState({
     name: "",
@@ -30,52 +24,16 @@ export default function AuthenticationModal({
     phone: "",
     country: "",
     organisation: "",
-    type: defaultType,
+    type: "authentication" as AuthRequestType,
     message: "",
     gdpr: false,
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  // Sync request type when opened from a different button
-  useEffect(() => {
-    setForm((f) => ({ ...f, type: defaultType }));
-  }, [defaultType]);
-
-  // Animate in/out
-  useEffect(() => {
-    const overlay = overlayRef.current;
-    const modal = modalRef.current;
-    if (!overlay || !modal) return;
-
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-      gsap.set(overlay, { display: "flex" });
-      gsap.fromTo(overlay, { opacity: 0 }, { opacity: 1, duration: 0.3 });
-      gsap.fromTo(
-        modal,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", delay: 0.05 }
-      );
-    } else {
-      gsap.to(overlay, {
-        opacity: 0,
-        duration: 0.25,
-        onComplete: () => {
-          gsap.set(overlay, { display: "none" });
-          document.body.style.overflow = "";
-        },
-      });
-    }
-  }, [isOpen]);
-
-  // Escape key
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && isOpen) onClose();
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [isOpen, onClose]);
+  function choose(type: AuthRequestType) {
+    setForm((f) => ({ ...f, type }));
+    formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -107,7 +65,7 @@ export default function AuthenticationModal({
         phone: "",
         country: "",
         organisation: "",
-        type: defaultType,
+        type: "authentication",
         message: "",
         gdpr: false,
       });
@@ -119,33 +77,44 @@ export default function AuthenticationModal({
   const inputClass =
     "w-full bg-transparent border-b border-outline-variant/40 text-on-surface text-sm py-3 px-0 focus:outline-none focus:border-primary transition-colors duration-300 placeholder:text-neutral-600";
 
-  return (
-    <div
-      ref={overlayRef}
-      className="inset inset-0 z-[100] items-center justify-center bg-black/80 backdrop-blur-sm p-4"
-      style={{ display: "none" }}
-      onClick={(e) => e.target === overlayRef.current && onClose()}
-      role="dialog"
-      aria-modal="true"
-      aria-label={t("title")}
-    >
-      <div
-        ref={modalRef}
-        className="w-full max-w-xl bg-surface-container-low border border-outline-variant/20 p-8 md:p-10 relative max-h-[90vh] overflow-y-auto"
-      >
-        {/* Close */}
-        <button
-          onClick={onClose}
-          className="absolute top-5 right-5 text-neutral-500 hover:text-primary transition-colors"
-          aria-label={t("close")}
-        >
-          <span className="material-symbols-outlined text-2xl font-light">close</span>
-        </button>
+  const btnBase =
+    "px-8 py-4 font-cinzel font-bold tracking-widest uppercase text-sm transition-all duration-300";
 
-        <h2 className="text-2xl font-cinzel font-bold text-on-surface mb-2">
+  return (
+    <div id="request" className="scroll-mt-28">
+      {/* Request-type entry points */}
+      <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center mb-16">
+        <button
+          type="button"
+          onClick={() => choose("authentication")}
+          className={`${btnBase} primary-cta-gradient text-on-primary glow-gold hover:scale-105`}
+        >
+          {ts("ctaRequest")}
+        </button>
+        <button
+          type="button"
+          onClick={() => choose("expert")}
+          className={`${btnBase} border border-primary/60 text-primary hover:border-primary`}
+        >
+          {ts("ctaExpert")}
+        </button>
+        <button
+          type="button"
+          onClick={() => choose("quote")}
+          className={`${btnBase} border border-primary/60 text-primary hover:border-primary`}
+        >
+          {ts("ctaQuote")}
+        </button>
+      </div>
+
+      <div
+        ref={formRef}
+        className="max-w-2xl mx-auto border border-outline-variant/20 bg-surface-container-low p-8 md:p-12"
+      >
+        <h3 className="text-2xl font-cinzel font-bold text-on-surface mb-2">
           {t("title")}
-        </h2>
-        <p className="text-neutral-500 text-sm italic mb-8 leading-relaxed">
+        </h3>
+        <p className="text-neutral-500 text-sm italic mb-10 leading-relaxed">
           {t("intro")}
         </p>
 
@@ -158,7 +127,6 @@ export default function AuthenticationModal({
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Request type */}
             <div>
               <label className="label-md text-neutral-500 block mb-2">
                 {t("fields.type")} *
@@ -179,7 +147,6 @@ export default function AuthenticationModal({
               </select>
             </div>
 
-            {/* Name */}
             <div>
               <label className="label-md text-neutral-500 block mb-2">
                 {t("fields.name")} *
@@ -194,7 +161,6 @@ export default function AuthenticationModal({
               />
             </div>
 
-            {/* Email */}
             <div>
               <label className="label-md text-neutral-500 block mb-2">
                 {t("fields.email")} *
@@ -209,8 +175,7 @@ export default function AuthenticationModal({
               />
             </div>
 
-            {/* Phone + Country */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label className="label-md text-neutral-500 block mb-2">
                   {t("fields.phone")}
@@ -233,12 +198,11 @@ export default function AuthenticationModal({
                   value={form.country}
                   onChange={(e) => setForm({ ...form, country: e.target.value })}
                   className={inputClass}
-                  placeholder="United States"
+                  placeholder={t("placeholders.country")}
                 />
               </div>
             </div>
 
-            {/* Organisation */}
             <div>
               <label className="label-md text-neutral-500 block mb-2">
                 {t("fields.organisation")}
@@ -246,29 +210,24 @@ export default function AuthenticationModal({
               <input
                 type="text"
                 value={form.organisation}
-                onChange={(e) =>
-                  setForm({ ...form, organisation: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, organisation: e.target.value })}
                 className={inputClass}
               />
             </div>
 
-            {/* Message */}
             <div>
               <label className="label-md text-neutral-500 block mb-2">
                 {t("fields.message")} *
               </label>
               <textarea
-                rows={3}
+                rows={4}
                 required
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 className={`${inputClass} resize-none`}
-                placeholder="..."
               />
             </div>
 
-            {/* GDPR */}
             <div className="flex items-start gap-3">
               <input
                 type="checkbox"
@@ -286,9 +245,7 @@ export default function AuthenticationModal({
               </label>
             </div>
 
-            {status === "error" && (
-              <p className="text-error text-xs">{t("error")}</p>
-            )}
+            {status === "error" && <p className="text-error text-xs">{t("error")}</p>}
 
             <button
               type="submit"

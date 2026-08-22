@@ -26,7 +26,10 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  const messages = await getMessages();
+  // Pass the locale explicitly: the root layout resolves the request config
+  // before setRequestLocale runs, so a bare getMessages() returns the cached
+  // default-locale bundle and every client component renders in French.
+  const messages = await getMessages({ locale });
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>

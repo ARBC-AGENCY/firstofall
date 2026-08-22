@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import AuthenticationCta from "@/components/ui/AuthenticationCta";
-import { BRAND_HAS_IP, BRAND_MARK, BRAND_NAME } from "@/lib/brand";
+import ParentBrandSection from "@/components/ui/ParentBrandSection";
+import { BRAND_HAS_IP, BRAND_MARK, BRAND_NAME, IS_SUB_BRAND } from "@/lib/brand";
 import essentialImg from "@/assets/images/IMG-20260422-WA0015.webp";
 import businessImg from "@/assets/images/IMG-20260422-WA0016.webp";
 import executiveImg from "@/assets/images/image-2.webp";
@@ -48,6 +48,7 @@ export default async function HomePage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "home" });
   const tc = await getTranslations({ locale, namespace: "collection" });
+  const tp = await getTranslations({ locale, namespace: "parentBrand" });
 
   return (
     <>
@@ -80,10 +81,12 @@ export default async function HomePage({
             {t("hero.subtext")}
           </p>
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-            <AuthenticationCta
-              buttons={[{ type: "authentication", label: t("hero.cta") }]}
-              className="contents"
-            />
+            <Link
+              href="/services"
+              className="primary-cta-gradient text-on-primary px-10 py-5 font-cinzel font-bold tracking-widest uppercase glow-gold hover:scale-105 transition-transform duration-300 text-sm"
+            >
+              {t("hero.cta")}
+            </Link>
             <Link
               href="/collection"
               className="border border-primary/60 text-primary px-10 py-5 font-cinzel font-bold tracking-widest uppercase hover:border-primary transition-all duration-300 text-sm"
@@ -92,6 +95,13 @@ export default async function HomePage({
             </Link>
           </div>
         </div>
+
+        {/* Attribution to the parent Maison — hidden on the parent's own site */}
+        {IS_SUB_BRAND && (
+          <p className="absolute bottom-28 left-1/2 -translate-x-1/2 w-full px-6 text-center text-[11px] md:text-xs tracking-widest uppercase text-neutral-500">
+            {tp("heroLine")}
+          </p>
+        )}
 
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-40">
@@ -208,6 +218,9 @@ export default async function HomePage({
           </ScrollReveal>
         </section>
       )}
+
+      {/* ── ARCHITECTURE DE MARQUE ───────────────────────────── */}
+      <ParentBrandSection locale={locale} />
 
       {/* ── PROGRAMME SILICON VALLEY ─────────────────────────── */}
       <section className="bg-surface relative overflow-hidden min-h-[560px] flex items-center">
