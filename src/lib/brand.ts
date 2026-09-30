@@ -13,6 +13,14 @@
 /** Slug stored in the Supabase `brand` column — must be stable, it partitions the data. */
 export const BRAND_ID = process.env.NEXT_PUBLIC_BRAND_ID ?? "first-of-all";
 
+/**
+ * First of All's own assets and claims (logo, favicon, IP registrations) are
+ * the fallback only on First of All's deployment. Any other brand that misses
+ * one of those variables gets nothing, rather than silently inheriting First
+ * of All's identity — or its trademark claims.
+ */
+const IS_FIRST_OF_ALL = BRAND_ID === "first-of-all";
+
 /** Display name, without any trademark symbol. */
 export const BRAND_NAME = process.env.NEXT_PUBLIC_BRAND_NAME ?? "First of All";
 
@@ -35,7 +43,8 @@ export const BRAND_DOMAIN = process.env.NEXT_PUBLIC_BRAND_DOMAIN ?? "firstofall.
  * Intrinsic pixel dimensions, needed by next/image to reserve layout space.
  */
 export const BRAND_LOGO =
-  process.env.NEXT_PUBLIC_BRAND_LOGO ?? "/brand/first-of-all.png";
+  process.env.NEXT_PUBLIC_BRAND_LOGO ??
+  (IS_FIRST_OF_ALL ? "/brand/first-of-all.png" : "");
 export const BRAND_LOGO_WIDTH = Number(
   process.env.NEXT_PUBLIC_BRAND_LOGO_WIDTH ?? 4500
 );
@@ -57,7 +66,19 @@ export const BRAND_LOGO_INVERT_ON_DARK =
  * brand without its own icon should get rather than inheriting another's.
  */
 export const BRAND_FAVICON =
-  process.env.NEXT_PUBLIC_BRAND_FAVICON ?? "/brand/first-of-all-icon.png";
+  process.env.NEXT_PUBLIC_BRAND_FAVICON ??
+  (IS_FIRST_OF_ALL ? "/brand/first-of-all-icon.png" : "");
+
+/**
+ * Home hero background video, and the still shown while it loads (its first
+ * frame). Each brand's video shows its own name, so these follow the brand ID
+ * by default — public/brand/hero-video-<id>.webm — and no deployment needs an
+ * extra variable. A brand without a video simply keeps the dark hero.
+ */
+export const BRAND_HERO_VIDEO =
+  process.env.NEXT_PUBLIC_BRAND_HERO_VIDEO ?? `/brand/hero-video-${BRAND_ID}.webm`;
+export const BRAND_HERO_POSTER =
+  process.env.NEXT_PUBLIC_BRAND_HERO_POSTER ?? `/brand/hero-poster-${BRAND_ID}.webp`;
 
 /**
  * Parent brand — the Maison that carries the invention.
@@ -124,4 +145,5 @@ export const BRAND_CONTACT_EMAIL =
  * rebranding it into a false claim.
  */
 export const BRAND_HAS_IP =
-  (process.env.NEXT_PUBLIC_BRAND_HAS_IP ?? "true").toLowerCase() === "true";
+  (process.env.NEXT_PUBLIC_BRAND_HAS_IP ?? String(IS_FIRST_OF_ALL)).toLowerCase() ===
+  "true";

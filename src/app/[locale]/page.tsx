@@ -5,11 +5,19 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import ParentBrandSection from "@/components/ui/ParentBrandSection";
 import { pageMetadata } from "@/lib/seo";
-import { BRAND_HAS_IP, BRAND_MARK, BRAND_NAME, IS_SUB_BRAND } from "@/lib/brand";
-import essentialImg from "@/assets/images/IMG-20260422-WA0015.webp";
-import businessImg from "@/assets/images/IMG-20260422-WA0016.webp";
-import executiveImg from "@/assets/images/image-2.webp";
-import exclusiveImg from "@/assets/images/IMG-20260422-WA0018.webp";
+import {
+  BRAND_HAS_IP,
+  BRAND_HERO_POSTER,
+  BRAND_HERO_VIDEO,
+  BRAND_MARK,
+  BRAND_NAME,
+  IS_SUB_BRAND,
+} from "@/lib/brand";
+// Framed by scripts/frame-cachets.py so object-cover never crops the product
+import essentialImg from "@/assets/images/cachets/essential.webp";
+import businessImg from "@/assets/images/cachets/business.webp";
+import executiveImg from "@/assets/images/cachets/executive.webp";
+import exclusiveImg from "@/assets/images/cachets/exclusive.webp";
 import technologyImg from "@/assets/images/patented-tech.jpg";
 
 export async function generateMetadata({
@@ -68,10 +76,10 @@ export default async function HomePage({
             muted
             loop
             playsInline
-            poster="/placeholder.png"
+            poster={BRAND_HERO_POSTER || undefined}
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/hero-video.webm" type="video/webm" />
+            <source src={BRAND_HERO_VIDEO} type="video/webm" />
           </video>
           <div className="absolute inset-0 hero-gradient" />
         </div>
@@ -156,6 +164,8 @@ export default async function HomePage({
                       className="object-cover opacity-60 group-hover:opacity-50 transition-opacity duration-700"
                     />
                   ) : null}
+                  {/* Keeps the card text legible over light product shots */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest from-10% via-surface-container-lowest/80 via-30% to-transparent to-55%" />
                   <div className="mt-auto relative z-10">
                     <h3 className="text-xl font-cinzel text-on-surface mb-2">
                       {t(`collection.versions.${v}.name`)}

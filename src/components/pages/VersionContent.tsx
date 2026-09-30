@@ -7,10 +7,12 @@ import { useTranslations } from "next-intl";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import ReservationModal from "@/components/ui/ReservationModal";
 import { use } from "react";
-import essentials from "@/assets/images/Essentiel.webp";
-import business from "@/assets/images/Business.webp";
-import executive from "@/assets/images/Executive.webp";
-import exclusive from "@/assets/images/Exclusive.webp";
+// Wide framing for the hero: the product sits above the overlaid title and
+// stays whole from phones to ultrawide (scripts/frame-cachets.py)
+import essentials from "@/assets/images/cachets/essential-wide.webp";
+import business from "@/assets/images/cachets/business-wide.webp";
+import executive from "@/assets/images/cachets/executive-wide.webp";
+import exclusive from "@/assets/images/cachets/exclusive-wide.webp";
 
 const VALID_VERSIONS = ["essential", "business", "executive", "exclusive"];
 
@@ -67,6 +69,9 @@ export default function VersionContent({
             alt={t(`versions.${versionKey}.name`)}
             fill
             priority
+            // A 2.4:1 image covering a 70vh hero renders 168vh wide whenever
+            // the screen is narrower than that — far beyond 100vw on phones
+            sizes="(max-aspect-ratio: 42/25) 168vh, 100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 hero-gradient" />

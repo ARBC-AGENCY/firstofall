@@ -5,10 +5,11 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { BRAND_HAS_IP } from "@/lib/brand";
-import essentialImg from "@/assets/images/Essentiel.webp";
-import businessImg from "@/assets/images/Business.webp";
-import executiveImg from "@/assets/images/Executive.webp";
-import exclusiveImg from "@/assets/images/Exclusive.webp";
+// Framed by scripts/frame-cachets.py so object-cover never crops the product
+import essentialImg from "@/assets/images/cachets/essential.webp";
+import businessImg from "@/assets/images/cachets/business.webp";
+import executiveImg from "@/assets/images/cachets/executive.webp";
+import exclusiveImg from "@/assets/images/cachets/exclusive.webp";
 
 export async function generateMetadata({
   params,
