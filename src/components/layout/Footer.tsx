@@ -176,7 +176,9 @@ export default async function Footer({ locale }: { locale: string }) {
             <a
               href="https://www.arbc-agency.com/"
               target="_blank"
-              rel="noopener noreferrer"
+              // No noreferrer: the agency's analytics should see these visits
+              // as referrals from the client site, not as direct traffic
+              rel="noopener"
               className="group inline-flex items-center gap-1.5 text-[10px] tracking-widest uppercase text-neutral-700 hover:text-primary transition-colors duration-300"
             >
               <span>{t("crafted")}</span>
