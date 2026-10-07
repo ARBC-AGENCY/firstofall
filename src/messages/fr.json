@@ -436,7 +436,7 @@
     "title": "Programme Silicon Valley Africa",
     "heroTagline": "Inspirer l'Afrique de demain.",
     "heroSubtitle": "5 % du chiffre d'affaires de %PARENT% est dédié à financer l'immersion de talents africains dans les Big Tech de la Silicon Valley. Parce que l'excellence infalsifiable passe aussi par la transmission du savoir.",
-    "heroCta": "Postuler pour l'édition Novembre 2026",
+    "heroCta": "Postuler pour l'édition de mars 2027",
     "commitment": {
       "label": "NOTRE ENGAGEMENT",
       "title": "Notre Engagement",
@@ -453,7 +453,7 @@
           "label": "Fréquence"
         },
         {
-          "value": "Nov. 2026",
+          "value": "Mars 2027",
           "label": "Prochaine édition"
         },
         {
@@ -521,7 +521,7 @@
     },
     "finalCta": {
       "quote": "Grâce à vous, propriétaire d'un %SEAL%, nous construisons un pont durable entre la Silicon Valley et l'Afrique. Un cercle vertueux où l'excellence technologique d'aujourd'hui forge les leaders scientifiques de demain.",
-      "applyBtn": "Postuler pour Novembre 2026",
+      "applyBtn": "Postuler pour mars 2027",
       "buyBtn": "Acheter un Cachet et contribuer"
     },
     "applyTitle": "Soumettre ma candidature",
@@ -682,7 +682,7 @@
     },
     "siliconValley": {
       "title": "Programme Silicon Valley Africa",
-      "description": "5 % du chiffre d'affaires finance l'immersion de talents africains dans les Big Tech de la Silicon Valley. Candidatures ouvertes pour l'édition de novembre 2026."
+      "description": "5 % du chiffre d'affaires finance l'immersion de talents africains dans les Big Tech de la Silicon Valley. Candidatures ouvertes pour l'édition du 18 au 23 mars 2027."
     },
     "actualites": {
       "title": "Actualités",
